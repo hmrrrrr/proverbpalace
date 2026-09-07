@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhxejx4k8w4jg"]
 
-[ext_resource type="Texture2D" uid="uid://dfoat73mv66cy" path="res://mods/johnboat/source/spells/flash_fx.png" id="1_m3m4b"]
-[ext_resource type="Script" uid="uid://bni5ybo5qge2c" path="res://mods/johnboat/source/spells/flash_fx.gd" id="1_pp7cj"]
+[ext_resource type="Texture2D" uid="uid://dfoat73mv66cy" path="res://mods/proverbpalace/source/spells/flash_fx.png" id="1_m3m4b"]
+[ext_resource type="Script" uid="uid://bni5ybo5qge2c" path="res://mods/proverbpalace/source/spells/flash_fx.gd" id="1_pp7cj"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m3m4b"]
 blend_mode = 1

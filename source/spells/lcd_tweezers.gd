@@ -1,10 +1,10 @@
 extends Spell
 
 
-var minigame_scene = load("res://mods/johnboat/source/minigames/7seg_minigame.tscn")
+var minigame_scene = load("res://mods/proverbpalace/source/minigames/7seg_minigame.tscn")
 var minigame: SevenSegMinigame = null
 
-const LIBRARY = preload("res://mods/johnboat/source/7seg/library.res")
+const LIBRARY = preload("res://mods/proverbpalace/source/7seg/library.res")
 
 var faking_out := true
 

@@ -7,7 +7,7 @@ var pic_rotations: Array[float] = []
 var pic_data: Array[Image] = []
 
 var album_overlay: ToyCameraAlbumOverlay = null
-const TOY_CAMERA_ALBUM_OVERLAY = preload("res://mods/johnboat/source/minigames/toy_camera_album_overlay.tscn")
+const TOY_CAMERA_ALBUM_OVERLAY = preload("res://mods/proverbpalace/source/minigames/toy_camera_album_overlay.tscn")
 
 var can_show_album := true
 

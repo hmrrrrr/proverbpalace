@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://4a57twep65ka"]
 
 [ext_resource type="PackedScene" uid="uid://dmg180a1myio" path="res://source/battle_unit/battle_unit_sprite.tscn" id="1_5xrak"]
-[ext_resource type="Texture2D" uid="uid://c4075ttgqf27m" path="res://mods/johnboat/arte/dimorph/dimorph.png" id="2_fugul"]
+[ext_resource type="Texture2D" uid="uid://c4075ttgqf27m" path="res://mods/proverbpalace/arte/dimorph/dimorph.png" id="2_fugul"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pslta"]
 radius = 39.0

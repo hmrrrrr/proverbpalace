@@ -11,12 +11,12 @@ const PLANT_CHANCE := 0.1
 const FAGGOT_CHANCE := .002
 
 var IS_THIS_THE_PLANT_OR_NAH := false
-const PAW_STAMP_EFFECT = preload("res://mods/johnboat/source/spells/paw_stamp_effect.tscn")
+const PAW_STAMP_EFFECT = preload("res://mods/proverbpalace/source/spells/paw_stamp_effect.tscn")
 
 const SOUNDS = {
-	FUCKING_MINECRAFT_SOUND_OK_GET_OFF_MY_BACK = preload("res://mods/johnboat/sounds/fucking_minecraft_sound_ok_get_off_my_back.mp3"),
-	STOCK_EXPLOSION = preload("res://mods/johnboat/sounds/StockExplosion.mp3"),
-	KITTYTILE = preload("res://mods/johnboat/sounds/tiles/kittytile.wav"),
+	FUCKING_MINECRAFT_SOUND_OK_GET_OFF_MY_BACK = preload("res://mods/proverbpalace/sounds/fucking_minecraft_sound_ok_get_off_my_back.mp3"),
+	STOCK_EXPLOSION = preload("res://mods/proverbpalace/sounds/StockExplosion.mp3"),
+	KITTYTILE = preload("res://mods/proverbpalace/sounds/tiles/kittytile.wav"),
 }
 
 func _first_spawn(is_transform: = false) -> void :

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/minigames/spellmaster.png"
+source_file="res://mods/proverbpalace/arte/minigames/spellmaster.png"
 dest_files=["res://.godot/imported/spellmaster.png-cef2dab1298265db99b6c5054746028d.ctex"]
 
 [params]

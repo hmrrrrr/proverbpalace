@@ -2,7 +2,7 @@
 extends EditorScript
 
 const CHARS = "AbcCdEFgHhIijJLnoOPqrStUuyZ234567789ソ=—フレГҀ¿¹ԇōīəΞγG″こ)\\^'ñλײַ"
-const _7_SEG_ATLAS = preload("res://mods/johnboat/source/7seg/7seg.png")
+const _7_SEG_ATLAS = preload("res://mods/proverbpalace/source/7seg/7seg.png")
 
 const SEG_POSITIONS := [
 	Vector2i(1,0),
@@ -40,4 +40,4 @@ func _run() -> void:
 		current_frame += 1
 	
 	
-	ResourceSaver.save(library,"res://mods/johnboat/source/7seg/library.res")
+	ResourceSaver.save(library,"res://mods/proverbpalace/source/7seg/library.res")

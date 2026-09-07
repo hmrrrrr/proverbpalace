@@ -9,7 +9,7 @@ func _run():
 func export_image(path: String):
 	var file := load(path) as Texture2D
 	if file:
-		file.get_image().save_png("res://mods/johnboat/source/editor_scripts/img_export/output.png")
+		file.get_image().save_png("res://mods/proverbpalace/source/editor_scripts/img_export/output.png")
 
 
 func make_rg_tex(size: Vector2i):
@@ -23,4 +23,4 @@ func make_rg_tex(size: Vector2i):
 			img.set_pixel(
 				i,j, Color(i_per,j_per,0)
 			)
-	img.save_png("res://mods/johnboat/source/editor_scripts/img_export/rg_tex.png")
+	img.save_png("res://mods/proverbpalace/source/editor_scripts/img_export/rg_tex.png")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ic6hj7ly8f2i"]
 
-[ext_resource type="Script" uid="uid://mf4g2aikgra" path="res://mods/johnboat/source/spells/halo_effect.gd" id="1_gmh6w"]
-[ext_resource type="Texture2D" uid="uid://c6oo8b4d21sel" path="res://mods/johnboat/arte/spells/halo_effect.png" id="1_j47f3"]
+[ext_resource type="Script" uid="uid://mf4g2aikgra" path="res://mods/proverbpalace/source/spells/halo_effect.gd" id="1_gmh6w"]
+[ext_resource type="Texture2D" uid="uid://c6oo8b4d21sel" path="res://mods/proverbpalace/arte/spells/halo_effect.png" id="1_j47f3"]
 [ext_resource type="PackedScene" uid="uid://dh6lqtk34pfn2" path="res://source/effects/particle_spawner.tscn" id="2_xrg6l"]
 [ext_resource type="PackedScene" uid="uid://ewftutvdavg4" path="res://source/effects/dustmote.tscn" id="3_jag65"]
 

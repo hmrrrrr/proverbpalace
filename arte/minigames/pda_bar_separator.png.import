@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/minigames/pda_bar_separator.png"
+source_file="res://mods/proverbpalace/arte/minigames/pda_bar_separator.png"
 dest_files=["res://.godot/imported/pda_bar_separator.png-e718a51bcd8e6827357cf3c51c98d98a.ctex"]
 
 [params]

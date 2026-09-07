@@ -2,10 +2,10 @@ extends Spell
 class_name Dynamo
 
 
-const LIGHTNING_ARC_EFFECT = preload("res://mods/johnboat/source/spells/lightning_arc_effect.tscn")
-const LIGHTNING_TILE_EFFECT = preload("res://mods/johnboat/source/effects/lightning_tile_effect.tscn")
+const LIGHTNING_ARC_EFFECT = preload("res://mods/proverbpalace/source/spells/lightning_arc_effect.tscn")
+const LIGHTNING_TILE_EFFECT = preload("res://mods/proverbpalace/source/effects/lightning_tile_effect.tscn")
 
-const DYNAMO_SOUND = preload("res://mods/johnboat/sounds/dynamo.wav")
+const DYNAMO_SOUND = preload("res://mods/proverbpalace/sounds/dynamo.wav")
 
 func set_status_tooltips():
 	status_tooltips = [

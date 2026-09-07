@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/paw_stamp.png"
+source_file="res://mods/proverbpalace/arte/spells/paw_stamp.png"
 dest_files=["res://.godot/imported/paw_stamp.png-93515a0725a3441a22715d1e3307f548.ctex"]
 
 [params]

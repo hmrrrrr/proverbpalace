@@ -7,7 +7,7 @@ path="res://.godot/imported/dimorph_gunkshot.wav-01c66c051ea5c5a15670f21fa5c9eef
 
 [deps]
 
-source_file="res://mods/johnboat/overrides/sounds/dimorph/dimorph_gunkshot.wav"
+source_file="res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_gunkshot.wav"
 dest_files=["res://.godot/imported/dimorph_gunkshot.wav-01c66c051ea5c5a15670f21fa5c9eefc.sample"]
 
 [params]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dhp2v61ogvbg7"]
 
-[ext_resource type="Script" uid="uid://gs8png1dsi6v" path="res://mods/johnboat/source/spells/bandage_effect_instance.gd" id="1_vrab2"]
-[ext_resource type="Texture2D" uid="uid://dyhc3ysx30x8n" path="res://mods/johnboat/arte/spells/tile_bandage.png" id="2_x7xlk"]
-[ext_resource type="Texture2D" uid="uid://snq3bktj7exm" path="res://mods/johnboat/arte/spells/tile_inside_mask.png" id="3_bdrcb"]
+[ext_resource type="Script" uid="uid://gs8png1dsi6v" path="res://mods/proverbpalace/source/spells/bandage_effect_instance.gd" id="1_vrab2"]
+[ext_resource type="Texture2D" uid="uid://dyhc3ysx30x8n" path="res://mods/proverbpalace/arte/spells/tile_bandage.png" id="2_x7xlk"]
+[ext_resource type="Texture2D" uid="uid://snq3bktj7exm" path="res://mods/proverbpalace/arte/spells/tile_inside_mask.png" id="3_bdrcb"]
 [ext_resource type="Script" uid="uid://cfpkpmdehkp8u" path="res://source/ui/generic/shadow_cloner.gd" id="4_a3284"]
 
 [sub_resource type="Animation" id="Animation_bdrcb"]

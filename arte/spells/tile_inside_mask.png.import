@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/tile_inside_mask.png"
+source_file="res://mods/proverbpalace/arte/spells/tile_inside_mask.png"
 dest_files=["res://.godot/imported/tile_inside_mask.png-74bf3b7ac390dc600e0be900070721f5.ctex"]
 
 [params]

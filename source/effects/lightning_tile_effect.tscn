@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dqjw7scartoje"]
 
-[ext_resource type="Texture2D" uid="uid://ddjvmpyo78anr" path="res://mods/johnboat/arte/spells/lightning_tile_effect.png" id="1_xox6v"]
-[ext_resource type="Script" uid="uid://cdjg3i5hdkdye" path="res://mods/johnboat/source/effects/lightning_tile_effect.gd" id="2_4x56m"]
+[ext_resource type="Texture2D" uid="uid://ddjvmpyo78anr" path="res://mods/proverbpalace/arte/spells/lightning_tile_effect.png" id="1_xox6v"]
+[ext_resource type="Script" uid="uid://cdjg3i5hdkdye" path="res://mods/proverbpalace/source/effects/lightning_tile_effect.gd" id="2_4x56m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4x56m"]
 blend_mode = 1

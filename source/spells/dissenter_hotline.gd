@@ -13,11 +13,11 @@ enum CatchyMode {
 	MODE_MAX
 }
 
-const DISSENTER_HOTLINE_EFFECT_INSTANCE = preload("res://mods/johnboat/source/spells/dissenter_hotline/dissenter_hotline_effect_instance.tscn")
+const DISSENTER_HOTLINE_EFFECT_INSTANCE = preload("res://mods/proverbpalace/source/spells/dissenter_hotline/dissenter_hotline_effect_instance.tscn")
 
 
 var number_sequence: Array[String] : get=generate_number_sequence
-const DISSENTER_HOTLINE_DELAY_CURVE: Curve = preload("res://mods/johnboat/source/resources/dissenter_hotline_delay_curve.tres")
+const DISSENTER_HOTLINE_DELAY_CURVE: Curve = preload("res://mods/proverbpalace/source/resources/dissenter_hotline_delay_curve.tres")
 
 static var STA_DEBUG_SEED := 0
 var DEBUG_SEED := 0

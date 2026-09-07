@@ -6,10 +6,10 @@ var editing_tile: Tile
 var preview_tile_a: Tile
 var preview_tile_b: Tile
 var lcd_segments: Array[LCDSegment] = []
-var segment_scene: PackedScene = load("res://mods/johnboat/source/minigames/lcd_segment.tscn")
+var segment_scene: PackedScene = load("res://mods/proverbpalace/source/minigames/lcd_segment.tscn")
 
-const library := preload("res://mods/johnboat/source/7seg/library.res")
-const LCD_ARROW = preload("res://mods/johnboat/arte/minigames/lcd_arrow.png")
+const library := preload("res://mods/proverbpalace/source/7seg/library.res")
+const LCD_ARROW = preload("res://mods/proverbpalace/arte/minigames/lcd_arrow.png")
 const DNA_ARROW = preload("res://arte/minigames/dna_arrow.png")
 
 @onready var board: Sprite2D = %Board

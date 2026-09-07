@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/source/editor_scripts/img_export/output.png"
+source_file="res://mods/proverbpalace/source/editor_scripts/img_export/output.png"
 dest_files=["res://.godot/imported/output.png-7f95eea97568e01199f078d5d860de01.ctex"]
 
 [params]

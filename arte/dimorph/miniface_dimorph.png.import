@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/dimorph/miniface_dimorph.png"
+source_file="res://mods/proverbpalace/arte/dimorph/miniface_dimorph.png"
 dest_files=["res://.godot/imported/miniface_dimorph.png-1047212bb872dfd9e5385ce1e1eb7579.ctex"]
 
 [params]

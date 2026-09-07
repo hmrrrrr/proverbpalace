@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hio1aqelu1u"]
 
-[ext_resource type="Script" uid="uid://bq7y3d8u7ltci" path="res://mods/johnboat/mod.gd" id="1_ksaoh"]
+[ext_resource type="Script" uid="uid://bq7y3d8u7ltci" path="res://mods/proverbpalace/mod.gd" id="1_ksaoh"]
 
 [node name="Mod" type="Node" unique_id=1132922213]
 script = ExtResource("1_ksaoh")

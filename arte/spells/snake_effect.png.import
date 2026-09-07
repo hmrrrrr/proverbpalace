@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/snake_effect.png"
+source_file="res://mods/proverbpalace/arte/spells/snake_effect.png"
 dest_files=["res://.godot/imported/snake_effect.png-c589e88e189138e4b6a338d64798e0bb.ctex"]
 
 [params]

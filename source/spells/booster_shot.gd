@@ -6,8 +6,8 @@ func set_status_tooltips():
 
 const SHOTS = ["x*", "z*", "*j", "*q"]
 var cycle_progress := 0
-const BANDAGE_EFFECT_INSTANCE = preload("res://mods/johnboat/source/spells/bandage_effect_instance.tscn")
-const BOOSTER_SHOT_USE = preload("res://mods/johnboat/sounds/booster_shot_use.wav")
+const BANDAGE_EFFECT_INSTANCE = preload("res://mods/proverbpalace/source/spells/bandage_effect_instance.tscn")
+const BOOSTER_SHOT_USE = preload("res://mods/proverbpalace/sounds/booster_shot_use.wav")
 
 func increment_cycle() -> void:
 	cycle_progress = (cycle_progress+1)%len(SHOTS)

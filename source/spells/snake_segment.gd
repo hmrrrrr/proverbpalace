@@ -8,7 +8,7 @@ signal death_finished
 @onready var snake_connection_overlay: Sprite2D = $SnakeConnectionOverlay
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
-const SNAKE_SEGMENT_CONNECTION_OVERLAY = preload("res://mods/johnboat/source/spells/snake_segment_connection_overlay.tscn")
+const SNAKE_SEGMENT_CONNECTION_OVERLAY = preload("res://mods/proverbpalace/source/spells/snake_segment_connection_overlay.tscn")
 
 @onready var parent := $".."
 
@@ -47,10 +47,11 @@ const FACE_FRAMES = {
 
 var adopted_children: Array[Node] = []
 
-func add_connection_overlay(direction: Vector2i):
+func add_connection_overlay(direction: Vector2i, other_segment: SnakeSegment):
 	var connection := SNAKE_SEGMENT_CONNECTION_OVERLAY.instantiate() as Sprite2D
 	get_node("../..").add_child(connection)
 	connection.material = material
+	connection.self_modulate = Color(lerp(other_segment.self_modulate,self_modulate,.5),1.)
 	adopted_children.append(connection)
 	#connection.top_level = true
 	connection.frame = CONNECTION_FRAMES[direction]

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dgesme27ivmu4"]
 
-[ext_resource type="Script" uid="uid://c3p6nou3obs1e" path="res://mods/johnboat/source/effects/eggshell.gd" id="1_jw84j"]
-[ext_resource type="Texture2D" uid="uid://dpyoilapffxxg" path="res://mods/johnboat/arte/tiles/eggshell.png" id="2_jw84j"]
+[ext_resource type="Script" uid="uid://c3p6nou3obs1e" path="res://mods/proverbpalace/source/effects/eggshell.gd" id="1_jw84j"]
+[ext_resource type="Texture2D" uid="uid://dpyoilapffxxg" path="res://mods/proverbpalace/arte/tiles/eggshell.png" id="2_jw84j"]
 [ext_resource type="Texture2D" uid="uid://bvrcwmuyem6s6" path="res://arte/tiles/plastic_tiles.png" id="4_1guhi"]
-[ext_resource type="Texture2D" uid="uid://bmo1c7n10oxuv" path="res://mods/johnboat/arte/tiles/yolk.png" id="4_gmtjm"]
+[ext_resource type="Texture2D" uid="uid://bmo1c7n10oxuv" path="res://mods/proverbpalace/arte/tiles/yolk.png" id="4_gmtjm"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1guhi"]
 blend_mode = 3

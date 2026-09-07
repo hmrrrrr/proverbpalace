@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b5083h6esx7ov"]
 
-[ext_resource type="Texture2D" uid="uid://dwodafruwgx17" path="res://mods/johnboat/arte/mutagen_bubble_mask.png" id="1_d0ola"]
-[ext_resource type="Script" uid="uid://b4g8hgs7buk1a" path="res://mods/johnboat/source/bubble/mutagen_bubble.gd" id="1_wa2dy"]
+[ext_resource type="Texture2D" uid="uid://dwodafruwgx17" path="res://mods/proverbpalace/arte/mutagen_bubble_mask.png" id="1_d0ola"]
+[ext_resource type="Script" uid="uid://b4g8hgs7buk1a" path="res://mods/proverbpalace/source/bubble/mutagen_bubble.gd" id="1_wa2dy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d0ola"]
 blend_mode = 1

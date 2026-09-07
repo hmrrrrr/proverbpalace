@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/sd_card_effect.png"
+source_file="res://mods/proverbpalace/arte/spells/sd_card_effect.png"
 dest_files=["res://.godot/imported/sd_card_effect.png-770425c72066714886cf2d6b504ec754.ctex"]
 
 [params]

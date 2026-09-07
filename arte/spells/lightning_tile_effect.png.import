@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/lightning_tile_effect.png"
+source_file="res://mods/proverbpalace/arte/spells/lightning_tile_effect.png"
 dest_files=["res://.godot/imported/lightning_tile_effect.png-5e1dcdd16dabb12ed1877ab243438fbd.ctex"]
 
 [params]

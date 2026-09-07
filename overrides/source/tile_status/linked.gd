@@ -3,13 +3,13 @@ extends "res://source/tile_status/linked.gd"
 const FUZZY = "fuzzy"
 const ZIPTIE = "ziptie"
 
-const FUZZY_LINK_BOTTOM = preload("res://mods/johnboat/arte/fuzzy_link1.png")
-const FUZZY_LINK_TOP = preload("res://mods/johnboat/arte/fuzzy_link2.png")
-const ZIPTIE_LINK_BOTTOM = preload("res://mods/johnboat/arte/ziptie_link1.png")
-const ZIPTIE_LINK_TOP = preload("res://mods/johnboat/arte/ziptie_link2.png")
+const FUZZY_LINK_BOTTOM = preload("res://mods/proverbpalace/arte/fuzzy_link1.png")
+const FUZZY_LINK_TOP = preload("res://mods/proverbpalace/arte/fuzzy_link2.png")
+const ZIPTIE_LINK_BOTTOM = preload("res://mods/proverbpalace/arte/ziptie_link1.png")
+const ZIPTIE_LINK_TOP = preload("res://mods/proverbpalace/arte/ziptie_link2.png")
 const DEFAULT_TILE_LINKED_TOP = preload("res://arte/tiles/tile_linked_top.png")
 const DEFAULT_TILE_LINKED_BOTTOM = preload("res://arte/tiles/tile_linked_bottom.png")
-const ZIPTIE_LINKED_MATERIAL = preload("res://mods/johnboat/arte/spells/ziptie_linked_material.tres")
+const ZIPTIE_LINKED_MATERIAL = preload("res://mods/proverbpalace/arte/spells/ziptie_linked_material.tres")
 
 func set_link_id(value):
 	

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/source/effects/rg_tex.png"
+source_file="res://mods/proverbpalace/source/effects/rg_tex.png"
 dest_files=["res://.godot/imported/rg_tex.png-7ff8a7f93d4ee64d087e1fbeaa150b80.ctex"]
 
 [params]

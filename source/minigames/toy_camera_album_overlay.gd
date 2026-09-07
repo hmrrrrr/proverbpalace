@@ -1,6 +1,6 @@
 class_name ToyCameraAlbumOverlay
 extends Control
-const TOY_CAMERA_ALBUM_ENTRY = preload("res://mods/johnboat/source/minigames/toy_camera_album_entry.tscn")
+const TOY_CAMERA_ALBUM_ENTRY = preload("res://mods/proverbpalace/source/minigames/toy_camera_album_entry.tscn")
 @onready var flow_container: FlowContainer = $FlowContainer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 

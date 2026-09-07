@@ -1,7 +1,7 @@
 extends Spell
 
 const SOUNDS = {
-	GAYDARSFX = preload("res://mods/johnboat/sounds/gaydarsfx.wav")
+	GAYDARSFX = preload("res://mods/proverbpalace/sounds/gaydarsfx.wav")
 	
 }
 

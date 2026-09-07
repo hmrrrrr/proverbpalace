@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/whodunit.png"
+source_file="res://mods/proverbpalace/arte/spells/whodunit.png"
 dest_files=["res://.godot/imported/whodunit.png-79a7bc4126da3ba5a114642818f10e57.ctex"]
 
 [params]

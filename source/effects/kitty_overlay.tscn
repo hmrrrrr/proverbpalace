@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dfyjap3l4tiee"]
 
-[ext_resource type="Texture2D" uid="uid://r4pu5gxudjxi" path="res://mods/johnboat/arte/tiles/kitty_overlay.png" id="1_h0by2"]
-[ext_resource type="Script" uid="uid://duw7u015dgu05" path="res://mods/johnboat/source/effects/kitty_overlay.gd" id="2_kcg6o"]
-[ext_resource type="AudioStream" uid="uid://cgu7it8uka0wm" path="res://mods/johnboat/sounds/mangopurr.ogg" id="3_kcg6o"]
+[ext_resource type="Texture2D" uid="uid://r4pu5gxudjxi" path="res://mods/proverbpalace/arte/tiles/kitty_overlay.png" id="1_h0by2"]
+[ext_resource type="Script" uid="uid://duw7u015dgu05" path="res://mods/proverbpalace/source/effects/kitty_overlay.gd" id="2_kcg6o"]
+[ext_resource type="AudioStream" uid="uid://cgu7it8uka0wm" path="res://mods/proverbpalace/sounds/mangopurr.ogg" id="3_kcg6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_34jc1"]
 

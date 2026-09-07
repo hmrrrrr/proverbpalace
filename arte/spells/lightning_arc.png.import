@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/lightning_arc.png"
+source_file="res://mods/proverbpalace/arte/spells/lightning_arc.png"
 dest_files=["res://.godot/imported/lightning_arc.png-86f1acaa67cc0e94def8d90b7fbc1744.ctex"]
 
 [params]

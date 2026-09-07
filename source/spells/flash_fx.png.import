@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/source/spells/flash_fx.png"
+source_file="res://mods/proverbpalace/source/spells/flash_fx.png"
 dest_files=["res://.godot/imported/flash_fx.png-b808ad3434986663f0bd5849947b0a01.ctex"]
 
 [params]

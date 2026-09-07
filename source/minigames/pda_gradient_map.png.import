@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/source/minigames/pda_gradient_map.png"
+source_file="res://mods/proverbpalace/source/minigames/pda_gradient_map.png"
 dest_files=["res://.godot/imported/pda_gradient_map.png-c7f053a5a60329fdb4695575dd0ec913.ctex"]
 
 [params]

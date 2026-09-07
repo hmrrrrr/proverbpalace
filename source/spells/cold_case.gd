@@ -326,17 +326,17 @@ const SHORT_WORD_TRIGRAMS := {
 
 
 const SOUNDS = {
-	GHOSTSOUND_1 = preload("res://mods/johnboat/sounds/ghostsound1.wav"),
-	GHOSTSOUND_2 = preload("res://mods/johnboat/sounds/ghostsound2.wav"),
-	GHOSTSOUND_3 = preload("res://mods/johnboat/sounds/ghostsound3.wav"),
+	GHOSTSOUND_1 = preload("res://mods/proverbpalace/sounds/ghostsound1.wav"),
+	GHOSTSOUND_2 = preload("res://mods/proverbpalace/sounds/ghostsound2.wav"),
+	GHOSTSOUND_3 = preload("res://mods/proverbpalace/sounds/ghostsound3.wav"),
 	
-	SUITCASE_1 = preload("res://mods/johnboat/sounds/suitcase1.wav"),
-	SUITCASE_2 = preload("res://mods/johnboat/sounds/suitcase2.wav"),
+	SUITCASE_1 = preload("res://mods/proverbpalace/sounds/suitcase1.wav"),
+	SUITCASE_2 = preload("res://mods/proverbpalace/sounds/suitcase2.wav"),
 }
 
 
 const MIN_NGRAM_WEIGHT := 0.1
-const COLD_CASE_EFFECT = preload("res://mods/johnboat/source/spells/cold_case/cold_case_effect_instance.tscn")
+const COLD_CASE_EFFECT = preload("res://mods/proverbpalace/source/spells/cold_case/cold_case_effect_instance.tscn")
 
 func is_ngram_valid(ngram: String, letter_pool: Array[String]) -> bool:
 	var remaining_letter_pool = letter_pool.duplicate()

@@ -7,7 +7,7 @@ path="res://.godot/imported/Undead Pixel 8.ttf-173c06f63776e46ad7e55add46870d05.
 
 [deps]
 
-source_file="res://mods/johnboat/fonts/Undead Pixel 8.ttf"
+source_file="res://mods/proverbpalace/fonts/Undead Pixel 8.ttf"
 dest_files=["res://.godot/imported/Undead Pixel 8.ttf-173c06f63776e46ad7e55add46870d05.fontdata"]
 
 [params]

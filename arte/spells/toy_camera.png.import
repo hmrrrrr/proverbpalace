@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/toy_camera.png"
+source_file="res://mods/proverbpalace/arte/spells/toy_camera.png"
 dest_files=["res://.godot/imported/toy_camera.png-73a6664c7f8d7dfb57e53662bd630a31.ctex"]
 
 [params]

@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ccrst1cib1ujq"]
 
-[ext_resource type="Texture2D" uid="uid://dnhc8ipstal5i" path="res://mods/johnboat/arte/spells/toy_camera_photograph.png" id="1_tjms1"]
-[ext_resource type="Script" uid="uid://rjebg8pn7jwc" path="res://mods/johnboat/source/minigames/toy_camera_album_entry.gd" id="2_7qk6g"]
-[ext_resource type="Texture2D" uid="uid://bkn31taok2iok" path="res://mods/johnboat/arte/spells/toy_camera_test.png" id="2_wum76"]
-[ext_resource type="Shader" uid="uid://u5me1kjxlqpc" path="res://mods/johnboat/source/minigames/toy_camera_album_entry.gdshader" id="3_jlo5w"]
+[ext_resource type="Texture2D" uid="uid://dnhc8ipstal5i" path="res://mods/proverbpalace/arte/spells/toy_camera_photograph.png" id="1_tjms1"]
+[ext_resource type="Script" uid="uid://rjebg8pn7jwc" path="res://mods/proverbpalace/source/minigames/toy_camera_album_entry.gd" id="2_7qk6g"]
+[ext_resource type="Texture2D" uid="uid://bkn31taok2iok" path="res://mods/proverbpalace/arte/spells/toy_camera_test.png" id="2_wum76"]
+[ext_resource type="Shader" uid="uid://u5me1kjxlqpc" path="res://mods/proverbpalace/source/minigames/toy_camera_album_entry.gdshader" id="3_jlo5w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7qk6g"]
 shader = ExtResource("3_jlo5w")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5xuuovnperob"]
 
-[ext_resource type="Texture2D" uid="uid://cm1ybjd4ujehs" path="res://mods/johnboat/arte/spells/snake_effect.png" id="1_pf2wj"]
+[ext_resource type="Texture2D" uid="uid://cm1ybjd4ujehs" path="res://mods/proverbpalace/arte/spells/snake_effect.png" id="1_pf2wj"]
 
 [node name="SnakeConnectionOverlay" type="Sprite2D" unique_id=1953876607]
 y_sort_enabled = true

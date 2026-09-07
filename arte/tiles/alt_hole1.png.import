@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/tiles/alt_hole1.png"
+source_file="res://mods/proverbpalace/arte/tiles/alt_hole1.png"
 dest_files=["res://.godot/imported/alt_hole1.png-e1edae0e159705b2bc6c341137ad2fe2.ctex"]
 
 [params]

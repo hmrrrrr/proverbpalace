@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/datamosh.png"
+source_file="res://mods/proverbpalace/arte/spells/datamosh.png"
 dest_files=["res://.godot/imported/datamosh.png-5a69e975f668d1bc8cdd2bac54c7e198.ctex"]
 
 [params]

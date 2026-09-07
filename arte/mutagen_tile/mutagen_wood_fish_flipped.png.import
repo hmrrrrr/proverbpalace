@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/mutagen_tile/mutagen_wood_fish_flipped.png"
+source_file="res://mods/proverbpalace/arte/mutagen_tile/mutagen_wood_fish_flipped.png"
 dest_files=["res://.godot/imported/mutagen_wood_fish_flipped.png-2d7b2e21539436aadb9ef0d935b272dd.ctex"]
 
 [params]

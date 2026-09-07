@@ -7,7 +7,7 @@ path="res://.godot/imported/milkspill.wav-fe3892313db608bde6c2ec0d2e37475b.sampl
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/milkspill.wav"
+source_file="res://mods/proverbpalace/sounds/milkspill.wav"
 dest_files=["res://.godot/imported/milkspill.wav-fe3892313db608bde6c2ec0d2e37475b.sample"]
 
 [params]

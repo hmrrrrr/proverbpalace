@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/minigames/lcd_arrow.png"
+source_file="res://mods/proverbpalace/arte/minigames/lcd_arrow.png"
 dest_files=["res://.godot/imported/lcd_arrow.png-1e753bdbd6caae2b39196270aebf31eb.ctex"]
 
 [params]

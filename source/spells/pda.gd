@@ -1,7 +1,7 @@
 extends Spell
 
 
-var minigame_scene = load("res://mods/johnboat/source/minigames/pda_minigame.tscn")
+var minigame_scene = load("res://mods/proverbpalace/source/minigames/pda_minigame.tscn")
 var minigame: PDAMinigame = null
 
 

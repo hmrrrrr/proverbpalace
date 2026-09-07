@@ -7,20 +7,20 @@ var files: Array[String] = [
 	"res://source/shaders/tile_sprite.gdshader",
 	
 	
-	"res://mods/johnboat/overrides/word_utility.gd",
+	"res://mods/proverbpalace/overrides/word_utility.gd",
 	
-	"res://mods/johnboat/sprites/mutagen_wood_tile.png",
-	"res://mods/johnboat/sprites/mutagen_plastic_tile.png",
+	"res://mods/proverbpalace/sprites/mutagen_wood_tile.png",
+	"res://mods/proverbpalace/sprites/mutagen_plastic_tile.png",
 	
-	"res://mods/johnboat/intents/mutagen_intent.png",
+	"res://mods/proverbpalace/intents/mutagen_intent.png",
 	
-	"res://mods/johnboat/bubble/mutagen_bubbles.gdshader",
-	"res://mods/johnboat/bubble/mutagen_bubble.gd",
-	"res://mods/johnboat/bubble/mutagen_bubbles.gd",
-	"res://mods/johnboat/bubble/mutagen_bubble.tscn",
-	"res://mods/johnboat/bubble/mutagen_bubbles.tscn",
-	"res://mods/johnboat/bubble/bubbles_material.tres",
-	"res://mods/johnboat/bubble/mutagen_bubble_mask.png",
+	"res://mods/proverbpalace/bubble/mutagen_bubbles.gdshader",
+	"res://mods/proverbpalace/bubble/mutagen_bubble.gd",
+	"res://mods/proverbpalace/bubble/mutagen_bubbles.gd",
+	"res://mods/proverbpalace/bubble/mutagen_bubble.tscn",
+	"res://mods/proverbpalace/bubble/mutagen_bubbles.tscn",
+	"res://mods/proverbpalace/bubble/bubbles_material.tres",
+	"res://mods/proverbpalace/bubble/mutagen_bubble_mask.png",
 	
 	"res://source/enemies/dimorph.tscn",
 	"res://source/enemies/dimorph.gd",

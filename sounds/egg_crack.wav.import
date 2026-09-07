@@ -7,7 +7,7 @@ path="res://.godot/imported/egg_crack.wav-689a3244d43bef4316cd7297b544dcf0.sampl
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/egg_crack.wav"
+source_file="res://mods/proverbpalace/sounds/egg_crack.wav"
 dest_files=["res://.godot/imported/egg_crack.wav-689a3244d43bef4316cd7297b544dcf0.sample"]
 
 [params]

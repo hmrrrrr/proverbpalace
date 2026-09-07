@@ -34,14 +34,14 @@ func get_target_tiles():
 	return word_builder.tiles.duplicate()
 
 const SOUNDS = {
-	DATAMOSH=preload("res://mods/johnboat/sounds/datamosh.wav"),
-	DATAMOSH_VAR1=preload("res://mods/johnboat/sounds/datamosh1.wav"),
-	DATAMOSH_VAR2=preload("res://mods/johnboat/sounds/datamosh2.wav"),
-	DATAMOSH_VAR3=preload("res://mods/johnboat/sounds/datamosh3.wav"),
-	DATAMOSH_VAR4=preload("res://mods/johnboat/sounds/datamosh4.wav"),
-	KITTYTILE = preload("res://mods/johnboat/sounds/tiles/kittytile.wav")
+	DATAMOSH=preload("res://mods/proverbpalace/sounds/datamosh.wav"),
+	DATAMOSH_VAR1=preload("res://mods/proverbpalace/sounds/datamosh1.wav"),
+	DATAMOSH_VAR2=preload("res://mods/proverbpalace/sounds/datamosh2.wav"),
+	DATAMOSH_VAR3=preload("res://mods/proverbpalace/sounds/datamosh3.wav"),
+	DATAMOSH_VAR4=preload("res://mods/proverbpalace/sounds/datamosh4.wav"),
+	KITTYTILE = preload("res://mods/proverbpalace/sounds/tiles/kittytile.wav")
 }
-const DATAMOSH_EFFECT = preload("res://mods/johnboat/source/datamosh/datamosh_effect_instance.tscn")
+const DATAMOSH_EFFECT = preload("res://mods/proverbpalace/source/datamosh/datamosh_effect_instance.tscn")
 
 
 static func get_corresponding_numbers(face: String) -> String:

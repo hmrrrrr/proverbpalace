@@ -1,6 +1,6 @@
 @tool
 extends Mod
-class_name JohnboatMod
+class_name ProverbPalaceMod
 const MUTAGEN_BUBBLES = preload("uid://xd5bu6sw7c6k")
 
 
@@ -42,7 +42,7 @@ var SPELL_POOL: Dictionary[String, float] = {
 	SPELLS.PHOTO_ALBUM: 0.,
 	SPELLS.BLENDER: 0.,
 	SPELLS.BOOSTER_SHOT: BASE_WEIGHT,
-	SPELLS.MILK: BASE_WEIGHT,
+	SPELLS.MILK: 0., #KILLED 💣
 	SPELLS.ZIPTIES: BASE_WEIGHT,
 	SPELLS.COLD_CASE: BASE_WEIGHT,
 	SPELLS.BLT: BASE_WEIGHT/2.,
@@ -99,12 +99,12 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		#{
 			#DIMORPH={
 				#SOUNDS = [
-					#preload("res://mods/johnboat/overrides/sounds/dimorph/dimorph_flinch.wav"),
-					#preload("res://mods/johnboat/overrides/sounds/dimorph/dimorph_flinch_parry.wav"),
-					#preload("res://mods/johnboat/overrides/sounds/dimorph/dimorph_growl.wav"),
-					#preload("res://mods/johnboat/overrides/sounds/dimorph/dimorph_gunkshot.wav"),
-					#preload("res://mods/johnboat/overrides/sounds/dimorph/dimorph_xscissor_1.wav"),
-					#preload("res://mods/johnboat/overrides/sounds/dimorph/dimorph_xscissor_2.wav"),
+					#preload("res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_flinch.wav"),
+					#preload("res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_flinch_parry.wav"),
+					#preload("res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_growl.wav"),
+					#preload("res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_gunkshot.wav"),
+					#preload("res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_xscissor_1.wav"),
+					#preload("res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_xscissor_2.wav"),
 				#]
 			#}
 		#},
@@ -118,7 +118,7 @@ func _ready() -> void:
 	#update_remove_other_enemies()
 	print_debug("Yay loaded \"Proverb Palace\"")
 	#if "dimorph" not in EnemyLoader.enemy_pools[0][0]:
-		#EnemyLoader.add_enemy("dimorph",2,3,"res://mods/johnboat/arte/dimorph/miniface_dimorph.png")
+		#EnemyLoader.add_enemy("dimorph",2,3,"res://mods/proverbpalace/arte/dimorph/miniface_dimorph.png")
 		
 	await Game.main_scene_loaded
 	Game.main.game_state_updated.connect(_game_state_updated)

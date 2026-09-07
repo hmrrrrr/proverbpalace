@@ -2,7 +2,7 @@ extends "res://source/tile_status/cursed.gd"
 
 var kitty := false
 var overlay: Sprite2D = null
-const KITTY_OVERLAY = preload("res://mods/johnboat/source/effects/kitty_overlay.tscn")
+const KITTY_OVERLAY = preload("res://mods/proverbpalace/source/effects/kitty_overlay.tscn")
 
 
 func get_save_data():

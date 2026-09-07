@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/subdomain.png"
+source_file="res://mods/proverbpalace/arte/spells/subdomain.png"
 dest_files=["res://.godot/imported/subdomain.png-9b51a6c4cd4d8bed1b44f3c71bb04cc5.ctex"]
 
 [params]

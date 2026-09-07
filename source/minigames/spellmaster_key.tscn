@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cog61qjchqcjh"]
 
-[ext_resource type="Script" uid="uid://dr7pcrt81vxme" path="res://mods/johnboat/source/minigames/spellmaster_key.gd" id="1_xak7f"]
-[ext_resource type="Texture2D" uid="uid://xbhmed8vd1am" path="res://mods/johnboat/arte/minigames/spellmaster_key.png" id="2_xak7f"]
+[ext_resource type="Script" uid="uid://dr7pcrt81vxme" path="res://mods/proverbpalace/source/minigames/spellmaster_key.gd" id="1_xak7f"]
+[ext_resource type="Texture2D" uid="uid://xbhmed8vd1am" path="res://mods/proverbpalace/arte/minigames/spellmaster_key.png" id="2_xak7f"]
 [ext_resource type="Script" uid="uid://7xvadspst3p5" path="res://source/ui/generic/hover_handler.gd" id="3_su386"]
 
 [node name="KeyTile" type="Node2D" unique_id=1819035332]

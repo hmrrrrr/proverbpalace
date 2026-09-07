@@ -1,19 +1,38 @@
 extends Spell
 
-const SNAKE_SEGMENT = preload("res://mods/johnboat/source/spells/snake_segment.tscn")
+const SNAKE_SEGMENT = preload("res://mods/proverbpalace/source/spells/snake_segment.tscn")
+
+var current_pigment: Color
 
 
 func create_segment(tile: Tile) -> SnakeSegment:
 	var segment := SNAKE_SEGMENT.instantiate() as SnakeSegment
 	tile.tile_sprite.add_child(segment)
-	
-	
+	segment.self_modulate = current_pigment
 	return segment
+
+
+
+var colors_image: Image
+
+
+func _ready() -> void:
+	colors_image = SNAKECOLORS.get_image()
 
 var on_first_tile := true
 
 var tiles: Array[Tile] = []
 
+const SNAKECOLORS = preload("res://mods/proverbpalace/source/resources/snakecolors.png")
+
+static func get_random_snake_color_coordinate() -> Vector2i:
+	var img := SNAKECOLORS.get_image() as Image
+	var bounds = img.get_size()
+	
+	return Vector2i(
+		randi()%bounds.x,
+		randi()%bounds.y
+	)
 
 func get_tooltip_context():
 	return {
@@ -26,6 +45,13 @@ func _use():
 	var can_continue_snaking := true
 	on_first_tile = true
 	const violence_interval = 0.0833
+	
+	var color_coord_walk: Vector2i = get_random_snake_color_coordinate()
+	var walk_direction = Vector2i(
+		randi_range(-1,1),
+		1 if randi()%2==0 else -1
+	)
+	
 	var destroy_segments := func(violent = false):
 		for tile in tiles:
 			tile.state = Tile.State.IDLE
@@ -49,7 +75,7 @@ func _use():
 						if bomb_status:
 							await bomb_status.explode(false,true)
 						else:
-							tile.add_poofcloud(Color("#36753a"),Globals.COLORS.BLOOD,false)
+							tile.add_poofcloud(segment.self_modulate,null,false)
 						tile_board.remove_tile_from_board(tile)
 						tile.clear()
 			)
@@ -78,6 +104,10 @@ func _use():
 			prev_segment.update_state(Vector2i.ZERO, len(tiles) == 1)
 		
 		
+		color_coord_walk += walk_direction
+		color_coord_walk = color_coord_walk.clamp(Vector2i.ZERO,colors_image.get_size()-Vector2i.ONE)
+		current_pigment = colors_image.get_pixelv(color_coord_walk)
+		
 		tiles.append(chosen_tile)
 		chosen_tile.hover_handler.set_disabled(true,true)
 		#chosen_tile.animation.play("reroll")
@@ -93,13 +123,15 @@ func _use():
 		AudioManager.play_sound(Sounds.BOOKWORM.MILKWORM_FIREBALL,pitch)
 		pitch *= 1.05946309436
 		if prev_tile:
+			var other_segment := segment
 			var presiding_segment := prev_segment
 			var connection_direction := relative_to_last_direction
 			if (chosen_tile.z_index > prev_tile.z_index):
 				presiding_segment = segment
+				other_segment = prev_segment
 				connection_direction *= -1
 			
-			presiding_segment.add_connection_overlay(connection_direction)
+			presiding_segment.add_connection_overlay(connection_direction,other_segment)
 		
 		if on_first_tile:
 			on_first_tile = false

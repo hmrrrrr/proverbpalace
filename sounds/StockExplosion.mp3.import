@@ -7,7 +7,7 @@ path="res://.godot/imported/StockExplosion.mp3-60cee148f7b508ff3aa5dcc70c7070af.
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/StockExplosion.mp3"
+source_file="res://mods/proverbpalace/sounds/StockExplosion.mp3"
 dest_files=["res://.godot/imported/StockExplosion.mp3-60cee148f7b508ff3aa5dcc70c7070af.mp3str"]
 
 [params]

@@ -7,7 +7,7 @@ path="res://.godot/imported/datamosh1.wav-917aa7bc31912c618fab3f4def470682.sampl
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/datamosh1.wav"
+source_file="res://mods/proverbpalace/sounds/datamosh1.wav"
 dest_files=["res://.godot/imported/datamosh1.wav-917aa7bc31912c618fab3f4def470682.sample"]
 
 [params]

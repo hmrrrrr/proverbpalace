@@ -7,7 +7,7 @@ path="res://.godot/imported/dynamo.wav-411d510b5ff636d821f47d173699c9d2.sample"
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/dynamo.wav"
+source_file="res://mods/proverbpalace/sounds/dynamo.wav"
 dest_files=["res://.godot/imported/dynamo.wav-411d510b5ff636d821f47d173699c9d2.sample"]
 
 [params]

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/tile_bandage.png"
+source_file="res://mods/proverbpalace/arte/spells/tile_bandage.png"
 dest_files=["res://.godot/imported/tile_bandage.png-aae01d131fd882074ab2b54aa3154c9b.ctex"]
 
 [params]

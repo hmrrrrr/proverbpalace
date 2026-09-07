@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/dimorph/dimorph.png"
+source_file="res://mods/proverbpalace/arte/dimorph/dimorph.png"
 dest_files=["res://.godot/imported/dimorph.png-1a8702ab5d828aa54b2195088228dfe0.ctex"]
 
 [params]

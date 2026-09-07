@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/lcd_tweezers.png"
+source_file="res://mods/proverbpalace/arte/spells/lcd_tweezers.png"
 dest_files=["res://.godot/imported/lcd_tweezers.png-c769e95792171c35960c815bc481d515.ctex"]
 
 [params]

@@ -22,10 +22,10 @@ func get_target_tiles() -> Array[Tile]:
 	return word_builder.tiles.duplicate()
 
 const SOUNDS = {
-	MILKSPILL = preload("res://mods/johnboat/sounds/milkspill.wav")
+	MILKSPILL = preload("res://mods/proverbpalace/sounds/milkspill.wav")
 	
 }
-const MILK_EFFECT = preload("res://mods/johnboat/source/spells/milk/milk_effect_instance.tscn")
+const MILK_EFFECT = preload("res://mods/proverbpalace/source/spells/milk/milk_effect_instance.tscn")
 
 func _ready() -> void:
 	charge_updated.connect(

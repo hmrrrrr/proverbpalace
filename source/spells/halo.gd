@@ -2,7 +2,7 @@ extends TileModifierSpell
 
 const FOREIGN_1 = preload("res://sounds/freezer/foreign1.wav")
 var mimicking_spell_id := ""
-const HALO_EFFECT = preload("res://mods/johnboat/source/spells/halo_effect.tscn")
+const HALO_EFFECT = preload("res://mods/proverbpalace/source/spells/halo_effect.tscn")
 
 func set_status_tooltips():
 	status_tooltips = [TileStatus.ETERNAL, TileStatus.HOLE]

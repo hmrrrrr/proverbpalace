@@ -7,7 +7,7 @@ path="res://.godot/imported/dimorph_growl.wav-153002f3e277ffde4d1d96e1b652a724.s
 
 [deps]
 
-source_file="res://mods/johnboat/overrides/sounds/dimorph/dimorph_growl.wav"
+source_file="res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_growl.wav"
 dest_files=["res://.godot/imported/dimorph_growl.wav-153002f3e277ffde4d1d96e1b652a724.sample"]
 
 [params]

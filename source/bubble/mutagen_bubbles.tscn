@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://xd5bu6sw7c6k"]
 
-[ext_resource type="Material" uid="uid://7mwomhb5r604" path="res://mods/johnboat/source/bubble/bubbles_material.tres" id="1_i6q1s"]
-[ext_resource type="Script" uid="uid://bprfafhavreum" path="res://mods/johnboat/source/bubble/mutagen_bubbles.gd" id="2_vqv8q"]
+[ext_resource type="Material" uid="uid://7mwomhb5r604" path="res://mods/proverbpalace/source/bubble/bubbles_material.tres" id="1_i6q1s"]
+[ext_resource type="Script" uid="uid://bprfafhavreum" path="res://mods/proverbpalace/source/bubble/mutagen_bubbles.gd" id="2_vqv8q"]
 
 [node name="MutagenBubbles" type="CanvasGroup" unique_id=2070257232]
 material = ExtResource("1_i6q1s")

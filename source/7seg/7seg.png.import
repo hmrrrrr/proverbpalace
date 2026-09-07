@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/source/7seg/7seg.png"
+source_file="res://mods/proverbpalace/source/7seg/7seg.png"
 dest_files=["res://.godot/imported/7seg.png-69592404b8d7e2c7569e30dd74c396e6.ctex"]
 
 [params]

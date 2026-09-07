@@ -7,7 +7,7 @@ path="res://.godot/imported/ghostsound3.wav-0f66bca5ff747f1be09d81a4fe1dea1f.sam
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/ghostsound3.wav"
+source_file="res://mods/proverbpalace/sounds/ghostsound3.wav"
 dest_files=["res://.godot/imported/ghostsound3.wav-0f66bca5ff747f1be09d81a4fe1dea1f.sample"]
 
 [params]

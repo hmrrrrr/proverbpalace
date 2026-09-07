@@ -1,7 +1,7 @@
 extends TileModifierSpell
 
 const SHIMMER_CHANCE := .75
-const SD_CARD_EFFECT = preload("res://mods/johnboat/source/spells/sd_card_effect.tscn")
+const SD_CARD_EFFECT = preload("res://mods/proverbpalace/source/spells/sd_card_effect.tscn")
 
 func set_status_tooltips():
 	status_tooltips = [TileEffect.SHIMMERING, TileEffect.SLASHED, TileStatus.CRIT]

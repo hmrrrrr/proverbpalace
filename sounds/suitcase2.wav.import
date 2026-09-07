@@ -7,7 +7,7 @@ path="res://.godot/imported/suitcase2.wav-28ddce8bb63ad7ba1e6d4c10cc1547b0.sampl
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/suitcase2.wav"
+source_file="res://mods/proverbpalace/sounds/suitcase2.wav"
 dest_files=["res://.godot/imported/suitcase2.wav-28ddce8bb63ad7ba1e6d4c10cc1547b0.sample"]
 
 [params]

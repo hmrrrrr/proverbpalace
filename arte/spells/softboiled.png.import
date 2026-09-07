@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/softboiled.png"
+source_file="res://mods/proverbpalace/arte/spells/softboiled.png"
 dest_files=["res://.godot/imported/softboiled.png-0721cb62f5f08584cef1e71eaa2a66d9.ctex"]
 
 [params]

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://kjo0tgl0c2d0"]
 
-[ext_resource type="Shader" uid="uid://qpys61e5u7hy" path="res://mods/johnboat/source/tile_noise_conversion.gdshader" id="1_d05t6"]
+[ext_resource type="Shader" uid="uid://qpys61e5u7hy" path="res://mods/proverbpalace/source/tile_noise_conversion.gdshader" id="1_d05t6"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_s2esl"]
 seed = 10

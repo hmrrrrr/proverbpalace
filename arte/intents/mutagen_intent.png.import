@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/intents/mutagen_intent.png"
+source_file="res://mods/proverbpalace/arte/intents/mutagen_intent.png"
 dest_files=["res://.godot/imported/mutagen_intent.png-e1139a24b1bb829ce5b601ce4f3547e1.ctex"]
 
 [params]

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/cold_case.png"
+source_file="res://mods/proverbpalace/arte/spells/cold_case.png"
 dest_files=["res://.godot/imported/cold_case.png-9b335eceb668319e83af85df196a204c.ctex"]
 
 [params]

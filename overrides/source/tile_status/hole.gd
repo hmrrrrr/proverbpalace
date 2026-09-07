@@ -5,13 +5,13 @@ const RECTANGLE_VARIANT_HACKY_CONSTANT = Vector2(1234,5678)
 var is_rectangle_variant := false
 
 const DEFAULT_HOLE_MASK = preload("res://arte/tiles/hole_mask.png")
-const ALT_HOLE_MASK = preload("res://mods/johnboat/arte/tiles/alt_hole3.png")
+const ALT_HOLE_MASK = preload("res://mods/proverbpalace/arte/tiles/alt_hole3.png")
 
 const DEFAULT_HOLE_OUTLINE = preload("res://arte/tiles/hole_outline.png")
-const ALT_HOLE_OUTLINE = preload("res://mods/johnboat/arte/tiles/alt_hole2.png")
+const ALT_HOLE_OUTLINE = preload("res://mods/proverbpalace/arte/tiles/alt_hole2.png")
 
-const PLASTIC_ALT_HOLES = preload("res://mods/johnboat/arte/tiles/plastic_alt_holes.png")
-const WOOD_ALT_HOLES = preload("res://mods/johnboat/arte/tiles/wood_alt_holes.png")
+const PLASTIC_ALT_HOLES = preload("res://mods/proverbpalace/arte/tiles/plastic_alt_holes.png")
+const WOOD_ALT_HOLES = preload("res://mods/proverbpalace/arte/tiles/wood_alt_holes.png")
 
 
 func apply_hole_variant() -> void:

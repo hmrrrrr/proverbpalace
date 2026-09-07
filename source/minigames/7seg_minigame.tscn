@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://detaa38wrfify"]
 
-[ext_resource type="Script" uid="uid://uf83gua6dwhw" path="res://mods/johnboat/source/minigames/7seg_minigame.gd" id="1_ar1ey"]
+[ext_resource type="Script" uid="uid://uf83gua6dwhw" path="res://mods/proverbpalace/source/minigames/7seg_minigame.gd" id="1_ar1ey"]
 [ext_resource type="Texture2D" uid="uid://cx2dtnfkx63iv" path="res://arte/minigames/dna_icons.png" id="2_kh4tf"]
 [ext_resource type="Script" uid="uid://cfpkpmdehkp8u" path="res://source/ui/generic/shadow_cloner.gd" id="3_n66ye"]
 [ext_resource type="PackedScene" uid="uid://dgtvtcn5lo1dl" path="res://source/ui/tooltip/menu_tooltip_collision.tscn" id="4_l4w7m"]
 [ext_resource type="PackedScene" uid="uid://d4a7isuy7vbow" path="res://source/ui/generic/action_glyph.tscn" id="5_ifbes"]
 [ext_resource type="Script" uid="uid://bofahnrm24rou" path="res://source/ui/generic/action_button.gd" id="6_k248k"]
 [ext_resource type="Script" uid="uid://7xvadspst3p5" path="res://source/ui/generic/hover_handler.gd" id="7_bjdxh"]
-[ext_resource type="Texture2D" uid="uid://cm8vqhvut0b6r" path="res://mods/johnboat/arte/minigames/lcd_board.png" id="8_ar1ey"]
+[ext_resource type="Texture2D" uid="uid://cm8vqhvut0b6r" path="res://mods/proverbpalace/arte/minigames/lcd_board.png" id="8_ar1ey"]
 [ext_resource type="Script" uid="uid://drgtw8sp4tp8n" path="res://source/library/anim_player.gd" id="9_fx5el"]
 
 [sub_resource type="Animation" id="Animation_iacmv"]

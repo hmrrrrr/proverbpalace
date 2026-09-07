@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/tiles/yolk.png"
+source_file="res://mods/proverbpalace/arte/tiles/yolk.png"
 dest_files=["res://.godot/imported/yolk.png-4bd388c238f834f12c0eb0bfc51cda5c.ctex"]
 
 [params]

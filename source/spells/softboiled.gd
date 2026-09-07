@@ -3,9 +3,9 @@ extends TileModifierSpell
 func set_status_tooltips():
 	status_tooltips = [TileStatus.SPICY, TileStatus.CANDY]
 
-const EGGSHELL = preload("res://mods/johnboat/source/effects/eggshell.tscn")
-const EGG_CRACK = preload("res://mods/johnboat/sounds/egg_crack.wav")
-const EGG_FLUID_TRAIL = preload("res://mods/johnboat/source/effects/egg_fluid_trail.tscn")
+const EGGSHELL = preload("res://mods/proverbpalace/source/effects/eggshell.tscn")
+const EGG_CRACK = preload("res://mods/proverbpalace/sounds/egg_crack.wav")
+const EGG_FLUID_TRAIL = preload("res://mods/proverbpalace/source/effects/egg_fluid_trail.tscn")
 
 
 func do_egg_crack_effect(tile: Tile):

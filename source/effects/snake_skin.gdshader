@@ -10,9 +10,7 @@ void vertex() {
 }
 
 void fragment() {
-	if (distance(color_key,COLOR.rgb) < 0.5) {
-		COLOR.rgb *= texture(noise,SCREEN_UV).rgb;
-	}
+	COLOR.rgb *= texture(noise,SCREEN_UV).rgb;
 }
 
 //void light() {

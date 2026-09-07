@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://7mwomhb5r604"]
 
-[ext_resource type="Shader" uid="uid://cbhx5wx0f6bxc" path="res://mods/johnboat/source/bubble/mutagen_bubbles.gdshader" id="1_dp7hp"]
+[ext_resource type="Shader" uid="uid://cbhx5wx0f6bxc" path="res://mods/proverbpalace/source/bubble/mutagen_bubbles.gdshader" id="1_dp7hp"]
 
 [resource]
 shader = ExtResource("1_dp7hp")

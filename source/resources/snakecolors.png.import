@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpyoilapffxxg"
-path="res://.godot/imported/eggshell.png-ef1bcccfba3fbd368668a3c0803535b1.ctex"
+uid="uid://tseje1ja3el2"
+path="res://.godot/imported/snakecolors.png-5ffe74193e9031105f01c38d777b7857.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods/proverbpalace/arte/tiles/eggshell.png"
-dest_files=["res://.godot/imported/eggshell.png-ef1bcccfba3fbd368668a3c0803535b1.ctex"]
+source_file="res://mods/proverbpalace/source/resources/snakecolors.png"
+dest_files=["res://.godot/imported/snakecolors.png-5ffe74193e9031105f01c38d777b7857.ctex"]
 
 [params]
 

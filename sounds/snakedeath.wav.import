@@ -7,7 +7,7 @@ path="res://.godot/imported/snakedeath.wav-6a5e9ab9c0eb871e2301f7ae82cc7fb6.samp
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/snakedeath.wav"
+source_file="res://mods/proverbpalace/sounds/snakedeath.wav"
 dest_files=["res://.godot/imported/snakedeath.wav-6a5e9ab9c0eb871e2301f7ae82cc7fb6.sample"]
 
 [params]

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/tiles/long_s_tile.png"
+source_file="res://mods/proverbpalace/arte/tiles/long_s_tile.png"
 dest_files=["res://.godot/imported/long_s_tile.png-9bcc1f88e781b3f7a9213752ac53f158.ctex"]
 
 [params]

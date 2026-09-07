@@ -1,7 +1,7 @@
 extends "res://source/minigames/fishing_minigame.gd"
 
 var counter_label: Label
-const FISHING_COUNTER_LABEL = preload("res://mods/johnboat/source/minigames/fishing_counter_label.tscn")
+const FISHING_COUNTER_LABEL = preload("res://mods/proverbpalace/source/minigames/fishing_counter_label.tscn")
 
 var fish_count := 0
 

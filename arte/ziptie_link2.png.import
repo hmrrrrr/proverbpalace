@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/ziptie_link2.png"
+source_file="res://mods/proverbpalace/arte/ziptie_link2.png"
 dest_files=["res://.godot/imported/ziptie_link2.png-c0c5fd98674ba7b47662fdf287a80faa.ctex"]
 
 [params]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://onin8idoxn8n"]
 
-[ext_resource type="Script" uid="uid://b8gycxjo20ssf" path="res://mods/johnboat/source/paw_stamp_effect.gd" id="1_676ep"]
-[ext_resource type="Texture2D" uid="uid://bnkv0b3jf6akr" path="res://mods/johnboat/arte/spells/paw_stamp.png" id="2_ncrj1"]
+[ext_resource type="Script" uid="uid://b8gycxjo20ssf" path="res://mods/proverbpalace/source/paw_stamp_effect.gd" id="1_676ep"]
+[ext_resource type="Texture2D" uid="uid://bnkv0b3jf6akr" path="res://mods/proverbpalace/arte/spells/paw_stamp.png" id="2_ncrj1"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_efxeb"]
 resource_local_to_scene = true

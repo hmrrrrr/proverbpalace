@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/gaydar.png"
+source_file="res://mods/proverbpalace/arte/spells/gaydar.png"
 dest_files=["res://.godot/imported/gaydar.png-de856bd07cb295d18c3294dec8719d3d.ctex"]
 
 [params]

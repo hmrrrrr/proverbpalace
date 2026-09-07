@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/minigames/pda_panel.png"
+source_file="res://mods/proverbpalace/arte/minigames/pda_panel.png"
 dest_files=["res://.godot/imported/pda_panel.png-1067a824f58eab19984c44e5c257e5c2.ctex"]
 
 [params]

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://b65yk58dey6td"]
 
-[ext_resource type="Texture2D" uid="uid://cm1ybjd4ujehs" path="res://mods/johnboat/arte/spells/snake_effect.png" id="1_5wstw"]
-[ext_resource type="Shader" uid="uid://cdn0kgb3x726g" path="res://mods/johnboat/source/effects/snake_skin.gdshader" id="1_x5hxh"]
-[ext_resource type="Script" uid="uid://dmyxqell5j83y" path="res://mods/johnboat/source/spells/snake_segment.gd" id="2_jiw31"]
+[ext_resource type="Texture2D" uid="uid://cm1ybjd4ujehs" path="res://mods/proverbpalace/arte/spells/snake_effect.png" id="1_5wstw"]
+[ext_resource type="Shader" uid="uid://cdn0kgb3x726g" path="res://mods/proverbpalace/source/effects/snake_skin.gdshader" id="1_x5hxh"]
+[ext_resource type="Script" uid="uid://dmyxqell5j83y" path="res://mods/proverbpalace/source/spells/snake_segment.gd" id="2_jiw31"]
 
 [sub_resource type="Gradient" id="Gradient_x5hxh"]
 interpolation_mode = 1

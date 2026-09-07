@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/tiles/kitty_overlay.png"
+source_file="res://mods/proverbpalace/arte/tiles/kitty_overlay.png"
 dest_files=["res://.godot/imported/kitty_overlay.png-aa120eee562894effa1937a6b9deabfb.ctex"]
 
 [params]

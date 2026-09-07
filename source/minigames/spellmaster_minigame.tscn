@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://b4n3fhh0xb3pl"]
 
-[ext_resource type="Script" uid="uid://uf83gua6dwhw" path="res://mods/johnboat/source/minigames/7seg_minigame.gd" id="1_uovvw"]
-[ext_resource type="Texture2D" uid="uid://rap16e47j2yt" path="res://mods/johnboat/arte/minigames/spellmaster.png" id="2_2gelt"]
+[ext_resource type="Script" uid="uid://uf83gua6dwhw" path="res://mods/proverbpalace/source/minigames/7seg_minigame.gd" id="1_uovvw"]
+[ext_resource type="Texture2D" uid="uid://rap16e47j2yt" path="res://mods/proverbpalace/arte/minigames/spellmaster.png" id="2_2gelt"]
 [ext_resource type="Script" uid="uid://cfpkpmdehkp8u" path="res://source/ui/generic/shadow_cloner.gd" id="3_ytdwa"]
-[ext_resource type="PackedScene" uid="uid://cog61qjchqcjh" path="res://mods/johnboat/source/minigames/spellmaster_key.tscn" id="4_qxyhd"]
+[ext_resource type="PackedScene" uid="uid://cog61qjchqcjh" path="res://mods/proverbpalace/source/minigames/spellmaster_key.tscn" id="4_qxyhd"]
 [ext_resource type="Script" uid="uid://drgtw8sp4tp8n" path="res://source/library/anim_player.gd" id="9_w5j6x"]
 
 [sub_resource type="Animation" id="Animation_r0sxd"]

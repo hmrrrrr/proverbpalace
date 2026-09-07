@@ -13,8 +13,8 @@ const IGNORED_EXTENSIONS = [
 	"zip"
 ]
 
-var mod_id: String = "johnboat"
-var pack_name: = "johnboat"
+var mod_id: String = "proverbpalace"
+var pack_name: = "proverbpalace"
 var pack_zip: = false
 
 

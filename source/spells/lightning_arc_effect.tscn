@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cfwl7rxkhfe1"]
 
-[ext_resource type="Shader" uid="uid://dwc5uclgjulfr" path="res://mods/johnboat/source/spells/lightning_arc.gdshader" id="1_3bfbb"]
-[ext_resource type="Script" uid="uid://clq47kjafxatb" path="res://mods/johnboat/source/spells/lightning_arc_effect.gd" id="1_e6foc"]
-[ext_resource type="Texture2D" uid="uid://cj3k4pajggna2" path="res://mods/johnboat/arte/spells/lightning_arc.png" id="2_c68at"]
+[ext_resource type="Shader" uid="uid://dwc5uclgjulfr" path="res://mods/proverbpalace/source/spells/lightning_arc.gdshader" id="1_3bfbb"]
+[ext_resource type="Script" uid="uid://clq47kjafxatb" path="res://mods/proverbpalace/source/spells/lightning_arc_effect.gd" id="1_e6foc"]
+[ext_resource type="Texture2D" uid="uid://cj3k4pajggna2" path="res://mods/proverbpalace/arte/spells/lightning_arc.png" id="2_c68at"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e6foc"]
 shader = ExtResource("1_3bfbb")

@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/dissenter_hotline.png"
+source_file="res://mods/proverbpalace/arte/spells/dissenter_hotline.png"
 dest_files=["res://.godot/imported/dissenter_hotline.png-ad09ae3fc1a1f9732a2c5bce5faeba69.ctex"]
 
 [params]

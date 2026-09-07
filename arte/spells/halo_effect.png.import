@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/spells/halo_effect.png"
+source_file="res://mods/proverbpalace/arte/spells/halo_effect.png"
 dest_files=["res://.godot/imported/halo_effect.png-336f92705badc7a43192251b3e891c10.ctex"]
 
 [params]

@@ -1,7 +1,7 @@
 @tool
 extends EditorScript
 
-var library: SevenSegmentLibrary = preload("res://mods/johnboat/source/7seg/library.res")
+var library: SevenSegmentLibrary = preload("res://mods/proverbpalace/source/7seg/library.res")
 
 func _run() -> void:
 	print_char_mappings(2,true,true)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ndt78u3bw7yk"]
 
-[ext_resource type="Script" uid="uid://b74mxdfobsw4w" path="res://mods/johnboat/source/datamosh/generic_tile_effect.gd" id="1_d5cd6"]
-[ext_resource type="Material" uid="uid://kjo0tgl0c2d0" path="res://mods/johnboat/source/spells/milk_material.tres" id="2_d5cd6"]
+[ext_resource type="Script" uid="uid://b74mxdfobsw4w" path="res://mods/proverbpalace/source/datamosh/generic_tile_effect.gd" id="1_d5cd6"]
+[ext_resource type="Material" uid="uid://kjo0tgl0c2d0" path="res://mods/proverbpalace/source/spells/milk_material.tres" id="2_d5cd6"]
 [ext_resource type="Texture2D" uid="uid://5rmj76byr2s4" path="res://arte/tiles/wood_tiles_a.png" id="3_i3hcs"]
 [ext_resource type="Script" uid="uid://cfpkpmdehkp8u" path="res://source/ui/generic/shadow_cloner.gd" id="4_ltdev"]
 

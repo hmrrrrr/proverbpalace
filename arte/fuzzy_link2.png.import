@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/arte/fuzzy_link2.png"
+source_file="res://mods/proverbpalace/arte/fuzzy_link2.png"
 dest_files=["res://.godot/imported/fuzzy_link2.png-2d0c5250c74543255475af8d7520d476.ctex"]
 
 [params]

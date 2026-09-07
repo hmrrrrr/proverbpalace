@@ -7,7 +7,7 @@ path="res://.godot/imported/kittytile.wav-d7d45f341d51659ac9c8f9b92352bc24.sampl
 
 [deps]
 
-source_file="res://mods/johnboat/sounds/tiles/kittytile.wav"
+source_file="res://mods/proverbpalace/sounds/tiles/kittytile.wav"
 dest_files=["res://.godot/imported/kittytile.wav-d7d45f341d51659ac9c8f9b92352bc24.sample"]
 
 [params]

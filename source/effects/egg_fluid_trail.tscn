@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d3v13rq1arumf"]
 
-[ext_resource type="Script" uid="uid://dr1g8gd6lo7au" path="res://mods/johnboat/source/effects/egg_fluid_trail.gd" id="1_dgtcf"]
+[ext_resource type="Script" uid="uid://dr1g8gd6lo7au" path="res://mods/proverbpalace/source/effects/egg_fluid_trail.gd" id="1_dgtcf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dgtcf"]
 blend_mode = 1

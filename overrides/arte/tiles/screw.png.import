@@ -10,7 +10,7 @@ metadata={
 
 [deps]
 
-source_file="res://mods/johnboat/overrides/arte/tiles/screw.png"
+source_file="res://mods/proverbpalace/overrides/arte/tiles/screw.png"
 dest_files=["res://.godot/imported/screw.png-3412b899aaac9abaa77237ca5452be30.ctex"]
 
 [params]

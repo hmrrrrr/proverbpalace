@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4ufyhdfk28wj"]
 
-[ext_resource type="Script" uid="uid://ckvdmueoyaui0" path="res://mods/johnboat/source/minigames/toy_camera_album_overlay.gd" id="1_hwgd5"]
+[ext_resource type="Script" uid="uid://ckvdmueoyaui0" path="res://mods/proverbpalace/source/minigames/toy_camera_album_overlay.gd" id="1_hwgd5"]
 
 [sub_resource type="Animation" id="Animation_mb6on"]
 length = 0.001
