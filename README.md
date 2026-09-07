@@ -89,6 +89,5 @@ NOTE: For playtesting purposes, spells from this mod currently appear with 5x th
 
 
 
-...and the case goes cold... [<img width="192" height="192" alt="cold_case" src="https://github.com/user-attachments/assets/99642eec-3e53-4815-8c91-77733d355bb5" />](https://github.com/user-attachments/assets/8ee93737-e891-4f02-8aaa-ba99c368a538)
-
+[<img width="96" height="96" alt="cold_case" src="https://github.com/user-attachments/assets/99642eec-3e53-4815-8c91-77733d355bb5" />](https://github.com/user-attachments/assets/8ee93737-e891-4f02-8aaa-ba99c368a538)...and the case goes cold...
 
