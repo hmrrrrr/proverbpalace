@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxrcquouwtbmb"
-path="res://.godot/imported/plastic_alt_holes.png-703a86312fb873ba25c078e0b6491fa0.ctex"
+path="res://.godot/imported/plastic_alt_holes.png-309cd4de491996c7dc9fb69fcd8182a8.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/tiles/plastic_alt_holes.png"
-dest_files=["res://.godot/imported/plastic_alt_holes.png-703a86312fb873ba25c078e0b6491fa0.ctex"]
+dest_files=["res://.godot/imported/plastic_alt_holes.png-309cd4de491996c7dc9fb69fcd8182a8.ctex"]
 
 [params]
 

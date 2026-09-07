@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkw0xhcjfu8nk"
-path="res://.godot/imported/7seg.png-69592404b8d7e2c7569e30dd74c396e6.ctex"
+path="res://.godot/imported/7seg.png-e3f60af98a5c46e6fa8e1009daf0ad38.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/source/7seg/7seg.png"
-dest_files=["res://.godot/imported/7seg.png-69592404b8d7e2c7569e30dd74c396e6.ctex"]
+dest_files=["res://.godot/imported/7seg.png-e3f60af98a5c46e6fa8e1009daf0ad38.ctex"]
 
 [params]
 

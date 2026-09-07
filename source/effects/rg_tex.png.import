@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2a6xjp3cw7lq"
-path="res://.godot/imported/rg_tex.png-7ff8a7f93d4ee64d087e1fbeaa150b80.ctex"
+path="res://.godot/imported/rg_tex.png-d118a44426367e5487c3ff328ba192bf.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/source/effects/rg_tex.png"
-dest_files=["res://.godot/imported/rg_tex.png-7ff8a7f93d4ee64d087e1fbeaa150b80.ctex"]
+dest_files=["res://.godot/imported/rg_tex.png-d118a44426367e5487c3ff328ba192bf.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnhc8ipstal5i"
-path="res://.godot/imported/toy_camera_photograph.png-c12dc3ed372cc3e58b0ee1c11c0cef6d.ctex"
+path="res://.godot/imported/toy_camera_photograph.png-f8082e388c502f1dc052c5b90ab369a4.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/toy_camera_photograph.png"
-dest_files=["res://.godot/imported/toy_camera_photograph.png-c12dc3ed372cc3e58b0ee1c11c0cef6d.ctex"]
+dest_files=["res://.godot/imported/toy_camera_photograph.png-f8082e388c502f1dc052c5b90ab369a4.ctex"]
 
 [params]
 

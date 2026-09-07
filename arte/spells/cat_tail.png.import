@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://75g1pcmtep1d"
-path="res://.godot/imported/cat_tail.png-6565bda043569be93ba7cdca158504b3.ctex"
+path="res://.godot/imported/cat_tail.png-8d6f50751030efcd7594bb3827f036c0.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/cat_tail.png"
-dest_files=["res://.godot/imported/cat_tail.png-6565bda043569be93ba7cdca158504b3.ctex"]
+dest_files=["res://.godot/imported/cat_tail.png-8d6f50751030efcd7594bb3827f036c0.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1mrmly3fa327"
-path="res://.godot/imported/mutagen_wood_fish.png-67f2fb4b2b18c6d8735738de92a0c763.ctex"
+path="res://.godot/imported/mutagen_wood_fish.png-2ef87c3d0fd90e7a0e9fd375fe1ed770.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/mutagen_tile/mutagen_wood_fish.png"
-dest_files=["res://.godot/imported/mutagen_wood_fish.png-67f2fb4b2b18c6d8735738de92a0c763.ctex"]
+dest_files=["res://.godot/imported/mutagen_wood_fish.png-2ef87c3d0fd90e7a0e9fd375fe1ed770.ctex"]
 
 [params]
 

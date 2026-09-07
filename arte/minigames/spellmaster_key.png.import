@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xbhmed8vd1am"
-path="res://.godot/imported/spellmaster_key.png-1ac16cbae72d4c41d13cbf1b52972ce8.ctex"
+path="res://.godot/imported/spellmaster_key.png-ee117a8f9c08a65a33bb7c21607f8b91.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/minigames/spellmaster_key.png"
-dest_files=["res://.godot/imported/spellmaster_key.png-1ac16cbae72d4c41d13cbf1b52972ce8.ctex"]
+dest_files=["res://.godot/imported/spellmaster_key.png-ee117a8f9c08a65a33bb7c21607f8b91.ctex"]
 
 [params]
 

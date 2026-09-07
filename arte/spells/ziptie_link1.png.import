@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bm8mh6yban7w2"
-path="res://.godot/imported/ziptie_link1.png-9b3e1247946e3b2a30c1fa8c07e76789.ctex"
+path="res://.godot/imported/ziptie_link1.png-63894800a677bb1588c18caf64a27b3b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/ziptie_link1.png"
-dest_files=["res://.godot/imported/ziptie_link1.png-9b3e1247946e3b2a30c1fa8c07e76789.ctex"]
+dest_files=["res://.godot/imported/ziptie_link1.png-63894800a677bb1588c18caf64a27b3b.ctex"]
 
 [params]
 

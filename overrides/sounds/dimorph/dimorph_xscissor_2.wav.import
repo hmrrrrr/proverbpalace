@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjutnf6nidv0o"
-path="res://.godot/imported/dimorph_xscissor_2.wav-a50d29a563bbceeed410cdd342c66934.sample"
+path="res://.godot/imported/dimorph_xscissor_2.wav-655982e9a277a05395085dfa5f95a829.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_xscissor_2.wav"
-dest_files=["res://.godot/imported/dimorph_xscissor_2.wav-a50d29a563bbceeed410cdd342c66934.sample"]
+dest_files=["res://.godot/imported/dimorph_xscissor_2.wav-655982e9a277a05395085dfa5f95a829.sample"]
 
 [params]
 

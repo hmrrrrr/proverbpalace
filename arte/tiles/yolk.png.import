@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmo1c7n10oxuv"
-path="res://.godot/imported/yolk.png-4bd388c238f834f12c0eb0bfc51cda5c.ctex"
+path="res://.godot/imported/yolk.png-5c640a800e5d9898517f7ed1ef37e6ae.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/tiles/yolk.png"
-dest_files=["res://.godot/imported/yolk.png-4bd388c238f834f12c0eb0bfc51cda5c.ctex"]
+dest_files=["res://.godot/imported/yolk.png-5c640a800e5d9898517f7ed1ef37e6ae.ctex"]
 
 [params]
 

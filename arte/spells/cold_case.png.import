@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8i3c1n1haugh"
-path="res://.godot/imported/cold_case.png-9b335eceb668319e83af85df196a204c.ctex"
+path="res://.godot/imported/cold_case.png-985c47b386de6bdcc6feb802af8fdf19.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/cold_case.png"
-dest_files=["res://.godot/imported/cold_case.png-9b335eceb668319e83af85df196a204c.ctex"]
+dest_files=["res://.godot/imported/cold_case.png-985c47b386de6bdcc6feb802af8fdf19.ctex"]
 
 [params]
 

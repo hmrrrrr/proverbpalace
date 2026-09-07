@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1oth52igjhv4"
-path="res://.godot/imported/booster_shot.png-9fc7447acff0ee3969b2a27ed935a905.ctex"
+path="res://.godot/imported/booster_shot.png-5bc0fd3dd04be31e5d0bd48f893fdc30.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/booster_shot.png"
-dest_files=["res://.godot/imported/booster_shot.png-9fc7447acff0ee3969b2a27ed935a905.ctex"]
+dest_files=["res://.godot/imported/booster_shot.png-5bc0fd3dd04be31e5d0bd48f893fdc30.ctex"]
 
 [params]
 

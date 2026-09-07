@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8iglrsysppcx"
-path="res://.godot/imported/pda_panel.png-1067a824f58eab19984c44e5c257e5c2.ctex"
+path="res://.godot/imported/pda_panel.png-69c2e08bc42dce35a5469fb9e0977f4b.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/minigames/pda_panel.png"
-dest_files=["res://.godot/imported/pda_panel.png-1067a824f58eab19984c44e5c257e5c2.ctex"]
+dest_files=["res://.godot/imported/pda_panel.png-69c2e08bc42dce35a5469fb9e0977f4b.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3ok2o5pnkoo4"
-path="res://.godot/imported/lcd_tweezers.png-c769e95792171c35960c815bc481d515.ctex"
+path="res://.godot/imported/lcd_tweezers.png-375df4a64c5660005d6751041b96311e.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/lcd_tweezers.png"
-dest_files=["res://.godot/imported/lcd_tweezers.png-c769e95792171c35960c815bc481d515.ctex"]
+dest_files=["res://.godot/imported/lcd_tweezers.png-375df4a64c5660005d6751041b96311e.ctex"]
 
 [params]
 

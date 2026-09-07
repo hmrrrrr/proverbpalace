@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://do4av5g3n24vs"
-path="res://.godot/imported/cameraprint.wav-fb6ff5981b19547dbe19ac997d0a4962.sample"
+path="res://.godot/imported/cameraprint.wav-6e6af6649085937728de87ef8b565ffe.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/cameraprint.wav"
-dest_files=["res://.godot/imported/cameraprint.wav-fb6ff5981b19547dbe19ac997d0a4962.sample"]
+dest_files=["res://.godot/imported/cameraprint.wav-6e6af6649085937728de87ef8b565ffe.sample"]
 
 [params]
 

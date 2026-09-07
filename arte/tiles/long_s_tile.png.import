@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctr7ir40l66fi"
-path="res://.godot/imported/long_s_tile.png-9bcc1f88e781b3f7a9213752ac53f158.ctex"
+path="res://.godot/imported/long_s_tile.png-9783750d31eb8892f7a5665640d46365.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/tiles/long_s_tile.png"
-dest_files=["res://.godot/imported/long_s_tile.png-9bcc1f88e781b3f7a9213752ac53f158.ctex"]
+dest_files=["res://.godot/imported/long_s_tile.png-9783750d31eb8892f7a5665640d46365.ctex"]
 
 [params]
 

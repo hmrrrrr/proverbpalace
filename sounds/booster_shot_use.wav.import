@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://k8huyt3kjic"
-path="res://.godot/imported/booster_shot_use.wav-1cc81e26d9019c8b20af367253adfd1f.sample"
+path="res://.godot/imported/booster_shot_use.wav-35b25d916617f7a01b6fb681f4d32f61.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/booster_shot_use.wav"
-dest_files=["res://.godot/imported/booster_shot_use.wav-1cc81e26d9019c8b20af367253adfd1f.sample"]
+dest_files=["res://.godot/imported/booster_shot_use.wav-35b25d916617f7a01b6fb681f4d32f61.sample"]
 
 [params]
 

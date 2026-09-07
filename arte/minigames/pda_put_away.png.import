@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clibm6y4h6b6w"
-path="res://.godot/imported/pda_put_away.png-58dc000a4fb1bea9aa52a41ae47b2433.ctex"
+path="res://.godot/imported/pda_put_away.png-5a53fb9f2527fd70fa9afb794924861f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/minigames/pda_put_away.png"
-dest_files=["res://.godot/imported/pda_put_away.png-58dc000a4fb1bea9aa52a41ae47b2433.ctex"]
+dest_files=["res://.godot/imported/pda_put_away.png-5a53fb9f2527fd70fa9afb794924861f.ctex"]
 
 [params]
 

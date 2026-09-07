@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bskgnww6gxpol"
-path="res://.godot/imported/StockExplosion.mp3-60cee148f7b508ff3aa5dcc70c7070af.mp3str"
+path="res://.godot/imported/StockExplosion.mp3-d45e13bb63c01100d10b9692eacff914.mp3str"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/StockExplosion.mp3"
-dest_files=["res://.godot/imported/StockExplosion.mp3-60cee148f7b508ff3aa5dcc70c7070af.mp3str"]
+dest_files=["res://.godot/imported/StockExplosion.mp3-d45e13bb63c01100d10b9692eacff914.mp3str"]
 
 [params]
 

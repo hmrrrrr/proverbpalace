@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://cgu7it8uka0wm"
-path="res://.godot/imported/mangopurr.ogg-f7d3dacad2ed06b9b3d3513387d6801d.oggvorbisstr"
+path="res://.godot/imported/mangopurr.ogg-177f507f8e1eb90e8f804b5b50c4f6ae.oggvorbisstr"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/mangopurr.ogg"
-dest_files=["res://.godot/imported/mangopurr.ogg-f7d3dacad2ed06b9b3d3513387d6801d.oggvorbisstr"]
+dest_files=["res://.godot/imported/mangopurr.ogg-177f507f8e1eb90e8f804b5b50c4f6ae.oggvorbisstr"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dmiv1uayl4kpk"
-path="res://.godot/imported/snakedeath.wav-6a5e9ab9c0eb871e2301f7ae82cc7fb6.sample"
+path="res://.godot/imported/snakedeath.wav-66cd65eee55c46ce6566ef6e3b5d00ad.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/snakedeath.wav"
-dest_files=["res://.godot/imported/snakedeath.wav-6a5e9ab9c0eb871e2301f7ae82cc7fb6.sample"]
+dest_files=["res://.godot/imported/snakedeath.wav-66cd65eee55c46ce6566ef6e3b5d00ad.sample"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cucbkuqiy86ph"
-path="res://.godot/imported/lcd_arrow.png-1e753bdbd6caae2b39196270aebf31eb.ctex"
+path="res://.godot/imported/lcd_arrow.png-85c523ef8f695e76a616559fa7132351.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/minigames/lcd_arrow.png"
-dest_files=["res://.godot/imported/lcd_arrow.png-1e753bdbd6caae2b39196270aebf31eb.ctex"]
+dest_files=["res://.godot/imported/lcd_arrow.png-85c523ef8f695e76a616559fa7132351.ctex"]
 
 [params]
 

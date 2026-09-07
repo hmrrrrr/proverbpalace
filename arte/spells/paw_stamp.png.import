@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnkv0b3jf6akr"
-path="res://.godot/imported/paw_stamp.png-93515a0725a3441a22715d1e3307f548.ctex"
+path="res://.godot/imported/paw_stamp.png-ec359a7cf51d0a473721659e25965794.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/paw_stamp.png"
-dest_files=["res://.godot/imported/paw_stamp.png-93515a0725a3441a22715d1e3307f548.ctex"]
+dest_files=["res://.godot/imported/paw_stamp.png-ec359a7cf51d0a473721659e25965794.ctex"]
 
 [params]
 

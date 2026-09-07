@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5fpulmod12v0"
-path="res://.godot/imported/milk.png-b36de26988782e1e0aa8924032533f89.ctex"
+path="res://.godot/imported/milk.png-577ae31ae2df92ed19c1e3c1ec71351f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/milk.png"
-dest_files=["res://.godot/imported/milk.png-b36de26988782e1e0aa8924032533f89.ctex"]
+dest_files=["res://.godot/imported/milk.png-577ae31ae2df92ed19c1e3c1ec71351f.ctex"]
 
 [params]
 

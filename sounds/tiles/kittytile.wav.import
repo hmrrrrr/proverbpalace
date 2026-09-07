@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cqaehli3ebv3r"
-path="res://.godot/imported/kittytile.wav-d7d45f341d51659ac9c8f9b92352bc24.sample"
+path="res://.godot/imported/kittytile.wav-c12475ab5b750329356511eac2ded283.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/tiles/kittytile.wav"
-dest_files=["res://.godot/imported/kittytile.wav-d7d45f341d51659ac9c8f9b92352bc24.sample"]
+dest_files=["res://.godot/imported/kittytile.wav-c12475ab5b750329356511eac2ded283.sample"]
 
 [params]
 

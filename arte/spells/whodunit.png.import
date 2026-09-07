@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7gp0oe3arrwu"
-path="res://.godot/imported/whodunit.png-79a7bc4126da3ba5a114642818f10e57.ctex"
+path="res://.godot/imported/whodunit.png-b27b8d89d392c52cedc6c104a2b52c5c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/whodunit.png"
-dest_files=["res://.godot/imported/whodunit.png-79a7bc4126da3ba5a114642818f10e57.ctex"]
+dest_files=["res://.godot/imported/whodunit.png-b27b8d89d392c52cedc6c104a2b52c5c.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl6de7i7mnq24"
-path="res://.godot/imported/fuzzy_link2.png-2d0c5250c74543255475af8d7520d476.ctex"
+path="res://.godot/imported/fuzzy_link2.png-9bca2f521f47d89c99bf0a80119d898f.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/fuzzy_link2.png"
-dest_files=["res://.godot/imported/fuzzy_link2.png-2d0c5250c74543255475af8d7520d476.ctex"]
+dest_files=["res://.godot/imported/fuzzy_link2.png-9bca2f521f47d89c99bf0a80119d898f.ctex"]
 
 [params]
 

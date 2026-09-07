@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpyoilapffxxg"
-path="res://.godot/imported/eggshell.png-ef1bcccfba3fbd368668a3c0803535b1.ctex"
+path="res://.godot/imported/eggshell.png-dddb66676583931635baf4bf2a4d2a25.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/tiles/eggshell.png"
-dest_files=["res://.godot/imported/eggshell.png-ef1bcccfba3fbd368668a3c0803535b1.ctex"]
+dest_files=["res://.godot/imported/eggshell.png-dddb66676583931635baf4bf2a4d2a25.ctex"]
 
 [params]
 

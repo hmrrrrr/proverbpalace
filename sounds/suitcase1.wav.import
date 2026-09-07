@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cdeg8hmwfjfq5"
-path="res://.godot/imported/suitcase1.wav-dc04a40f45ff0c4e792bfa2b4529c057.sample"
+path="res://.godot/imported/suitcase1.wav-fb919867f1ca52ddd65a499a42605258.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/suitcase1.wav"
-dest_files=["res://.godot/imported/suitcase1.wav-dc04a40f45ff0c4e792bfa2b4529c057.sample"]
+dest_files=["res://.godot/imported/suitcase1.wav-fb919867f1ca52ddd65a499a42605258.sample"]
 
 [params]
 

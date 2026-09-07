@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cj3k4pajggna2"
-path="res://.godot/imported/lightning_arc.png-86f1acaa67cc0e94def8d90b7fbc1744.ctex"
+path="res://.godot/imported/lightning_arc.png-1d6ec19b9c697dfbf2f1b56274e8addb.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/lightning_arc.png"
-dest_files=["res://.godot/imported/lightning_arc.png-86f1acaa67cc0e94def8d90b7fbc1744.ctex"]
+dest_files=["res://.godot/imported/lightning_arc.png-1d6ec19b9c697dfbf2f1b56274e8addb.ctex"]
 
 [params]
 

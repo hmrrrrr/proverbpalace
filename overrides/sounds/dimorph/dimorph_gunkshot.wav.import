@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://co76bj8haluu8"
-path="res://.godot/imported/dimorph_gunkshot.wav-01c66c051ea5c5a15670f21fa5c9eefc.sample"
+path="res://.godot/imported/dimorph_gunkshot.wav-fdf633e3cc2b18acf2b893ac873e6599.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_gunkshot.wav"
-dest_files=["res://.godot/imported/dimorph_gunkshot.wav-01c66c051ea5c5a15670f21fa5c9eefc.sample"]
+dest_files=["res://.godot/imported/dimorph_gunkshot.wav-fdf633e3cc2b18acf2b893ac873e6599.sample"]
 
 [params]
 

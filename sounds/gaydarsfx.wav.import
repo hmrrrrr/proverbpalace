@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ull8im0ofr"
-path="res://.godot/imported/gaydarsfx.wav-ebc0da78aedcc858de413dde138db5b0.sample"
+path="res://.godot/imported/gaydarsfx.wav-dcc94bc86592d5f5f519180d097816de.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/gaydarsfx.wav"
-dest_files=["res://.godot/imported/gaydarsfx.wav-ebc0da78aedcc858de413dde138db5b0.sample"]
+dest_files=["res://.godot/imported/gaydarsfx.wav-dcc94bc86592d5f5f519180d097816de.sample"]
 
 [params]
 

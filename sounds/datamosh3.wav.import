@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://mfjp0r1g2klr"
-path="res://.godot/imported/datamosh3.wav-efd6106ea51f9ec5a768e3d7c87e8e69.sample"
+path="res://.godot/imported/datamosh3.wav-b66a5c40e66475c2338c6ba025d19b03.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/datamosh3.wav"
-dest_files=["res://.godot/imported/datamosh3.wav-efd6106ea51f9ec5a768e3d7c87e8e69.sample"]
+dest_files=["res://.godot/imported/datamosh3.wav-b66a5c40e66475c2338c6ba025d19b03.sample"]
 
 [params]
 

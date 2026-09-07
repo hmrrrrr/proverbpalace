@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://34ylcnw5tw84"
-path="res://.godot/imported/egg_crack.wav-689a3244d43bef4316cd7297b544dcf0.sample"
+path="res://.godot/imported/egg_crack.wav-25d66e8f07e770a175de97dbfc40393c.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/egg_crack.wav"
-dest_files=["res://.godot/imported/egg_crack.wav-689a3244d43bef4316cd7297b544dcf0.sample"]
+dest_files=["res://.godot/imported/egg_crack.wav-25d66e8f07e770a175de97dbfc40393c.sample"]
 
 [params]
 

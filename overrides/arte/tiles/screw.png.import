@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cugbu5c0fbwu4"
-path="res://.godot/imported/screw.png-3412b899aaac9abaa77237ca5452be30.ctex"
+path="res://.godot/imported/screw.png-7ae41efbd483a06b9c7707c5114cc0f9.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/overrides/arte/tiles/screw.png"
-dest_files=["res://.godot/imported/screw.png-3412b899aaac9abaa77237ca5452be30.ctex"]
+dest_files=["res://.godot/imported/screw.png-7ae41efbd483a06b9c7707c5114cc0f9.ctex"]
 
 [params]
 

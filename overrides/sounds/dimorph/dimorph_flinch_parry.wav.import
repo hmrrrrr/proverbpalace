@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://drspvxm85apyg"
-path="res://.godot/imported/dimorph_flinch_parry.wav-26deb58af57d49a433ec2920710dc484.sample"
+path="res://.godot/imported/dimorph_flinch_parry.wav-7e12917fc7810417a0e02946158ad540.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_flinch_parry.wav"
-dest_files=["res://.godot/imported/dimorph_flinch_parry.wav-26deb58af57d49a433ec2920710dc484.sample"]
+dest_files=["res://.godot/imported/dimorph_flinch_parry.wav-7e12917fc7810417a0e02946158ad540.sample"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm1ybjd4ujehs"
-path="res://.godot/imported/snake_effect.png-c589e88e189138e4b6a338d64798e0bb.ctex"
+path="res://.godot/imported/snake_effect.png-cc45d8889bf0a4cd3fadd123c43f16b6.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/snake_effect.png"
-dest_files=["res://.godot/imported/snake_effect.png-c589e88e189138e4b6a338d64798e0bb.ctex"]
+dest_files=["res://.godot/imported/snake_effect.png-cc45d8889bf0a4cd3fadd123c43f16b6.ctex"]
 
 [params]
 

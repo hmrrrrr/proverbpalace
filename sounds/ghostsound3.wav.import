@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b8dbivy18clrc"
-path="res://.godot/imported/ghostsound3.wav-0f66bca5ff747f1be09d81a4fe1dea1f.sample"
+path="res://.godot/imported/ghostsound3.wav-6a098356ca9d6279a10c4e1a035e9492.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/ghostsound3.wav"
-dest_files=["res://.godot/imported/ghostsound3.wav-0f66bca5ff747f1be09d81a4fe1dea1f.sample"]
+dest_files=["res://.godot/imported/ghostsound3.wav-6a098356ca9d6279a10c4e1a035e9492.sample"]
 
 [params]
 

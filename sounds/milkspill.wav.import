@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cta8e6stil4gd"
-path="res://.godot/imported/milkspill.wav-fe3892313db608bde6c2ec0d2e37475b.sample"
+path="res://.godot/imported/milkspill.wav-7c50dc926bec5a4d87278cf492716b66.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/milkspill.wav"
-dest_files=["res://.godot/imported/milkspill.wav-fe3892313db608bde6c2ec0d2e37475b.sample"]
+dest_files=["res://.godot/imported/milkspill.wav-7c50dc926bec5a4d87278cf492716b66.sample"]
 
 [params]
 

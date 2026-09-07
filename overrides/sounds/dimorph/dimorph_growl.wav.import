@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://djkds4q6uvn1c"
-path="res://.godot/imported/dimorph_growl.wav-153002f3e277ffde4d1d96e1b652a724.sample"
+path="res://.godot/imported/dimorph_growl.wav-bccc726bc000c93dd525faa4f8821cae.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/overrides/sounds/dimorph/dimorph_growl.wav"
-dest_files=["res://.godot/imported/dimorph_growl.wav-153002f3e277ffde4d1d96e1b652a724.sample"]
+dest_files=["res://.godot/imported/dimorph_growl.wav-bccc726bc000c93dd525faa4f8821cae.sample"]
 
 [params]
 

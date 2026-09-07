@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c8ivih1e22fwo"
-path="res://.godot/imported/dynamo.wav-411d510b5ff636d821f47d173699c9d2.sample"
+path="res://.godot/imported/dynamo.wav-6a7b1d5020ee533a0b983be6491c69b5.sample"
 
 [deps]
 
 source_file="res://mods/proverbpalace/sounds/dynamo.wav"
-dest_files=["res://.godot/imported/dynamo.wav-411d510b5ff636d821f47d173699c9d2.sample"]
+dest_files=["res://.godot/imported/dynamo.wav-6a7b1d5020ee533a0b983be6491c69b5.sample"]
 
 [params]
 

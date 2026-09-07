@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcmxbdaj8oou8"
-path="res://.godot/imported/miniface_dimorph.png-1047212bb872dfd9e5385ce1e1eb7579.ctex"
+path="res://.godot/imported/miniface_dimorph.png-8e9c707b1e3dad3d151fa5961088cb3c.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/dimorph/miniface_dimorph.png"
-dest_files=["res://.godot/imported/miniface_dimorph.png-1047212bb872dfd9e5385ce1e1eb7579.ctex"]
+dest_files=["res://.godot/imported/miniface_dimorph.png-8e9c707b1e3dad3d151fa5961088cb3c.ctex"]
 
 [params]
 

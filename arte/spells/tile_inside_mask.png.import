@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://snq3bktj7exm"
-path="res://.godot/imported/tile_inside_mask.png-74bf3b7ac390dc600e0be900070721f5.ctex"
+path="res://.godot/imported/tile_inside_mask.png-0a11fbe4f731c3dc3b4a834238c70aed.ctex"
 metadata={
 "vram_texture": false
 }
@@ -11,7 +11,7 @@ metadata={
 [deps]
 
 source_file="res://mods/proverbpalace/arte/spells/tile_inside_mask.png"
-dest_files=["res://.godot/imported/tile_inside_mask.png-74bf3b7ac390dc600e0be900070721f5.ctex"]
+dest_files=["res://.godot/imported/tile_inside_mask.png-0a11fbe4f731c3dc3b4a834238c70aed.ctex"]
 
 [params]
 
