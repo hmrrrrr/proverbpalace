@@ -15,3 +15,8 @@
 	::
 		Art:
 		Booster Shot
+
+::
+	Vesper Stryxx
+	::
+		SD Card

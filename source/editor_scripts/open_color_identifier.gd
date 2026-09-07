@@ -46,30 +46,60 @@ func _run() -> void:
 		func(v): return v[0]
 	)
 	colors_srgb.append_array(
-		Globals.TILE_POOF_COLOR.values().map(
-			func(v): return v[1]
-		)
+		[
+			Color(0xDDBE91FF),
+			Color(0xDB311EFF),
+			Color(0xE5DCC9FF),
+			Color(0xFF854AFF),
+			Color(0xEAABD1FF),
+			Color(0xBC5C6AFF),
+			Color(0xD0DEDAFF),
+			Color(0x9E7758FF),
+			Color(0xFFBB0AFF),
+			Color(0xCCD69AFF),
+			Color(0xCEDC74FF),
+			Color(0xCCC7E2FF),
+			Color(0x595959FF),
+			Color(0xE6A368FF),
+			Color(0xFACDD2FF),
+			Color(0xE1E3EAFF),
+			Color(0xCBF922FF),
+			Color(0x22222DFF),
+			Color(0xB270BCFF),
+			Color(0xD3CFBEFF),
+			Color(0x9CAFAFFF),
+			Color(0xE01F4FFF), 
+			Color(0x9CA39DFF),
+			Color(0xFF934AFF),
+			Color(0xAFAFF7FF),
+			Color(0xA25D75FF),
+			Color(0xD0E5E5FF),
+			Color(0x87703FFF),
+			Color(0xF0C555FF),
+			Color(0xB0CCAFFF),
+			Color(0x8ADB88FF),
+			Color(0xC7D0DDFF),
+			Color(0x5C6060FF),
+			Color(0x7CCEC2FF),
+			Color(0xDDC6EAFF),
+			Color(0xD2D9DDFF),
+			Color(0x55F490FF),
+			Color(0x251763FF),
+			Color(0x8372BFFF),
+			Color(0xBAB8B6FF),
+
+		]
 	)
 	
 	colors_srgb.append_array([
 		Color(0,0,0, 1.0),
-		Color(1,0,0, 1.0),
-		Color(0,1,0, 1.0),
-		Color(0,0,1, 1.0),
 		#bomb
 		Color("#a233f7"),
 		Color("#251763"),
 		Color("#432689"),
 		Color("#22222d"),
 		
-		Color("10a606ff"),
-		Color(0.5449, 0.0019, 0.0853, 1.0),
-		Color("fd59feff"),
-		Color("900280ff"),
-		Color(0.0652, 0.4365, 0.002, 1.0),
-		Color("035eb7ff")
-
-
+		Color("0843fdff")
 		
 	])
 	

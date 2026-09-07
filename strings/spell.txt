@@ -250,6 +250,27 @@
 	:label:
 		Burn or candy 99
 
+:sd_card:
+	:name:
+		SD Card
+	
+	:description:
+		Convert a tile to a crit.
+		3/4 chance to shimmer the face between S and D.
+		1/4 chance to make the face into a slashed S/D.
+	
+	:charge_category:
+		very_rare
+	
+	:max_charge:
+		2
+		
+	:exclude_characters:
+		zv
+	
+	:label:
+		Critical SD
+	
 :party_bomb:
 	:name:
 		Blowout
@@ -366,8 +387,14 @@
 	
 	:description:
 		Convert a tile to an eternal hole.
-		Recharged when you are brought to 3 HP or less.
-
+		Recharged when you are damaged to 3 HP or less.
+		
+		test
+		ffl
+		affl
+		ffi
+		fi
+		fl
 	:label:
 		Eternal hole
 	

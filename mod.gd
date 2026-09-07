@@ -27,7 +27,8 @@ const SPELLS: Dictionary[String, String] = {
 	PARTY_BOMB = "party_bomb",
 	POCKET_SNAKE = "pocket_snake",
 	VANILLA_ESSENCE = "vanilla_essence",
-	HALO = "halo"
+	HALO = "halo",
+	SD_CARD = "sd_card"
 }
 
 const BASE_WEIGHT := 5.
@@ -52,7 +53,9 @@ var SPELL_POOL: Dictionary[String, float] = {
 	SPELLS.PARTY_BOMB: BASE_WEIGHT/2.,
 	SPELLS.POCKET_SNAKE: BASE_WEIGHT,
 	SPELLS.VANILLA_ESSENCE: 0.,
-	SPELLS.HALO: BASE_WEIGHT/2.
+	SPELLS.HALO: BASE_WEIGHT/2.,
+	SPELLS.SOFTBOILED: BASE_WEIGHT,
+	SPELLS.SD_CARD: 0.
 }
 
 var SPELL_CATEGORIES: Dictionary[String, Array] = {
@@ -70,7 +73,8 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.MILK,
 		SPELLS.GAYDAR,
 		SPELLS.SUBDOMAIN,
-		SPELLS.PARTY_BOMB
+		SPELLS.PARTY_BOMB,
+		SPELLS.SD_CARD
 	],
 	Globals.SPELL_CATEGORY.DEFENSIVE: [
 		SPELLS.TOY_CAMERA,
