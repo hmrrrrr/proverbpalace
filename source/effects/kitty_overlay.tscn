@@ -24,6 +24,7 @@ shape = SubResource("RectangleShape2D_34jc1")
 stream = ExtResource("3_kcg6o")
 volume_db = -80.0
 autoplay = true
+bus = &"Sound"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1324992102]
 

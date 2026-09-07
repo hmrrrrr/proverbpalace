@@ -136,7 +136,9 @@ func _use():
 	
 	
 	for coord in line:
-		tiles.append(tile_board.get_tile_at(coord))
+		var tile = tile_board.get_tile_at(coord)
+		if tile:
+			tiles.append(tile)
 	
 	var arc := LIGHTNING_ARC_EFFECT.instantiate() as LightningArc
 	arc.tile_list_to_init = tiles

@@ -16,18 +16,19 @@ func compare_word_value(wordA, wordB):
 func _run() -> void:
 	
 	var game_dictionary: WordDictionary = ResourceLoader.load("res://words/compiled.res", "", ResourceLoader.CACHE_MODE_IGNORE)
-	var common_words := game_dictionary.word_flags[WordDictionary.WordFlags.COMMON].words
-	for word in common_words:
-		var output = get_number_alts_for_word(word)
-		
-		if len(output) > 0:
-			print("%s => %s"%[word,output])
+	var common_words := game_dictionary.words.words
+	print(get_number_alts_for_word("up"))
+	#for word in common_words:
+		#var output = get_number_alts_for_word(word)
+		#
+		#if len(output) > 0:
+			#print("%s => %s"%[word,output])
 			
 
 func get_number_alts_for_word(target_word: String) -> PackedStringArray:
 	var game_dictionary: WordDictionary = ResourceLoader.load("res://words/compiled.res", "", ResourceLoader.CACHE_MODE_IGNORE)
 	var target_word_nums = ""
-	var common_words := game_dictionary.word_flags[WordDictionary.WordFlags.COMMON].words
+	var common_words := game_dictionary.words.words
 	for target_letter in target_word:
 		for key in Letters.NUMPAD_CHARACTERS.keys():
 			var options = Letters.NUMPAD_CHARACTERS[key]
