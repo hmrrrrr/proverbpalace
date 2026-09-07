@@ -46,7 +46,6 @@ func get_next_trigram() -> String:
 		trigram_pool = Trigrams.SHIT_TRIGRAMS
 		if rng.spell.randi_range(0,25) != 0: #1/25 to be forced toward cij
 			max_weight -= 1
-	return "cij"
 	return Letters.pick_from_pool(
 		Trigrams.GOOD_TRIGRAMS, rng.spell, {
 			max_weight=max_weight,
