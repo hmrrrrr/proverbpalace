@@ -23,6 +23,11 @@ Currently adds:
 <img width="387" height="135" alt="burner" src="https://github.com/user-attachments/assets/00869bb4-ebbc-45f9-84f4-45db82532a14" />
 </p>
 
+<h1 align="center">Look at cat pictures</h1>
+<p align="center">
+<img width="800" height="472" alt="Look at cat pictures" src="https://github.com/user-attachments/assets/0d8d949c-4326-4611-84ea-e9641c02b201" />
+</p>
+
 <h1 align="center">LSD i mean LCD</h1>
 <p align="center">
 <img width="569" height="675" alt="lcd" src="https://github.com/user-attachments/assets/9f8026c4-7e74-44d1-b3e1-89ed02e4c871" />
@@ -89,5 +94,5 @@ NOTE: For playtesting purposes, spells from this mod currently appear with 5x th
 
 
 
-[<img width="96" height="96" alt="cold_case" src="https://github.com/user-attachments/assets/99642eec-3e53-4815-8c91-77733d355bb5" />](https://github.com/user-attachments/assets/8ee93737-e891-4f02-8aaa-ba99c368a538)...and the case goes cold...
+[<img width="128" height="128" alt="cold_case" src="https://github.com/user-attachments/assets/99642eec-3e53-4815-8c91-77733d355bb5" />](https://github.com/user-attachments/assets/8ee93737-e891-4f02-8aaa-ba99c368a538)...and the case goes cold...
 
