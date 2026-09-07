@@ -5,11 +5,13 @@
 <h1 align="center">Proverb Palace!</h1>
 <h3 align="center"> A mod for Pronoun Palace :3c</h3>
 
+
 Currently adds:
 - 16(+?) new spells
 - A cute and not evil kitty
 - Maybe other things also
 
+### [hello this is where you download the mod](https://github.com/hmrrrrr/proverbpalace/releases)
 
 <h1 align="center">Deploy Snake</h1>
 <p align="center">
