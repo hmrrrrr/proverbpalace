@@ -9,7 +9,7 @@
 Currently adds:
 - 16(+?) new spells
 - A cute and not evil kitty
-- Maybe other things also
+- Unfortunately, no proverbs
 
 ### [hello this is where you download the mod](https://github.com/hmrrrrr/proverbpalace/releases)
 
