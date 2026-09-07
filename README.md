@@ -7,7 +7,7 @@
 
 Currently adds:
 - 16(+?) new spells
-- A cute kitty
+- A cute and not evil kitty
 - Maybe other things also
 
 
@@ -33,15 +33,15 @@ Currently adds:
 <img width="191" height="196" alt="holy" src="https://github.com/user-attachments/assets/f32cbcbb-0cfc-4182-8ff1-d2c046ae686c" />
 </p>
 
-<h1 align="center">Whatever this is</h1>
-<p align="center">
-<img width="800" height="427" alt="cij" src="https://github.com/user-attachments/assets/ca679ab2-bd26-4139-8580-c825a2ada8d1" />
-</p>
 <h1 align="center">Crack people's eggs</h1>
 <p align="center">
 <img width="443" height="378" alt="pih" src="https://github.com/user-attachments/assets/340dc1e0-a6e3-4be9-8c10-849f4ef48976" />
 </p>
 
+<h1 align="center">Whatever this is</h1>
+<p align="center">
+<img width="800" height="427" alt="cij" src="https://github.com/user-attachments/assets/ca679ab2-bd26-4139-8580-c825a2ada8d1" />
+</p>
 
 NOTE: For playtesting purposes, spells from this mod currently appear with 5x the weight (basically, they show up 5 times as much as vanilla spells). Working on a solution for configuring a lower weight if you want them to show up less..!
 
