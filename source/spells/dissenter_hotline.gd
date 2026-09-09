@@ -159,5 +159,5 @@ func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_u
 
 func is_tile_selectable(tile: Tile) -> bool:
 	return (
-		!(tile.has_number() and tile.has_status(TileStatus.SPICY))
+		!(tile.has_number() and tile.has_status(TileStatus.SPICY)) and !tile.has_harmful_status()
 	)

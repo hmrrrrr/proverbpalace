@@ -15,6 +15,21 @@
 	:charge_characters:
 		rais8e24
 
+:discombobulator:
+	:name:
+		Discombobulator
+	
+	:charge_category:
+		auto
+	
+	:max_charge:
+		1
+	
+	:label:
+		Override charge
+	
+	:description:
+		Change ALL your spells' charges to correspond to letters in a random row, deleting them.
 
 :blender:
 	:name:
@@ -176,7 +191,7 @@
 		Turn ANY tile to an ash W, and turn the tiles to its left and right to ash vowels.
 	
 	:charge_characters:
-		9
+		999999997
 
 	:exclude_characters:
 		aeiouyw
@@ -192,7 +207,7 @@
 
 :dissenter_hotline:
 	:name:
-		Dissenter Hotline
+		Burner Phone
 	
 	:description:
 		Turn a chosen face and the faces to its right to {number_list list_and upper} respectively. Burn affected tiles.
@@ -271,7 +286,7 @@
 	:label:
 		Critical SD
 	
-:party_bomb:
+:blowout:
 	:name:
 		Blowout
 	

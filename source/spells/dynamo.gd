@@ -47,6 +47,11 @@ var LETTERS_ADJUSTED: Dictionary[String, float] = {
 var is_selecting_first_tile := true
 
 func apply_to_tile(tile: Tile):
+	
+	if tile.has_status(TileStatus.BOMB):
+		await (tile.get_status(TileStatus.BOMB) as BombStatus).explode()
+		tile_board.remove_tile(tile,{restock=false,settle=false})
+		return true
 	if !tile.has_face():
 		return
 	
@@ -143,14 +148,19 @@ func _use():
 	var arc := LIGHTNING_ARC_EFFECT.instantiate() as LightningArc
 	arc.tile_list_to_init = tiles
 	main.add_child(arc)
-	
+	var needs_restock := false
 	for tile in tiles:
-		apply_to_tile(tile)
-		tile.animation.play("shake",-1,1.56)
 		tile.tile_sprite.add_child(LIGHTNING_TILE_EFFECT.instantiate())
+		if (await apply_to_tile(tile)):
+			needs_restock = true
+		tile.animation.play("shake",-1,1.56)
 		await Game.timeout(.03)
 		
-	
+	if needs_restock:
+		
+		await tile_board.settle_board()
+
+		await tile_board.fill_board()
 
 	_post_use()
 	description_updated.emit()

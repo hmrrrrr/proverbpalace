@@ -6,9 +6,11 @@ func set_status_tooltips():
 
 const VOWELS := ['a','e','i','o','u']
 
-const Y_CHANCE := 0.1
+var chamber = []
+
+const Y_CHANCE := .1
 const PLANT_CHANCE := 0.1
-const FAGGOT_CHANCE := .002
+const FAGGOT_CHANCE := .003
 
 var IS_THIS_THE_PLANT_OR_NAH := false
 const PAW_STAMP_EFFECT = preload("res://mods/proverbpalace/source/spells/paw_stamp_effect.tscn")
@@ -38,14 +40,21 @@ func get_frame() -> int:
 func get_save_data():
 	var save = super.get_save_data()
 	save["IS_THIS_THE_PLANT_OR_NAH"] = IS_THIS_THE_PLANT_OR_NAH
+	save["chamber"] = chamber
 	return save
-
 
 func load_save_data(save):
 	super.load_save_data(save)
 	IS_THIS_THE_PLANT_OR_NAH = save.IS_THIS_THE_PLANT_OR_NAH
 	frame_updated.emit()
+	chamber = save.chamber
 
+func load_chamber():
+	chamber = []
+	chamber.append_array(VOWELS)
+	chamber.append_array(VOWELS)
+	rng.spell.shuffle(chamber)
+	
 func make_kitty_ash(tile: Tile, should_be_kitty: bool, is_tooltip := false) -> void:
 	tile.add_status(TileStatus.ASH,{kitty=should_be_kitty})
 	if should_be_kitty and !is_tooltip:
@@ -56,7 +65,9 @@ func make_kitty_ash(tile: Tile, should_be_kitty: bool, is_tooltip := false) -> v
 		)
 	
 func change_to_ash_vowel(tile: Tile, is_right: bool, do_faggot_easter_egg: bool) -> void:
-	var chosen_vowel: String = rng.spell.pick_random(VOWELS)
+	if chamber.is_empty():
+		load_chamber()
+	var chosen_vowel: String = chamber.pop_back()
 	
 	if (rng.spell.randf() < Y_CHANCE) and is_right:
 		chosen_vowel = "y"
@@ -92,6 +103,9 @@ func do_paw_stamp_effect(tile: Tile, lerp_t: float, faggotron: bool = false) -> 
 	tile.animation.play("bounce")
 	
 
+func is_tile_selectable(tile: Tile) -> bool:
+	return !tile.has_status(TileStatus.ASH) 
+
 func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_update: bool) -> void :
 	if is_preview:
 		tile.set_face("w")
@@ -107,6 +121,10 @@ func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_u
 			var neighbor: Tile
 			if vec == Vector2i.ZERO:
 				neighbor = tile
+			else:
+				neighbor = tile.get_board_neighbor(vec)
+			
+			if vec == Vector2i.ZERO:
 				(func():
 					await do_paw_stamp_effect(tile,t,SHOULD_DO_FAGGOT_EASTER_EGG)
 					tile.set_face("w" if !SHOULD_DO_FAGGOT_EASTER_EGG else "gg")
@@ -114,7 +132,6 @@ func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_u
 				).call()
 			else:
 				(func():
-					neighbor = tile.get_board_neighbor(vec)
 					if neighbor:
 						await do_paw_stamp_effect(neighbor,t,SHOULD_DO_FAGGOT_EASTER_EGG)
 						change_to_ash_vowel(neighbor, vec == Vector2i.RIGHT, SHOULD_DO_FAGGOT_EASTER_EGG)

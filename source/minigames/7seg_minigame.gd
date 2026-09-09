@@ -37,6 +37,8 @@ const SEGMENT_POSITIONS = [
 	Vector2(28,42),
 ]
 
+var preview_b_original_statuses = []
+
 func _ready():
 	
 	const ROTATED_SEGMENTS = [0,3,6]
@@ -69,7 +71,6 @@ func _ready():
 			[buttons[5],buttons[6],buttons[1]],
 			[buttons[4],buttons[3],buttons[2]],
 		], true, false)
-
 
 func set_tile(tile: Tile) -> void :
 	editing_tile = tile
@@ -120,6 +121,8 @@ func appear(instant: = false) -> void :
 
 	preview_tile_a = Game.tile_board.create_preview_tile(editing_tile)
 	preview_tile_b = Game.tile_board.create_preview_tile(editing_tile)
+	
+	preview_b_original_statuses = preview_tile_b.statuses.keys()
 	Game.main.spell_banner.set_tiles(preview_tile_a, preview_tile_b)
 
 
@@ -167,6 +170,8 @@ func update_state() -> void :
 	
 		if current_letter in Letters.ALPHABET or current_letter in Letters.NUMBERS or current_letter == "":
 			preview_tile_b.remove_status(Tile.TileStatus.ASH)
+			for status in preview_b_original_statuses:
+				preview_tile_b.add_status(status)
 		else:
 			preview_tile_b.add_status(Tile.TileStatus.ASH)
 		

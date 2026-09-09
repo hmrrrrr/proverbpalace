@@ -14,6 +14,15 @@ func on_hover():
 
 	switch_state()
 
+func load_save_data(save):
+	super(save)
+	faking_out = save.faking_out
+
+func get_save_data():
+	var save = super.get_save_data()
+	save.faking_out = faking_out
+	return save
+
 func switch_state():
 	if faking_out:
 		faking_out = false
