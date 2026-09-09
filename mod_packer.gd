@@ -10,7 +10,8 @@ const IGNORED_FILES = [
 
 const IGNORED_EXTENSIONS = [
 	"pck", 
-	"zip"
+	"zip",
+	"ase"
 ]
 
 var mod_id: String = "proverbpalace"
