@@ -7,7 +7,7 @@
 
 
 Currently adds:
-- 16(+?) new spells
+- 17(+?) new spells
 - A cute and not evil kitty
 - Unfortunately, no proverbs
 
