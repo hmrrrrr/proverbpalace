@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dndwveewrk7sk"]
+
+[ext_resource type="Shader" uid="uid://p75tq53rkbuu" path="res://mods/proverbpalace/source/effects/streamer.gdshader" id="1_nu72j"]
+[ext_resource type="Texture2D" uid="uid://cnm8kuo1pv4qm" path="res://mods/proverbpalace/source/effects/streamer_purple.png" id="2_nu72j"]
+[ext_resource type="Script" uid="uid://d0w3q72gjphpg" path="res://mods/proverbpalace/source/effects/streamer.gd" id="3_hpuaq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t010t"]
+shader = ExtResource("1_nu72j")
+shader_parameter/speed = 6.66
+
+[sub_resource type="Curve" id="Curve_n4y2n"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.16425121, 0.5842697), 1.4619577, 1.4619577, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_n4y2n"]
+offsets = PackedFloat32Array(0.01183432, 0.31360948, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.8392157, 1, 1, 1, 1)
+
+[node name="Streamer" type="Line2D" unique_id=1568823514]
+z_index = 1100
+z_as_relative = false
+texture_repeat = 2
+material = SubResource("ShaderMaterial_t010t")
+position = Vector2(13, -30)
+width = 12.0
+width_curve = SubResource("Curve_n4y2n")
+gradient = SubResource("Gradient_n4y2n")
+texture = ExtResource("2_nu72j")
+texture_mode = 1
+script = ExtResource("3_hpuaq")

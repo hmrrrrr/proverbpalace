@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b3dvmt50leuwv"]
+
+[ext_resource type="Script" uid="uid://bqbogcbuwbge" path="res://mods/proverbpalace/source/effects/glitch_redact_effect.gd" id="1_nabcr"]
+
+[sub_resource type="Shader" id="Shader_tru33"]
+code = "shader_type canvas_item;
+
+uniform vec3 glitch_color : source_color = vec3(0,0,0);
+uniform vec2 base_rect_size = vec2(16,16);
+uniform int rect_count = 3;
+uniform float shuffle_interval = 0.66;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	// Called for every pixel the material is visible on.
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tru33"]
+shader = SubResource("Shader_tru33")
+shader_parameter/glitch_color = Color(0, 0, 0, 1)
+shader_parameter/base_rect_size = Vector2(16, 16)
+shader_parameter/rect_count = 3
+shader_parameter/shuffle_interval = 0.66
+
+[node name="GlitchRedactEffect" type="Node2D" unique_id=459438855]
+material = SubResource("ShaderMaterial_tru33")
+script = ExtResource("1_nabcr")
+
+[node name="Timer" type="Timer" parent="." unique_id=496064235]
+wait_time = 0.133
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
