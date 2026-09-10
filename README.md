@@ -7,7 +7,7 @@
 
 
 Currently adds:
-- 16(+?) new spells
+- 17(+?) new spells
 - A cute and not evil kitty
 - Unfortunately, no proverbs
 
@@ -50,9 +50,6 @@ Currently adds:
 <img width="800" height="427" alt="cij" src="https://github.com/user-attachments/assets/ca679ab2-bd26-4139-8580-c825a2ada8d1" />
 </p>
 
-NOTE: For playtesting purposes, spells from this mod currently appear with 5x the weight (basically, they show up 5 times as much as vanilla spells). Working on a solution for configuring a lower weight if you want them to show up less..!
-
-<br>
 <br>
 <br>
 <br>
