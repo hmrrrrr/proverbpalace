@@ -532,3 +532,20 @@
 		
 	:label:
 		Analyze
+		
+
+:bubble_tape:
+	:name:
+		Bubble Tape
+	
+	:charge_category:
+		common
+	
+	:max_charge:
+		3
+	
+	:label:
+		Bubble tape
+	
+	:description:
+		test

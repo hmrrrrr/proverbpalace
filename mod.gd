@@ -30,6 +30,7 @@ const SPELLS: Dictionary[String, String] = {
 	HALO = "halo",
 	SD_CARD = "sd_card",
 	DISCOMBOBULATOR = "discombobulator",
+	BUBBLE_TAPE = "bubble_tape",
 }
 
 var BASE_WEIGHT := 4.5
@@ -48,7 +49,8 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.DYNAMO,
 		SPELLS.POCKET_SNAKE,
 		SPELLS.VANILLA_ESSENCE,
-		SPELLS.DISCOMBOBULATOR
+		SPELLS.DISCOMBOBULATOR,
+		SPELLS.BUBBLE_TAPE
 	],
 	Globals.SPELL_CATEGORY.OFFENSIVE: [
 		SPELLS.MILK,
@@ -169,6 +171,7 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.PDA: 0.,
 		SPELLS.PHOTO_ALBUM: 0.,
 		SPELLS.BLENDER: 0.,
+		SPELLS.BUBBLE_TAPE: 0.,
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])
