@@ -4,7 +4,6 @@ class_name BubbleTapeSection
 enum Target {
 	WORD_LONG,
 	WORD_SHORT,
-	LETTER,
 	TILE_STATUS,
 	TILE_EFFECT,
 	TILE,
@@ -13,10 +12,9 @@ enum Target {
 
 enum Section {
 	CLAUSE,
-	EFFECT
+	EFFECT,
+	SELF_CONTAINED_CLAUSE
 }
 
-
-@export var strength := 1
 @export var section_type: Section
 @export var target: Target

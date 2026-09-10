@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://cfgucxa0hsstp"]
+
+[ext_resource type="Script" uid="uid://df2mx6comstq3" path="res://mods/proverbpalace/source/spells/bubble_tape/clauses/word_starts_with.gd" id="1_qtrl4"]
+
+[resource]
+script = ExtResource("1_qtrl4")
+metadata/_custom_type_script = "uid://w057eop0e1vq"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BubbleTapeSection" format=3 uid="uid://b0jlptuvwrcov"]
+
+[ext_resource type="Script" uid="uid://w057eop0e1vq" path="res://mods/proverbpalace/source/spells/bubble_tape/bubble_tape_section.gd" id="1_q7itc"]
+
+[resource]
+script = ExtResource("1_q7itc")
+section_type = 1
+target = 2
+metadata/_custom_type_script = "uid://w057eop0e1vq"

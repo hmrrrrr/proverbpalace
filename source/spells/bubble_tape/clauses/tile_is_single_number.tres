@@ -1,0 +1,10 @@
+[gd_resource type="Resource" format=3 uid="uid://d2yve8h3pqpoa"]
+
+[sub_resource type="GDScript" id="GDScript_ncefp"]
+script/source = "extends BubbleTapeSection
+"
+
+[resource]
+script = SubResource("GDScript_ncefp")
+target = 4
+metadata/_custom_type_script = "uid://w057eop0e1vq"

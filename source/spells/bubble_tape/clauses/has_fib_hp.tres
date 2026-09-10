@@ -1,0 +1,13 @@
+[gd_resource type="Resource" format=3 uid="uid://lsswacdl08cp"]
+
+[sub_resource type="GDScript" id="GDScript_ki3kk"]
+script/source = "extends BubbleTapeSection
+
+const FIBONACCI_NUMBERS = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+"
+
+[resource]
+script = SubResource("GDScript_ki3kk")
+strength = 5
+target = 5
+metadata/_custom_type_script = "uid://w057eop0e1vq"
