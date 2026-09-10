@@ -403,13 +403,7 @@
 	:description:
 		Convert a tile to an eternal hole.
 		Recharged when you are damaged to 3 HP or less.
-		
-		test
-		ffl
-		affl
-		ffi
-		fi
-		fl
+	
 	:label:
 		Eternal hole
 	
