@@ -33,6 +33,14 @@ const COW_BIGRAMS: Dictionary[String, String] = {
 	"z": "ze", 
 }
 
+enum {
+	PROVIDER,
+	CONDITION,
+	HANDLING_CONDITION,
+	ARBITRARY_CONDITION,
+	ENDPOINT,
+}
+
 var sections: Dictionary[String, Dictionary] = {}
 
 var country_code: String = Steam.getIPCountry().to_lower()
@@ -104,7 +112,8 @@ func randomize_sections(bubble_rng: RNG):
 	sections = {
 		"swap_tile_type": {
 			params = ["tile"],
-			output = ["tile"],
+			output = [],
+			type = ENDPOINT,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				tile.set_type(TileType.DAMAGE if tile.is_type(TileType.DEFENSE) else TileType.DEFENSE)
@@ -113,8 +122,7 @@ func randomize_sections(bubble_rng: RNG):
 		"get_spelled_word": {
 			params = [],
 			output = ["word"],
-			condition = true,
-			read_only = true,
+			type = PROVIDER,
 			run = func(_params: Dictionary):
 				if !(word_builder.can_submit_tiles() and word_builder.can_submit_words(word_builder.words_list)):
 					return false
@@ -126,8 +134,7 @@ func randomize_sections(bubble_rng: RNG):
 		"word_is_in_category": {
 			params = ["word"],
 			output = ["word"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			context = {category = random_category_name},
 			run = func(params: Dictionary):
 				var word: WordList = params.word
@@ -138,38 +145,36 @@ func randomize_sections(bubble_rng: RNG):
 		"tile_is_faceless": {
 			params = ["tile"],
 			output = ["tile"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				if !tile.has_face():
 					return {tile=tile}
 				return false
 	},
-		"pick_random_tile": {
-			params = [],
-			output = ["tile"],
-			read_only = true,
-			run = func(_params: Dictionary):
-				var tiles: Array[Tile] = tile_board.get_tiles({amount = 1})
-				if len(tiles) == 0:
-					return false
-				return {
-					tile = tiles[0]
-				}
-	},
-		"has_fib_hp": {
-			params = [],
-			output = [],
-			condition = true,
-			read_only = true,
-			run = func(_params: Dictionary):
-				return player.health in FIBONACCI_NUMBERS
-	},
+		#"pick_random_tile": {
+			#params = [],
+			#output = ["tile"],
+			#type = PROVIDER,
+			#run = func(_params: Dictionary):
+				#var tiles: Array[Tile] = tile_board.get_tiles({amount = 1})
+				#if len(tiles) == 0:
+					#return false
+				#return {
+					#tile = tiles[0]
+				#}
+	#},
+		#"has_fib_hp": {
+			#params = [],
+			#output = [],
+			#type = ARBITRARY_CONDITION,
+			#run = func(_params: Dictionary):
+				#return player.health in FIBONACCI_NUMBERS
+	#},
 		"get_country_code": {
 			params = [],
 			output = ["ngram"],
-			read_only = true,
+			type = PROVIDER,
 			run = func(_params: Dictionary):
 				if len(country_code) == 2:
 					return {ngram = country_code}
@@ -177,7 +182,8 @@ func randomize_sections(bubble_rng: RNG):
 	},
 		"place_ngram": {
 			params = ["ngram", "tile"],
-			output = ["tile"],
+			output = [],
+			type = ENDPOINT,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				var ngram: String = params.ngram
@@ -186,7 +192,8 @@ func randomize_sections(bubble_rng: RNG):
 	},
 		"place_ngram_slashed": {
 			params = ["ngram", "tile"],
-			output = ["tile"],
+			output = [],
+			type = ENDPOINT,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				var ngram: String = params.ngram
@@ -195,8 +202,8 @@ func randomize_sections(bubble_rng: RNG):
 	},
 		"append_cow_bigram": {
 			params = ["tile"],
-			output = ["tile"],
-			condition = true,
+			output = [],
+			type = HANDLING_CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				if !tile.is_single_letter(false,false):
@@ -209,8 +216,7 @@ func randomize_sections(bubble_rng: RNG):
 		"tile_is_status": {
 			params = ["tile", "status"],
 			output = ["tile"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				var status: String = params.status
@@ -220,8 +226,8 @@ func randomize_sections(bubble_rng: RNG):
 	},
 		"turn_tile_to_status": {
 			params = ["tile", "status"],
-			output = ["tile"],
-			condition = true,
+			output = [],
+			type = HANDLING_CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				var status: String = params.status
@@ -233,8 +239,7 @@ func randomize_sections(bubble_rng: RNG):
 		"get_spelled_status": {
 			params = ["word"],
 			output = ["word","status"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			run = func(params: Dictionary):
 				var word: WordList = params.word
 				if word.sub_lists.size() != 1:
@@ -247,8 +252,7 @@ func randomize_sections(bubble_rng: RNG):
 		"face_all_from_back_half_of_alphabet": {
 			params = ["tile"],
 			output = ["tile"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
@@ -264,7 +268,7 @@ func randomize_sections(bubble_rng: RNG):
 		"make_capital_wildcard": {
 			params = ["tile"],
 			output = [],
-			condition = true,
+			type = HANDLING_CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				if tile.only_face_is("*") and tile.has_status(TileStatus.CAPITAL):
@@ -277,22 +281,21 @@ func randomize_sections(bubble_rng: RNG):
 		"get_random_negative_status": {
 			params = [],
 			output = ["status"],
-			read_only = true,
+			type = PROVIDER,
 			run = func(_params: Dictionary):
 				return {status=random_neg_status}
 	},
 		"get_random_defensive_status": {
 			params = [],
 			output = ["status"],
-			read_only = true,
+			type = PROVIDER,
 			run = func(_params: Dictionary):
 				return {status=random_defensive_status}
 	},
 		"tile_is_single_number": {
 			params = ["tile"],
 			output = ["tile"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				if len(tile.get_numbers()) == len(tile.face) and tile.has_single_face(1):
@@ -302,6 +305,7 @@ func randomize_sections(bubble_rng: RNG):
 		"remove_tile": {
 			params = ["tile"],
 			output = [],
+			type = ENDPOINT,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				await letter_opener_tile_launch(tile)
@@ -310,17 +314,29 @@ func randomize_sections(bubble_rng: RNG):
 		"tile_is_at_least_two_value": {
 			params = ["tile"],
 			output = ["tile"],
-			condition = true,
-			read_only = true,
+			type = CONDITION,
 			run = func(params: Dictionary):
 				var tile: Tile = params.tile
 				if tile.get_value() >= 2:
 					return {tile=tile}
 				return false
 	},
+		"has_any_tile_with_status": {
+			params = ["status"],
+			output = ["tile"],
+			type = CONDITION,
+			run = func(params: Dictionary):
+				var status: String = params.status
+				return len(
+					tile_board.get_tiles({
+						custom_tile_check = func(t: Tile):
+							return t.has_status(status)
+				})) > 0
+	},
 		"shuffle_faces_in_word": {
 			params = ["word"],
 			output = [],
+			type = ENDPOINT,
 			run = func(params: Dictionary):
 				var word: WordList = params.word
 				var tiles: Array[Tile] = word.tiles_list
@@ -338,91 +354,113 @@ func randomize_sections(bubble_rng: RNG):
 		"get_random_suffix": {
 			params = [],
 			output = ["ngram"],
-			read_only = true,
+			type = PROVIDER,
 			run = func(_params: Dictionary):
 				var suffixes = Letters.COMMON_SUFFIXES
 				return {ngram = rng.spell.pick_random(suffixes)}
 	},
 		"pick_a_tile": {
 			params = [],
-			output = ["tile","should_cancel_usage"],
+			output = ["tile"],
+			type = PROVIDER,
+			should_cancel_usage = true,
 			read_only = true,
 			run = func(_params: Dictionary):
 				var tile: Tile = await get_selection()
 				if tile == null:
-					return {should_cancel_usage=true}
+					return false
+				return {tile=tile}
 	}
 	
 	
 }
 	
+	const DEFAULT_NODE = {
+		parents = [],
+		children = [],
+		section_id = ""
+	}
 	
 	#print(sections)
 	for section in sections:
 		sections[section] = sections[section].merged(DEFAULT_SECTION,false)
-	
+	var section_keys = sections.keys()
 	var pick_section_filtered = func(fn: Callable):
-		return rng.spell.pick_random(sections.keys().filter(fn))
+		var chosen_key = rng.spell.pick_random(section_keys.filter(fn))
+		section_keys.erase(chosen_key)
+		return chosen_key
 	
-	var valid_for_starting_clause = func(section_name: String):
-		var section = sections[section_name]
-		return section.read_only and section.condition and len(section.params) == 0
+	var provider_name = pick_section_filtered.call(
+		func(s): return sections[s].type == PROVIDER
+	)
 	
-	var starting_clause: String = pick_section_filtered.call(valid_for_starting_clause)
-	var valid_for_subclause = func(section_name: String, input_parameters: Array):
-		var section = sections[section_name]
-		for param in section.params:
-			if param not in input_parameters:
-				return false
-		return !section.read_only
+	var create_section_node = func(name): return {section_id=name}.merged(DEFAULT_NODE)
 	
-	var get_section_missing_parameter = func(available_parameters: Array, section: Dictionary):
-		for parameter in section.params:
-			if parameter not in available_parameters:
-				return parameter
-		return ""
 	
-	var get_self_contained_chain = func(recurse: Callable, can_be_conditional := true):
-		var section_name = pick_section_filtered.call(
-			func(s): return sections[s].read_only and len(sections[s].params) == 0 and (
-				!sections[s].condition or can_be_conditional
-			)
-		)
-		var section = sections[section_name]
-		if section.condition:
-			return {section_name:[recurse.call(recurse,false),recurse.call(recurse,false)]}
+	var add_differing_provider = func(tree_node: Dictionary, force_parameter_type := ""):
+		var parents = [tree_node.section_id] + tree_node.parents
+		var all_parent_outputs = {}
+		for parent in parents:
+			var parent_section = sections[parent]
+			for output in parent_section.output:
+				all_parent_outputs[output] = true
 		
-		var available_parameters = section.output
-		
-		var make_up_parameter = func(parameter: String): 
-			return pick_section_filtered.call(
-				func(s):
-					return sections[s].output == [parameter] and len(sections[s].params) == 0
-		)
-		
-		var following_section_name = pick_section_filtered.call(
-			func(s):
-				var missing_count = 0
-				for parameter in sections[s].params:
-					if parameter not in available_parameters and missing_count == 1:
+		var available_parameters = all_parent_outputs.keys()
+		var valid_section = pick_section_filtered.call(
+			func(section_name):
+				var section = sections[section_name]
+				for parameter in section.output:
+					if parameter in available_parameters:
 						return false
-					else:
-						missing_count += 1
-				return !sections[s].read_only
+				if force_parameter_type:
+					return section.type == PROVIDER and force_parameter_type in section.output
+				return section.type == PROVIDER
 		)
-		var following_section = sections[following_section_name]
-		var missing = get_section_missing_parameter.call(available_parameters,following_section)
-		if missing:
-			following_section = {make_up_parameter.call(missing): following_section}
-		return {section_name: following_section_name}
 		
+		var child = create_section_node.call(valid_section)
+		child.parents += parents
+		tree_node.children = tree_node.children + [child]
+	
+	var create_branch = func(tree_node: Dictionary, require_all_parameters := false):
+		var parents = [tree_node.section_id] + tree_node.parents
+		var valid_branch_types = [CONDITION,ARBITRARY_CONDITION,HANDLING_CONDITION,ENDPOINT]
 		
+		var all_parent_outputs = {}
+		for parent in parents:
+			var parent_section = sections[parent]
+			for output in parent_section.output:
+				all_parent_outputs[output] = true
+		
+		var available_parameters = all_parent_outputs.keys()
+		var valid_section = pick_section_filtered.call(
+			func(section_name):
+				var section = sections[section_name]
+				for parameter in section.params:
+					if parameter not in available_parameters:
+						return false
+				if require_all_parameters:
+					for parameter in available_parameters:
+						if parameter not in section.params:
+							return false
+				return section.type in valid_branch_types
+		)
+		
+		var child = create_section_node.call(valid_section)
+		
+		child.parents += parents
+		tree_node.children = tree_node.children + [child]
+		
+	var tree = create_section_node.call(provider_name)
 	
-	var structure = {
-		starting_clause: [
-				get_self_contained_chain.call(get_self_contained_chain),
-				get_self_contained_chain.call(get_self_contained_chain)
-		]
-	}
 	
-	print(structure)
+	print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+	print(tree)
+	if 'ngram' in sections[tree.section_id].output:
+		add_differing_provider.call(tree,"tile")
+		create_branch.call(tree.children[0], true)
+	else:
+		create_branch.call(tree)
+	
+	for child in tree.children:
+		create_branch.call(child)
+	print(tree)
