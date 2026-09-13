@@ -144,7 +144,7 @@ func confirm() -> void :
 
 
 func update_state() -> void :
-	var moves_remaining: = 2
+	var moves_remaining: = 3
 	for seg in lcd_segments:
 		seg.set_disabled(false)
 		if seg.state != seg.original_state:
@@ -154,9 +154,9 @@ func update_state() -> void :
 		for seg in lcd_segments:
 			seg.set_disabled(seg.state == seg.original_state)
 
-	turns_label.text = str(moves_remaining) + "/2"
+	turns_label.text = str(moves_remaining) + "/3"
 
-	reset_button.disabled = moves_remaining == 2
+	reset_button.disabled = moves_remaining == 3
 	reset_sprite.frame = 1 if reset_button.disabled else 2
 	reset_hover_handler.set_disabled(reset_button.disabled)
 
@@ -177,7 +177,7 @@ func update_state() -> void :
 		
 
 	var confirmable: bool = (
-		moves_remaining != 2
+		moves_remaining != 3
 		and current_letter != ""
 		and current_letter != original_letter
 	)

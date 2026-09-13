@@ -8,12 +8,6 @@ const LIBRARY = preload("res://mods/proverbpalace/source/7seg/library.res")
 
 var faking_out := true
 
-func on_hover():
-	if player.is_using_spell():
-		return
-
-	switch_state()
-
 func load_save_data(save):
 	super(save)
 	faking_out = save.faking_out
@@ -22,6 +16,13 @@ func get_save_data():
 	var save = super.get_save_data()
 	save.faking_out = faking_out
 	return save
+
+func on_hover():
+	if player.is_using_spell():
+		return
+
+	switch_state()
+
 
 func switch_state():
 	if faking_out:

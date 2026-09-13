@@ -1,14 +1,23 @@
 shader_type canvas_item;
 
+#include "res://source/shaders/hsv.gdshaderinc"
+
 instance uniform bool hole_enabled;
+instance uniform bool epsilon_enabled;
 instance uniform bool mutagen_enabled = false;
 instance uniform vec2 hole_local_position;
+
 uniform sampler2D hole_mask : filter_nearest;
+uniform sampler2D tile_wraparound : filter_nearest;
 
 uniform vec3 mutagen_color_a : source_color = vec3(0.45882353, 0.5764706, 0.9411765);
 uniform vec3 mutagen_color_b : source_color = vec3(0.9529412, 0.44705883, 0.6313726);
 
 varying vec2 local_position;
+
+const float WRAPAROUND_STRIPES = 8.;
+const float WRAPAROUND_SPEED = .75;
+const float WRAPAROUND_STRIPE_WIDTH = .5;
 
 void vertex() {
 	local_position = VERTEX;
@@ -40,6 +49,24 @@ void fragment() {
 		if ((v > 0.)) {
 			COLOR.rgb *= (mutagen_color_a*val_r + mutagen_color_b*val_g);
 		}
+		}
+	}
+	if (epsilon_enabled){
+		vec3 hsv = rgb_to_hsv(COLOR.rgb);
+		float s = hsv.g;
+		float v = hsv.b;
+		vec4 wraparound_sample = texture(tile_wraparound, UV);
+		float wraparound_amt = wraparound_sample.r*wraparound_sample.a;
+		wraparound_amt *= WRAPAROUND_STRIPES;
+		wraparound_amt -= TIME*WRAPAROUND_SPEED;
+		wraparound_amt = fract(wraparound_amt);
+		//COLOR.r = wraparound_amt;
+		if (COLOR.a*wraparound_sample.a > 0.) {
+			if ((wraparound_amt < WRAPAROUND_STRIPE_WIDTH || wraparound_sample.a < 0.001) ){
+				COLOR.a = 1.;
+			}
+			//hsv.b = 1.-hsv.b;
+			//COLOR.rgb = hsv_to_rgb(hsv);
 		}
 	}
 	// Called for every pixel the material is visible on.

@@ -14,6 +14,9 @@ const DATAMOSH_SOUND = preload("res://mods/proverbpalace/sounds/datamosh.wav")
 func is_spell_valid_target(spell: Spell) -> bool:
 	return (spell.spell_data.charge_category not in CHARGE_CATEGORIES.LIMITED) and spell.max_charge >= 1
 
+func generate_spell_select_tooltip(tooltip: GameTooltip) -> void:
+	super(tooltip)
+	print("DOES THIS OWRK?")
 #func get_spelled_word_raw() -> String:
 	#var words: WordList = word_builder.get_words()
 	#if !has_valid_word():

@@ -351,11 +351,23 @@ func is_ngram_valid(ngram: String, letter_pool: Array[String]) -> bool:
 
 func get_ngram_pool(letter_pool: Array[String]) -> Dictionary[String,float]:
 	var pool_for_value : Dictionary[String, float] = {}
+	
+	const MIN_OPTIONS_BY_VALUE = {
+		8: 4,
+		7: 4,
+		6: 4,
+		5: 4,
+		4: 4,
+		3: 3,
+		2: 3,
+		1: 2,
+	}
+	
 	for ngram_length in range(3,0,-1):
 		for val in range(8,0,-1):
 			pool_for_value = get_ngram_pool_for_value(letter_pool,val,ngram_length)
 			#print_debug(pool_for_value)
-			if len(pool_for_value) >= 3:
+			if len(pool_for_value) >= MIN_OPTIONS_BY_VALUE[val]:
 				return pool_for_value
 	
 	return {}
@@ -385,8 +397,8 @@ func get_ngram_pool_for_value(letter_pool: Array[String], value: int, ngram_leng
 
 func apply_to_tile(tile: Tile, _real_tile, is_preview, _is_preview_update):
 	if is_preview:
-		tile.add_status(TileStatus.MYSTERY)
 		tile.add_status(TileStatus.FROZEN)
+		tile.add_status(TileStatus.MYSTERY)
 	
 	tile.remove_status(TileStatus.CAPITAL)
 	tile.remove_status(TileStatus.PERIOD)
@@ -406,7 +418,7 @@ func apply_to_tile(tile: Tile, _real_tile, is_preview, _is_preview_update):
 			
 		var ngram_pool := get_ngram_pool(letter_pool)
 		
-		AudioManager.play_sound(SOUNDS["SUITCASE_%d"%(randi_range(1,2))],.8,1.)
+		AudioManager.play_sound(SOUNDS["SUITCASE_%d"%(randi_range(1,2))],1,1.)
 		#tile.add_poofcloud(POOF_COLOR,Globals.TILE_POOF_COLOR.frozen[1])
 		
 		if len(ngram_pool.keys()) < 1:
@@ -470,7 +482,7 @@ func apply_to_tile(tile: Tile, _real_tile, is_preview, _is_preview_update):
 		
 		frame_updated.emit()
 	else:
-		tile.set_face("aaa", true, false)
+		tile.set_face("***", true, false)
 
 func get_hv_frames() -> Vector2i:
 	return Vector2i(3, 1)

@@ -35,6 +35,13 @@
 		{:reroll_singular: if singular}{:reroll_plural: not singular} {:coal_target_ngram: if alt_targets}{:coal_target_normal: not alt_targets}
 		Detonates bombs.
 
+:epsilon:
+	:name:
+		Epsilon
+	
+	:description:
+		Has an empty face; counts as if there was nothing there.
+
 :cursed:
 	:name:
 		Cursed

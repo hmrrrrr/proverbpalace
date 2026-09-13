@@ -1,19 +1,34 @@
 :datamosh:
 	:name:
+		{:null: if fakeout}
+		{:name_normal: not fakeout}
+	
+	:name_normal:
 		Datamosh
+	
+	:null:
+		<null>
 
 	:description:
+		{:null: if fakeout}
+		{:description_normal: not fakeout}
+	
+	:description_normal:
 		Convert letters in a spelled word to cursed numbers.
-		Can't curse crits.
 
-	:label:
+	:label_normal:
 		Cursed numbers
+		
+	:label:
+		{:label_normal: not fakeout}
+		{:null: if fakeout}
 
+	
 	:max_charge:
-		2
+		3
 
 	:charge_characters:
-		rais8e24
+		9udcl5rais8e24
 
 :discombobulator:
 	:name:
@@ -49,6 +64,37 @@
 	
 	:banner:
 		Select tiles to blend
+
+:unlimited_bacon:
+	:name:
+		Unlimited Bacon
+	
+	:name_1:
+		Unlimited Bacon
+	
+	:name_2:
+		Unlimited Games
+	
+	:name_3:
+		Games, Unlimited Games
+	
+	:name_4:
+		No Games
+		
+	:label:
+		*, but ɛ
+	
+	:charge_category:
+		common
+	
+	:exclude_characters:
+		s
+	
+	:max_charge:
+		2
+	
+	:description:
+		Shimmer a tile's face between a wildcard and Ɛ
 
 :subdomain:
 	:name:
@@ -237,11 +283,11 @@
 	:description:
 		Turn a tile into a frozen mystery trigram based on your other letters.
 	
-	:charge_category:
-		common
+	:charge_characters:
+		ou
 
 	:max_charge:
-		3
+		2
 	
 	:banner:
 		Select a tile to mystify
@@ -549,3 +595,105 @@
 	
 	:description:
 		test
+	
+	:verbiage:
+		:otherwise:
+			otherwise,
+
+		:see_section:
+			see Section {section capital}.
+
+		:section:
+			Section {section capital}
+
+		:pick_a_tile:
+			Select a tile.
+
+		:place_three_or_less_letter_word_on_tile:
+			if you have a word of 3 or less length spelled, place it on this tile.
+		
+		:shift_forward_consonant:
+			if the face is a single consonant, shift it forward one letter.
+		
+		:is_tile_in_bottom_row:
+			if the tile is in the bottom row,
+		
+		:tile_has_harmful_status:
+			if the tile has a harmful status,
+		
+		:board_contains_only_default:
+			if your board contains no tiles with statuses,
+		
+		:convert_to_epsilon:
+			convert it's face to Ɛ.
+		
+		:convert_to_tetragram:
+			convert it's face to {tetragram upper}.
+		
+		:enemy_at_half_hp:
+			if the current enemy is at half HP or less,
+		
+		:is_tile_specific_letter:
+			if the tile's only face is the letter {letter upper},
+		
+		:try_apply_status:
+			make it into a {status} tile if it isn't one already.
+		
+		:get_tile_neighbor:
+			if this tile has any neighbor, choose one and
+
+		:append_cow_bigram:
+			if it is a single letter, turn it into its respective 100 Cow Lead bigram.
+		
+		:ngram_in_character_name:
+			if the tile's face is in your character's full legal name,
+		
+		:has_spell_shown_or_mentioned_in_cutscene:
+			if you have a spell shown or mentioned in a cutscene,
+		
+		:place_country_code_bigram:
+			place your country code on it as a bigram.
+
+		:has_fib_hp:
+			if your character's HP is in the Fibonacci sequence, then
+
+		:make_capital_wildcard:
+			make it into a capital wildcard if it isn't one already.
+
+		:tile_is_single_number:
+			if it's face is a single number,
+
+		:tile_is_at_least_two_value:
+			if the tile's value is at least 2,
+		
+		:has_odd_number_of_tiles:
+			if your board has an odd number of tiles,
+		
+		:remove_tile:
+			remove the tile.
+		
+		:tile_is_wood:
+			if the tile is wood,
+			
+		:tile_is_plastic:
+			if the tile is plastic,
+		
+		:set_to_specific_number:
+			set it's face to {number} if it isn't already.
+		
+		:fighting_enemy_shadow:
+			if you are currently fighting an enemy's shadow,
+			
+		:swap_tile_type:
+			swap it's type between wood and plastic.
+
+		:face_all_from_back_half_of_alphabet:
+			if it has a single face, and each letter in the face is from the second half of the alphabet,
+
+		:tile_is_faceless:
+			if the tile has no face, then
+
+		:word_is_in_category:
+			if this word is in the category "{category}", then
+
+	

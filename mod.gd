@@ -31,6 +31,7 @@ const SPELLS: Dictionary[String, String] = {
 	SD_CARD = "sd_card",
 	DISCOMBOBULATOR = "discombobulator",
 	BUBBLE_TAPE = "bubble_tape",
+	UNLIMITED_BACON = "unlimited_bacon",
 }
 
 var BASE_WEIGHT := 4.5
@@ -48,16 +49,15 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.LCD_TWEEZERS,
 		SPELLS.DYNAMO,
 		SPELLS.POCKET_SNAKE,
-		SPELLS.VANILLA_ESSENCE,
 		SPELLS.DISCOMBOBULATOR,
-		SPELLS.BUBBLE_TAPE
+		SPELLS.BUBBLE_TAPE,
+		SPELLS.UNLIMITED_BACON
 	],
 	Globals.SPELL_CATEGORY.OFFENSIVE: [
 		SPELLS.MILK,
 		SPELLS.GAYDAR,
 		SPELLS.SUBDOMAIN,
 		SPELLS.BLOWOUT,
-		SPELLS.SD_CARD,
 		SPELLS.HALO,
 	],
 	Globals.SPELL_CATEGORY.DEFENSIVE: [
@@ -100,7 +100,6 @@ func _ready() -> void:
 	#CustomIntent.custom_status_intent_icons["mutagen"]=preload("uid://dukxvsrifradw")
 	#update_remove_other_enemies()
 	var do_playtest_weights = FileAccess.file_exists("res://mods/proverbpalace/BOOST_SPELL_WEIGHTS.yes")
-	
 	print_debug("Yay loaded Proverb Palace. Playtest weights file %sdetected"%("not " if !do_playtest_weights else ""))
 	#if "dimorph" not in EnemyLoader.enemy_pools[0][0]:
 		#EnemyLoader.add_enemy("dimorph",2,3,"res://mods/proverbpalace/arte/dimorph/miniface_dimorph.png")
@@ -108,9 +107,29 @@ func _ready() -> void:
 	
 	
 	await Game.main_scene_loaded
+	
+	_initialize_managers()
 	Game.main.game_state_updated.connect(_game_state_updated)
 
+var tile_manager: ProverbPalaceTileManager
+
+func _initialize_managers() -> void:
+	tile_manager = ProverbPalaceTileManager.new()
+	add_child(tile_manager)
+	
+	get_tree().node_added.connect(tile_manager._on_node_added)
+
 func _game_state_updated():
+	for player_spell: PlayerSpell in Game.player.spell_container.player_spells:
+		if player_spell.spell == null:
+			var a := Spell.create("proverbpalace:datamosh", Game.main.rng.spell) as Datamosh
+			player_spell.set_spell(
+				a
+			)
+			a._first_spawn(false)
+			push_error(
+				"DATAMOSH IS REPLACING A NULL SPELL!\n%s"%Datamosh.DEBUG_PRINT_PIC
+			)
 	#if Game.word_builder != null and !Game.word_builder.has_node("MutagenBubbles"):
 		#var inst = MUTAGEN_BUBBLES.instantiate()
 		#Game.word_builder.add_child(inst)
@@ -165,13 +184,14 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.POCKET_SNAKE: BASE_WEIGHT,
 		SPELLS.HALO: BASE_WEIGHT,
 		SPELLS.SOFTBOILED: BASE_WEIGHT,
-		SPELLS.DISCOMBOBULATOR: BASE_WEIGHT*UNPLAYTESTED_COEFF*0.,
+		SPELLS.DISCOMBOBULATOR: BASE_WEIGHT*UNPLAYTESTED_COEFF,
 		SPELLS.SD_CARD: 0.,
 		SPELLS.VANILLA_ESSENCE: 0.,
 		SPELLS.PDA: 0.,
 		SPELLS.PHOTO_ALBUM: 0.,
 		SPELLS.BLENDER: 0.,
 		SPELLS.BUBBLE_TAPE: 0.,
+		SPELLS.UNLIMITED_BACON: 0.,
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])
