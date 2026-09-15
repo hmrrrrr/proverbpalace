@@ -65,6 +65,24 @@
 	:banner:
 		Select tiles to blend
 
+:cliffhanger:
+	:name:
+		Cliffhanger
+	
+	:label:
+		Anticlimactic crit
+	
+	:description:
+		Convert a tile to a crit Ɛ.
+		Convert it and a random adjacent tile to period.
+	
+	:charge_category:
+		common
+	
+	:max_charge:
+		4
+	
+
 :unlimited_bacon:
 	:name:
 		Unlimited Bacon

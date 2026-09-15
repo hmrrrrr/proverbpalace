@@ -2,7 +2,7 @@ extends Node
 class_name ProverbPalaceTileManager
 
 
-const EPSILON = "ɛ"
+const EPSILON = "ԑ"
 const TILE_WRAPAROUND_ATLAS = preload("res://mods/proverbpalace/arte/tiles/tile_wraparound_atlas.png")
 
 func tile_counts_as_epsilon(tile: Tile) -> bool:
@@ -13,10 +13,19 @@ func tile_counts_as_epsilon(tile: Tile) -> bool:
 			return true
 	return false
 
-func _on_word_builder_state_updated():
+var do_state_update_callback := true
+
+func _on_word_builder_tiles_updated():
+	return
+	do_state_update_callback = false
+	await get_tree().process_frame
+	var can_submit = Game.word_builder.can_submit_tiles()
 	for tile in Game.word_builder.tiles:
-		#fix_epsilon_faces(tile,!tile.word_builder.can_submit_tiles())
-		print("hi :3")
+		fix_epsilon_faces(tile,!can_submit)
+	Game.word_builder.resolve_words()
+	Game.main.game_state_updated.emit()
+	do_state_update_callback = true
+	
 
 func _on_tile_generate_tooltip(tooltip: Variant, tile: Tile):
 	var using_spell = tile.player.get_using_spell()
@@ -68,6 +77,7 @@ func fix_epsilon_faces(tile: Tile, should_have_epsilon: bool):
 	
 	
 func _on_tile_state_updated(tile: Tile, fix_others := true):
+	return
 	fix_epsilon_faces(tile,!tile.in_word())
 	if tile.in_word() and fix_others:
 		for t in tile.word_builder.tiles:
@@ -79,6 +89,8 @@ func _on_tile_state_updated(tile: Tile, fix_others := true):
 			fix_epsilon_faces(tile,true)
 
 func _on_tile_updated(tile: Tile):
+	#if !do_state_update_callback:
+		#return
 	fix_epsilon_faces(tile,!tile.in_word() or !tile.word_builder.can_submit_tiles())
 
 const CUSTOM_SHADER = preload("res://mods/proverbpalace/overrides/source/shaders/tile_sprite.gdshader")
@@ -109,12 +121,22 @@ func _on_tile_added(tile: Tile):
 	tile.tile_sprite.material.shader = CUSTOM_SHADER
 	(tile.tile_sprite.material as ShaderMaterial).set_shader_parameter("tile_wraparound",TILE_WRAPAROUND_ATLAS)
 
+var connected_word_builder := false
+
+func _ready() -> void:
+	if !connected_word_builder:
+		Game.word_builder.tiles_updated.connect(
+			_on_word_builder_tiles_updated
+		)
+		connected_word_builder = true
+
 func _on_node_added(node: Node):
 	var tile := node as Tile
 	if node is WordBuilder:
-		node.state_updated.connect(
-			_on_word_builder_state_updated
+		node.tiles_updated.connect(
+			_on_word_builder_tiles_updated
 		)
+		connected_word_builder = true
 	if tile:
 		await tile.ready
 		tile.tooltip_collision.generate_tooltip.connect(

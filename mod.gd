@@ -32,6 +32,7 @@ const SPELLS: Dictionary[String, String] = {
 	DISCOMBOBULATOR = "discombobulator",
 	BUBBLE_TAPE = "bubble_tape",
 	UNLIMITED_BACON = "unlimited_bacon",
+	CLIFFHANGER = "cliffhanger"
 }
 
 var BASE_WEIGHT := 4.5
@@ -59,6 +60,7 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.SUBDOMAIN,
 		SPELLS.BLOWOUT,
 		SPELLS.HALO,
+		SPELLS.CLIFFHANGER
 	],
 	Globals.SPELL_CATEGORY.DEFENSIVE: [
 		SPELLS.TOY_CAMERA,
@@ -108,7 +110,7 @@ func _ready() -> void:
 	
 	await Game.main_scene_loaded
 	
-	_initialize_managers()
+	#_initialize_managers()
 	Game.main.game_state_updated.connect(_game_state_updated)
 
 var tile_manager: ProverbPalaceTileManager
@@ -192,6 +194,7 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.BLENDER: 0.,
 		SPELLS.BUBBLE_TAPE: 0.,
 		SPELLS.UNLIMITED_BACON: 0.,
+		SPELLS.CLIFFHANGER: BASE_WEIGHT*UNPLAYTESTED_COEFF*0.,
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])
