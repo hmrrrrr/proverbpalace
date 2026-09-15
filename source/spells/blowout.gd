@@ -28,7 +28,10 @@ const RARITY_CUTOFFS = [
 ]
 
 func get_save_data():
-	return {current_trigram=current_trigram, current_trigram_count=current_trigram_count}
+	var save=super()
+	save.current_trigram=current_trigram
+	save.current_trigram_count=current_trigram_count
+	return save
 	
 func load_save_data(save):
 	current_trigram = save.current_trigram
