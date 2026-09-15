@@ -4,8 +4,6 @@ extends TileModifierSpell
 var current_trigram := ""
 var current_trigram_count := 1
 
-const STREAMER = preload("res://mods/proverbpalace/source/effects/streamer.tscn")
-
 
 const RARITY_NAMES = [
 	"abundant",
@@ -28,9 +26,12 @@ const RARITY_CUTOFFS = [
 ]
 
 func get_save_data():
-	return {current_trigram=current_trigram, current_trigram_count=current_trigram_count}
-	
+	var save = super()
+	save.current_trigram = current_trigram
+	save.current_trigram_count = current_trigram_count
+	return save
 func load_save_data(save):
+	super(save)
 	current_trigram = save.current_trigram
 	current_trigram_count = save.current_trigram_count
 
@@ -70,15 +71,15 @@ func get_tooltip_context():
 func set_status_tooltips():
 	status_tooltips = [{status=TileStatus.BOMB,bomb_turns=1}]
 
-func create_streamer_trail(proj: ArcingProjectile, color = "PURPLE", offset := Vector2.ZERO):
-	var streamer := STREAMER.instantiate() as Streamer
-	streamer.streamer_color = color
-	streamer.bound_projectile = proj
-	
-	
-	main.projectile_container.add_child(streamer)
-	main.projectile_container.move_child(streamer,0)
-	streamer.offset = offset
+#func create_streamer_trail(proj: ArcingProjectile, color = "PURPLE", offset := Vector2.ZERO):
+	#var streamer := STREAMER.instantiate() as Streamer
+	#streamer.streamer_color = color
+	#streamer.bound_projectile = proj
+	#
+	#
+	#main.projectile_container.add_child(streamer)
+	#main.projectile_container.move_child(streamer,0)
+	#streamer.offset = offset
 
 func get_trigram_count(trigram: String):
 	if trigram in Trigrams.GOOD_TRIGRAMS:

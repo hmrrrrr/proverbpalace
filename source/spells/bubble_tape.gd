@@ -11,6 +11,12 @@ const FUNNY_TETRAGRAMS = [
 		"homo", "anal", "rack", "tism", "fish", "zing"
 	]
 
+const VARIANTS = {
+	REGULAR_FLAVOR = "regular_flavor",
+	FAVORITE_FLAVOR = "favorite_flavor",
+	MYSTERY_FLAVOR = "mystery_flavor",
+}
+
 const SPELLS_SHOWN_OR_MENTIONED_IN_CUTSCENES = [
 	SPELLS.LETTER_OPENER, SPELLS.PARTY_RATION, SPELLS.GIRL_PILLS, SPELLS.SALT,
 	SPELLS.VICTORY_WHISKEY, SPELLS.CIGARETTE, SPELLS.CIGARETTE_BUTT, SPELLS.CLOVER,
@@ -66,9 +72,15 @@ var sections: Array[Dictionary] = []
 
 var country_code: String = Steam.getIPCountry().to_lower()
 
+var flavor: String
+
 func _first_spawn(is_transform: = false) -> void:
 	randomize_sections(rng.spell)
+	flavor = rng.spell.pick_random(VARIANTS.values())
 	super(is_transform)
+
+func _ready() -> void:
+	update_color()
 
 func _use():
 	randomize_sections(rng.spell)
@@ -77,10 +89,12 @@ func _use():
 func get_save_data():
 	var save = super()
 	save.country_code = country_code
+	save.flavor = flavor
 	return save
 
 func load_save_data(save):
 	super(save)
+	flavor = save.flavor
 	country_code = save.country_code
 
 func get_random_word_category(bubble_rng: RNG):
@@ -156,7 +170,7 @@ func fill_out_section(bubble_rng: RNG, section: Dictionary, depth := 0, desired_
 	match section.type:
 		PROVIDER:
 			needed_children.append("next")
-			needed_types = [CONDITION,HANDLING_CONDITION,ARBITRARY_CONDITION]
+			needed_types = [CONDITION,ARBITRARY_CONDITION]
 		CONDITION, ARBITRARY_CONDITION:
 			needed_children.append("next_if_yes")
 			needed_children.append("next_if_no")
@@ -427,6 +441,7 @@ func randomize_sections(bubble_rng: RNG):
 		{id="convert_to_tetragram",
 			object="tile",
 			type = ENDPOINT,
+			weight = 0.5,
 			context = {tetragram = random_tetragram},
 			run = func(param):
 				var tile: Tile = param
@@ -593,6 +608,7 @@ func randomize_sections(bubble_rng: RNG):
 		"pick_a_tile"
 	]
 	
+	frame = bubble_rng.randi()%4
 	
 	for section in sections:
 		if !section.has("weight"):
@@ -606,14 +622,30 @@ func randomize_sections(bubble_rng: RNG):
 	sections_for_description = {}
 	create_sections_for_description(structure)
 	
+	
+	frame_updated.emit()
+	shake.emit()
+	description_updated.emit()
+	
+
+var frame := 0
 
 const SECTION_NAMES = Letters.ALPHABET
+
+func get_tooltip_context():
+	return {flavor=flavor}
 
 func get_next_section_name() -> String:
 	for let in SECTION_NAMES:
 		if let not in sections_for_description:
 			return let
 	return "z"
+
+func get_hv_frames() -> Vector2i:
+	return Vector2i(4,1)
+
+func get_frame() -> int:
+	return frame
 
 
 func create_sections_for_description(section: Dictionary, current_description_section := "base") -> void:
@@ -659,6 +691,16 @@ func get_description_text_from_array(arr: Array) -> String:
 	
 	
 
+func update_color() -> void:
+	if charge_container:
+		pass
+	else:
+		return
+	var spell_sprite: SpellSprite = charge_container.get_parent().get_node("SpellSprite")
+	
+	if spell_sprite:
+		spell_sprite.modulate = color
+
 
 func get_section_name(section_letter: String):
 	return get_string_group().get_string("verbiage/section",{section=section_letter})
@@ -673,8 +715,16 @@ func generate_spell_select_tooltip(tooltip: GameTooltip) -> void:
 	for section in sections_for_description:
 		if section != "base":
 			tooltip.add_subtooltip(get_section_name(section), get_description_text_from_array(sections_for_description[section]))
-	print("OIFJAOFJOIA")
+
 	post_generate_tooltip(tooltip)
+
+
+func get_title_context() -> Dictionary:
+	var ctx = super()
+	ctx.flavor = flavor
+	return ctx
+
+var color = Color("a8b8faff")
 
 func generate_player_spell_tooltip(tooltip: GameTooltip) -> void :
 	
@@ -683,8 +733,9 @@ func generate_player_spell_tooltip(tooltip: GameTooltip) -> void :
 		if section == "base":
 			tooltip.add_subtooltip(get_title(), get_description_text_from_array(sections_for_description[section]))
 		else:
-			tooltip.add_subtooltip(get_section_name(section), get_description_text_from_array(sections_for_description[section]))
-			
+			var tt = tooltip.add_subtooltip(get_section_name(section), get_description_text_from_array(sections_for_description[section]))
+			#tt.set_title_color(color)
+			#tt.set_meta(&"custom_panel","MenuPaperLight")
 	
 	if is_cursed() and curse not in [CURSE.CENSORED, CURSE.NOSTALGIC, CURSE.SHINY]:
 		if id == secret_id or secret_id not in Globals.GIFTS or not has_curse(CURSE.CURSED):
@@ -695,6 +746,8 @@ func generate_player_spell_tooltip(tooltip: GameTooltip) -> void :
 	
 	
 	post_generate_tooltip(tooltip)
+
+
 
 
 func should_capitalize_next_part_of_section(string: String):

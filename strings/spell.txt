@@ -73,7 +73,7 @@
 		Unlimited Bacon
 	
 	:name_2:
-		Unlimited Games
+		No Games
 	
 	:name_3:
 		Games, Unlimited Games
@@ -82,7 +82,7 @@
 		No Games
 		
 	:label:
-		*, but ɛ
+		*, but Ɛ
 	
 	:charge_category:
 		common
@@ -284,7 +284,7 @@
 		Turn a tile into a frozen mystery trigram based on your other letters.
 	
 	:charge_characters:
-		ou
+		o
 
 	:max_charge:
 		2
@@ -331,7 +331,7 @@
 	
 	:label:
 		Critical SD
-	
+
 :blowout:
 	:name:
 		Blowout
@@ -582,7 +582,28 @@
 
 :bubble_tape:
 	:name:
-		Bubble Tape
+		{:flv_icon:} Bubble Tape {:flv_icon:}
+	
+	:flv_icon:
+		{:favorite_flavor_shortening: if flavor "favorite_flavor"}{:mystery_flavor_shortening: if flavor "mystery_flavor"}
+	
+	:favorite_flavor_shortening:
+		🟊
+	
+	:mystery_flavor_shortening:
+		⁇
+	
+	:favorite_flavor:
+		Favorite Flavor
+	
+	:mystery_flavor:
+		Mystery Flavor
+	
+	:mystery_flavor_description:
+		Effects reroll after every battle.
+	
+	:favorite_flavor_description:
+		This spell's effect is personalized.
 	
 	:charge_category:
 		common
@@ -591,7 +612,9 @@
 		3
 	
 	:label:
-		Bubble tape
+		{"Bubble tape" if flavor "regular_flavor"}
+		{"Mystery flavor" if flavor "mystery_flavor"}
+		{"Favorite flavor" if flavor "favorite_flavor"}
 	
 	:description:
 		test
@@ -625,10 +648,10 @@
 			if your board contains no tiles with statuses,
 		
 		:convert_to_epsilon:
-			convert it's face to Ɛ.
+			convert its face to Ɛ.
 		
 		:convert_to_tetragram:
-			convert it's face to {tetragram upper}.
+			convert its face to {tetragram upper}.
 		
 		:enemy_at_half_hp:
 			if the current enemy is at half HP or less,
@@ -661,7 +684,7 @@
 			make it into a capital wildcard if it isn't one already.
 
 		:tile_is_single_number:
-			if it's face is a single number,
+			if its face is a single number,
 
 		:tile_is_at_least_two_value:
 			if the tile's value is at least 2,
@@ -679,13 +702,13 @@
 			if the tile is plastic,
 		
 		:set_to_specific_number:
-			set it's face to {number} if it isn't already.
+			set its face to {number} if it isn't that already.
 		
 		:fighting_enemy_shadow:
 			if you are currently fighting an enemy's shadow,
 			
 		:swap_tile_type:
-			swap it's type between wood and plastic.
+			swap its type between wood and plastic.
 
 		:face_all_from_back_half_of_alphabet:
 			if it has a single face, and each letter in the face is from the second half of the alphabet,

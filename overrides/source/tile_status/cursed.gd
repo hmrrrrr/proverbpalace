@@ -12,6 +12,7 @@ func get_tooltip_context():
 	return {status_value = get_status_value(), is_kitty = kitty}
 
 func load_save_data(data):
+	super(data)
 	kitty = data.kitty
 	update_kittyous()
 
