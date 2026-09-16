@@ -44,16 +44,21 @@ func resolve_tile_words(tiles, priority_words: = PackedStringArray(), depriority
 	for tile_set in tile_sets:
 		var word_list = WordList.new()
 		word_list.set_priority(priority_words, depriority_words, priority_flag)
-
+		
+		var skip := false
 		for tile: Tile in tile_set:
 			word_list.add_tile(tile)
-
+			if tile.face == ProverbPalaceTileManager.EPSILON:
+				skip = true
+				break
 		if not tile_set.is_empty():
-			word_list.generate_permutations()
+			if !skip:
+				word_list.generate_permutations()
 			word_list.resolve()
 
-			if word_list.all_valid:
-				word_list.set_tile_wildcard_faces()
+			if !skip:
+				if word_list.all_valid:
+					word_list.set_tile_wildcard_faces()
 
 		full_word_list.extend_from_word_list(word_list)
 

@@ -16,7 +16,7 @@ func get_spell_name() -> String:
 	
 func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_update: bool) -> void :
 	tile.set_face(
-		["*","ɛ"]
+		["*",ProverbPalaceTileManager.EPSILON]
 	)
 
 func is_tile_selectable(tile: Tile) -> bool:

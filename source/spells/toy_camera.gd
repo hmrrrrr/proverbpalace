@@ -15,7 +15,6 @@ const SOUNDS = {
 	CAMERAPRINT = preload("res://mods/proverbpalace/sounds/cameraprint.wav")
 }
 
-const FLASH_FX = preload("res://mods/proverbpalace/source/spells/flash_fx.tscn")
 const ARCING_PROJECTILE = preload("res://source/effects/arcing_projectile.tscn")
 
 var can_show_album := true
@@ -98,6 +97,7 @@ func handle_invalid_tile(tile):
 			word_hint.temporary_warning("misc/word_warnings/already_in_album",{letter=breaking_letter})
 		).call()
 
+const FLASH_FX = preload("res://mods/proverbpalace/source/spells/flash_fx.tscn")
 func create_flash_effect(tile: Tile) -> FlashFX:
 	var flash := FLASH_FX.instantiate() as FlashFX
 	

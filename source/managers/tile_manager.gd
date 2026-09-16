@@ -16,7 +16,6 @@ func tile_counts_as_epsilon(tile: Tile) -> bool:
 var do_state_update_callback := true
 
 func _on_word_builder_tiles_updated():
-	return
 	do_state_update_callback = false
 	await get_tree().process_frame
 	var can_submit = Game.word_builder.can_submit_tiles()
@@ -108,7 +107,7 @@ func _on_tile_face_draw(tile: Tile):
 	if !tile_counts_as_epsilon(tile):
 		return
 	if "" == tile.faces[tile.tile_face.face_index]:
-		tile.modulate.a = 0.05
+		tile.modulate.a = 0.35
 		#tile.disable_shadow()
 	else:
 		tile.modulate.a = 1

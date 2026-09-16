@@ -32,7 +32,8 @@ const SPELLS: Dictionary[String, String] = {
 	DISCOMBOBULATOR = "discombobulator",
 	BUBBLE_TAPE = "bubble_tape",
 	UNLIMITED_BACON = "unlimited_bacon",
-	CLIFFHANGER = "cliffhanger"
+	CLIFFHANGER = "cliffhanger",
+	BRASS_KNUCKLES = "brass_knuckles",
 }
 
 var BASE_WEIGHT := 4.5
@@ -52,7 +53,8 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.POCKET_SNAKE,
 		SPELLS.DISCOMBOBULATOR,
 		SPELLS.BUBBLE_TAPE,
-		SPELLS.UNLIMITED_BACON
+		SPELLS.UNLIMITED_BACON,
+		SPELLS.BRASS_KNUCKLES,
 	],
 	Globals.SPELL_CATEGORY.OFFENSIVE: [
 		SPELLS.MILK,
@@ -110,7 +112,7 @@ func _ready() -> void:
 	
 	await Game.main_scene_loaded
 	
-	#_initialize_managers()
+	_initialize_managers()
 	Game.main.game_state_updated.connect(_game_state_updated)
 
 var tile_manager: ProverbPalaceTileManager
@@ -193,8 +195,9 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.PHOTO_ALBUM: 0.,
 		SPELLS.BLENDER: 0.,
 		SPELLS.BUBBLE_TAPE: 0.,
-		SPELLS.UNLIMITED_BACON: 0.,
-		SPELLS.CLIFFHANGER: BASE_WEIGHT*UNPLAYTESTED_COEFF*0.,
+		SPELLS.UNLIMITED_BACON: BASE_WEIGHT*UNPLAYTESTED_COEFF,
+		SPELLS.CLIFFHANGER: BASE_WEIGHT*UNPLAYTESTED_COEFF,
+		SPELLS.BRASS_KNUCKLES: BASE_WEIGHT*UNPLAYTESTED_COEFF,
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])

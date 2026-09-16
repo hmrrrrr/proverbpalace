@@ -64,6 +64,7 @@ func _on_hole_texture_changed():
 	
 func clear():
 	remove_hole_variant()
+	super()
 
 func update_frame() -> void:
 	super()

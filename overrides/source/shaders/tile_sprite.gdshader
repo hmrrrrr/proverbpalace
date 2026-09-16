@@ -61,13 +61,14 @@ void fragment() {
 		wraparound_amt -= TIME*WRAPAROUND_SPEED;
 		wraparound_amt = fract(wraparound_amt);
 		//COLOR.r = wraparound_amt;
-		if (COLOR.a*wraparound_sample.a > 0.) {
-			if ((wraparound_amt < WRAPAROUND_STRIPE_WIDTH || wraparound_sample.a < 0.001) ){
-				COLOR.a = 1.;
-			}
-			//hsv.b = 1.-hsv.b;
-			//COLOR.rgb = hsv_to_rgb(hsv);
-		}
+		//if (COLOR.a*wraparound_sample.a > 0.) {
+			//if ((wraparound_amt < WRAPAROUND_STRIPE_WIDTH || wraparound_sample.a < 0.001)){
+				//COLOR.a = 1.;
+			//}
+			////hsv.b = 1.-hsv.b;
+			////COLOR.rgb = hsv_to_rgb(hsv);
+		//}
+		COLOR.a = float((COLOR.a*wraparound_sample.a > 0. && (wraparound_amt < WRAPAROUND_STRIPE_WIDTH || wraparound_sample.a < 0.001)));
 	}
 	// Called for every pixel the material is visible on.
 }

@@ -30,6 +30,23 @@
 	:charge_characters:
 		9udcl5rais8e24
 
+:brass_knuckles:
+	:name:
+		Brass Knuckles
+	
+	:charge_category:
+		auto
+	
+	:max_charge:
+		2
+	
+	:label:
+		Bruised Ԑ
+	
+	:description:
+		Convert ANY tile to a bruised Ԑ.
+	
+
 :discombobulator:
 	:name:
 		Discombobulator
@@ -73,7 +90,7 @@
 		Anticlimactic crit
 	
 	:description:
-		Convert a tile to a crit Ɛ.
+		Convert a tile to a crit Ԑ.
 		Convert it and a random adjacent tile to period.
 	
 	:charge_category:
@@ -100,7 +117,7 @@
 		No Games
 		
 	:label:
-		*, but Ɛ
+		*, but Ԑ
 	
 	:charge_category:
 		common
@@ -112,7 +129,7 @@
 		2
 	
 	:description:
-		Shimmer a tile's face between a wildcard and Ɛ
+		Shimmer a tile's face between a wildcard and Ԑ
 
 :subdomain:
 	:name:
