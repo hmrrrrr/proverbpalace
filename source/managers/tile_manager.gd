@@ -4,6 +4,9 @@ class_name ProverbPalaceTileManager
 
 const EPSILON = "ԑ"
 const TILE_WRAPAROUND_ATLAS = preload("res://mods/proverbpalace/arte/tiles/tile_wraparound_atlas.png")
+const MUTAGEN_BUBBLES = preload("res://mods/proverbpalace/source/bubble/mutagen_bubbles.tscn")
+
+
 
 func tile_counts_as_epsilon(tile: Tile) -> bool:
 	if tile.has_faceless_status():
@@ -87,9 +90,58 @@ func _on_tile_state_updated(tile: Tile, fix_others := true):
 		if !tile.word_builder.can_submit_tiles():
 			fix_epsilon_faces(tile,true)
 
+func set_mutagen_enabled_for_sprite(sprite: TileSprite, enabled: bool):
+	sprite.set_instance_shader_parameter("mutagen_enabled",enabled)
+	
+	for inheritor in sprite.material_inheritors:
+		inheritor.set_instance_shader_parameter("mutagen_enabled",enabled)
+	
+
+func fix_mutagen_visuals(tile: Tile, is_in_word := true):
+	if !tile.has_status("mutagen"):
+		set_mutagen_enabled_for_sprite(tile.tile_sprite,false)
+		return
+	set_mutagen_enabled_for_sprite(tile.tile_sprite,true)
+	tile.tile_face.set_deboss_color(
+		"#999999"
+	)
+	tile.tile_face.set_color("#003300")
+	tile.tile_face.value_color = "#003300"
+	tile.tile_face.queue_redraw()
+	
+
+const MUTAGEN_EXCLUSIVE_STATUSES_GREATER = [
+	Globals.TileEffect.POSITIVE_FACE,
+	Globals.TileStatus.HOLE,
+	Globals.TileStatus.MYSTERY
+]
+const MUTAGEN_EXCLUSIVE_STATUSES_LESSER = [
+	Globals.TileStatus.CAPITAL,
+	Globals.TileStatus.PERIOD
+]
+
+
+
+func fix_mutagen_tile(tile: Tile, is_in_word := true):
+	if !tile.has_status("mutagen"):
+		return
+	
+	
+	if tile.has_any_effect(MUTAGEN_EXCLUSIVE_STATUSES_GREATER):
+		tile.remove_status("mutagen")
+		return
+	
+	for status in MUTAGEN_EXCLUSIVE_STATUSES_LESSER:
+		if tile.has_status(status):
+			tile.remove_status(status)
+		
+	tile.tile_sprite.set_frame(26)
+	
+
 func _on_tile_updated(tile: Tile):
 	#if !do_state_update_callback:
-		#return
+		#retur
+	fix_mutagen_tile(tile)
 	fix_epsilon_faces(tile,!tile.in_word() or !tile.word_builder.can_submit_tiles())
 
 const CUSTOM_SHADER = preload("res://mods/proverbpalace/overrides/source/shaders/tile_sprite.gdshader")
@@ -104,6 +156,7 @@ func set_epsilon_shader(tile: Tile, toggle: bool):
 			
 
 func _on_tile_face_draw(tile: Tile):
+	fix_mutagen_visuals(tile)
 	if !tile_counts_as_epsilon(tile):
 		return
 	if "" == tile.faces[tile.tile_face.face_index]:
@@ -122,19 +175,26 @@ func _on_tile_added(tile: Tile):
 
 var connected_word_builder := false
 
+func init_word_builder(word_builder: WordBuilder):
+	word_builder.tiles_updated.connect(
+		_on_word_builder_tiles_updated
+	)
+	var inst = MUTAGEN_BUBBLES.instantiate()
+	word_builder.add_child(inst)
+	var word_holder = word_builder.get_node("WordHolder")
+	word_holder.updated_tiles.connect(inst._on_word_holder_updated_tiles)
+
+
 func _ready() -> void:
 	if !connected_word_builder:
-		Game.word_builder.tiles_updated.connect(
-			_on_word_builder_tiles_updated
-		)
+		init_word_builder(Game.word_builder)
+		
 		connected_word_builder = true
 
 func _on_node_added(node: Node):
 	var tile := node as Tile
 	if node is WordBuilder:
-		node.tiles_updated.connect(
-			_on_word_builder_tiles_updated
-		)
+		init_word_builder(node)
 		connected_word_builder = true
 	if tile:
 		await tile.ready

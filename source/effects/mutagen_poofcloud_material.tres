@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://ib7tvcmcslsn"]
+
+[ext_resource type="Shader" uid="uid://crn6dxdldondd" path="res://mods/proverbpalace/source/effects/mutagen_poofcloud.gdshader" id="1_70j2k"]
+
+[resource]
+shader = ExtResource("1_70j2k")
+shader_parameter/mutagen_color_a = Color(0.45882353, 0.5764706, 0.9411765, 1)
+shader_parameter/mutagen_color_b = Color(0.9529412, 0.44705883, 0.6313726, 1)

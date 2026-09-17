@@ -30,6 +30,22 @@
 	:charge_characters:
 		9udcl5rais8e24
 
+:cheap_beer:
+	:name:
+		Cheap Beer
+	
+	:charge_category:
+		uncommon
+	
+	:max_charge:
+		2
+	
+	:label:
+		Mutagen spill
+	
+	:description:
+		Convert a tile and a random neighboring tile to mutagen.
+	
 :brass_knuckles:
 	:name:
 		Brass Knuckles
@@ -61,7 +77,7 @@
 		Override charge
 	
 	:description:
-		Change ALL your spells' charges to correspond to letters in a random row, deleting them.
+		Change ALL your spells' charges to correspond to the letters or numbers in a random row, deleting them.
 
 :blender:
 	:name:

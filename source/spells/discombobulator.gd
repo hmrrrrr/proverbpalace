@@ -16,7 +16,6 @@ func is_spell_valid_target(spell: Spell) -> bool:
 
 func generate_spell_select_tooltip(tooltip: GameTooltip) -> void:
 	super(tooltip)
-	print("DOES THIS OWRK?")
 #func get_spelled_word_raw() -> String:
 	#var words: WordList = word_builder.get_words()
 	#if !has_valid_word():
@@ -104,7 +103,7 @@ func _use():
 				var inst := GLITCH_REDACT_EFFECT.instantiate() as GlitchRedactEffect
 				charge_tile.charge_face.add_child(inst)
 				effects.append(inst)
-			AudioManager.play_sound(DATAMOSH_SOUND,1.6)
+			AudioManager.play_sound(DATAMOSH_SOUND,1.2 + i*randf_range(-.13,.16))
 			
 			await Game.timeout(0.08)
 	

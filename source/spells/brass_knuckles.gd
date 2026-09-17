@@ -145,7 +145,7 @@ func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_u
 	if not is_preview:
 		tile.animation.play("pressed",3.5)
 		AudioManager.play_sound(Sounds.STOKER.SWING,randf_range(.8,.83),.35)
-		AudioManager.play_sound(Sounds.GENERIC.HIT)
+		AudioManager.play_sound(Sounds.GENERIC.HIT,1.5)
 		#tile.add_poofcloud(Globals.COLORS.BRUISE)
 		var flash := create_flash_effect(tile)
 		flash.position += tile.get_local_mouse_position().clampf(-4.,4.)

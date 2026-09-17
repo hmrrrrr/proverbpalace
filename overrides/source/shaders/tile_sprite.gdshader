@@ -39,7 +39,7 @@ void fragment() {
 		}
 	}
 	if (mutagen_enabled) {
-		if (COLOR.g < 0.3 && COLOR.g > 0.01) {
+		if (COLOR.g < 0.3 && COLOR.g > 0.1) {
 			COLOR.rgb = vec3(1.,1.,1.);
 		} else {
 		float t = TIME*1.5;

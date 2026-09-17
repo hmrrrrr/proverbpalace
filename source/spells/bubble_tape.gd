@@ -16,6 +16,7 @@ const VARIANTS = {
 	FAVORITE_FLAVOR = "favorite_flavor",
 	MYSTERY_FLAVOR = "mystery_flavor",
 }
+const BUBBLE_TAPE_COLORS = preload("res://mods/proverbpalace/source/resources/bubble_tape_colors.tres")
 
 const SPELLS_SHOWN_OR_MENTIONED_IN_CUTSCENES = [
 	SPELLS.LETTER_OPENER, SPELLS.PARTY_RATION, SPELLS.GIRL_PILLS, SPELLS.SALT,
@@ -74,28 +75,47 @@ var country_code: String = Steam.getIPCountry().to_lower()
 
 var flavor: String
 
+var current_seed := 0
+
 func _first_spawn(is_transform: = false) -> void:
-	randomize_sections(rng.spell)
 	flavor = rng.spell.pick_random(VARIANTS.values())
+	if flavor == VARIANTS.FAVORITE_FLAVOR:
+		current_seed = Steam.getSteamID()
+	else:
+		current_seed = rng.spell.randi()
+	
+	
+	
+	update_sections()
+	
+	
+	
 	super(is_transform)
 
 func _ready() -> void:
-	update_color()
+	pass
 
 func _use():
-	randomize_sections(rng.spell)
+	
+	if flavor == VARIANTS.MYSTERY_FLAVOR:
+		current_seed = rng.spell.randi()
+		update_sections()
+	
 	_end_use()
 
 func get_save_data():
 	var save = super()
 	save.country_code = country_code
 	save.flavor = flavor
+	save.current_seed = current_seed
 	return save
 
 func load_save_data(save):
 	super(save)
 	flavor = save.flavor
+	current_seed = save.current_seed
 	country_code = save.country_code
+	update_sections()
 
 func get_random_word_category(bubble_rng: RNG):
 	return bubble_rng.pick_random(Globals.WORD_CATEGORY_FLAGS.keys())
@@ -211,13 +231,17 @@ func get_section_by_id(section_id: String):
 		if section.id == section_id:
 			return section
 
-func randomize_sections(bubble_rng: RNG):
+func update_sections():
+	var bubble_rng := RNG.new()
+	bubble_rng.seed = current_seed
+	#bubble_rng.state = 0
+	
 	var random_category_name = get_random_word_category(bubble_rng)
 	var random_category = Globals.WORD_CATEGORY_FLAGS[random_category_name]
 
 	var random_neg_status = bubble_rng.pick_random(
 		[
-			TileStatus.BRUISE,TileStatus.ASH,TileStatus.CAPITAL,TileStatus.GUNK,TileStatus.MONEY,TileStatus.SPICY
+			TileStatus.BRUISE,TileStatus.ASH,TileStatus.CAPITAL,TileStatus.GUNK,TileStatus.MONEY
 		]
 	)
 	var random_defensive_status = bubble_rng.pick_random(
@@ -227,7 +251,7 @@ func randomize_sections(bubble_rng: RNG):
 	)
 	var random_offensive_status = bubble_rng.pick_random(
 		[
-			TileStatus.CRIT, TileStatus.ENHANCED, TileStatus.FROZEN
+			TileStatus.CRIT, TileStatus.ENHANCED, TileStatus.FROZEN, "mutagen"
 		]
 	)
 	
@@ -622,6 +646,10 @@ func randomize_sections(bubble_rng: RNG):
 	sections_for_description = {}
 	create_sections_for_description(structure)
 	
+	color = BUBBLE_TAPE_COLORS.sample(
+		bubble_rng.randf()
+	)
+	update_color()
 	
 	frame_updated.emit()
 	shake.emit()

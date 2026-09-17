@@ -1,16 +1,17 @@
 @tool
 extends Mod
 class_name ProverbPalaceMod
-#const MUTAGEN_BUBBLES = preload("uid://xd5bu6sw7c6k")
 
 
 const SPELLS: Dictionary[String, String] = {
 	PDA = "pda",
+	VANILLA_ESSENCE = "vanilla_essence",
+	SD_CARD = "sd_card",
+	BLENDER = "blender",
+	
 	PHOTO_ALBUM = "photo_album",
 	
-	
 	DATAMOSH = "datamosh",
-	BLENDER = "blender",
 	BOOSTER_SHOT = "booster_shot",
 	TOY_CAMERA = "toy_camera",
 	MILK = "milk",
@@ -26,19 +27,20 @@ const SPELLS: Dictionary[String, String] = {
 	SOFTBOILED = "softboiled",
 	BLOWOUT = "blowout",
 	POCKET_SNAKE = "pocket_snake",
-	VANILLA_ESSENCE = "vanilla_essence",
 	HALO = "halo",
-	SD_CARD = "sd_card",
 	DISCOMBOBULATOR = "discombobulator",
 	BUBBLE_TAPE = "bubble_tape",
 	UNLIMITED_BACON = "unlimited_bacon",
 	CLIFFHANGER = "cliffhanger",
 	BRASS_KNUCKLES = "brass_knuckles",
+	CHEAP_BEER = "cheap_beer",
+	
+	
 }
 
 var BASE_WEIGHT := 4.5
-var PLAYTESTED_COEFF := .5
-var UNPLAYTESTED_COEFF := 1.5
+var PLAYTESTED_COEFF := .75
+var UNPLAYTESTED_COEFF := 1.35
 const UNCOMMON_COEFF := .5
 
 
@@ -62,7 +64,8 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.SUBDOMAIN,
 		SPELLS.BLOWOUT,
 		SPELLS.HALO,
-		SPELLS.CLIFFHANGER
+		SPELLS.CLIFFHANGER,
+		SPELLS.CHEAP_BEER,
 	],
 	Globals.SPELL_CATEGORY.DEFENSIVE: [
 		SPELLS.TOY_CAMERA,
@@ -134,11 +137,8 @@ func _game_state_updated():
 			push_error(
 				"DATAMOSH IS REPLACING A NULL SPELL!\n%s"%Datamosh.DEBUG_PRINT_PIC
 			)
-	#if Game.word_builder != null and !Game.word_builder.has_node("MutagenBubbles"):
-		#var inst = MUTAGEN_BUBBLES.instantiate()
-		#Game.word_builder.add_child(inst)
-		#var word_holder = Game.word_builder.get_node("WordHolder")
-		#word_holder.updated_tiles.connect(inst._on_word_holder_updated_tiles)
+			if Game.player.id == Globals.CHARACTERS.JUBILIST:
+				a.secret_id = Globals.SPELLS.GIFT_PUZZLE
 	pass
 func _post_mods_loaded() -> void :
 	pass
@@ -148,11 +148,38 @@ func get_options_save_data() -> Dictionary:
 	return {}
 
 
-func get_save_data() -> Dictionary:
-	return {}
-
-
 func get_run_save_data() -> Dictionary:
+	var discombobulator_spell_record: Dictionary[int, Dictionary] = {}
+	var i := 0
+	for spell in Game.spell_container.get_spells():
+		discombobulator_spell_record[i] = {
+			spell = spell.id,
+			character = spell.charge_character
+		}
+		i += 1
+	return {
+		discombobulator_spell_record = discombobulator_spell_record
+	}
+
+func load_run_save_data(data: Dictionary) -> void :
+	if data.discombobulator_spell_record:
+		await get_tree().process_frame
+		var spells: Array[Spell] = Game.spell_container.get_spells()
+		for spell_slot in data.discombobulator_spell_record:
+			var spell: Spell = spells[spell_slot]
+			if spell.spell_data.charge_category == Globals.CHARGE_CATEGORIES.AUTO:
+				if data.discombobulator_spell_record[spell_slot].spell == spell.id:
+					var new_data = SpellData.new()
+					new_data.id = spell.spell_data.id
+					new_data.mod = spell.spell_data.mod
+					new_data.load_data()
+					new_data.load_script()
+					new_data.charge_category = Globals.CHARGE_CATEGORIES.COMMON
+					spell.spell_data = new_data
+					spell.charge_container.update_charge_character(false)
+					spell.charge_character = data.discombobulator_spell_record[spell_slot].character
+
+func get_save_data() -> Dictionary:
 	return {}
 
 func get_spell_ids() -> Array[String]:
@@ -188,16 +215,17 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.POCKET_SNAKE: BASE_WEIGHT,
 		SPELLS.HALO: BASE_WEIGHT,
 		SPELLS.SOFTBOILED: BASE_WEIGHT,
-		SPELLS.DISCOMBOBULATOR: BASE_WEIGHT*UNPLAYTESTED_COEFF*0.,
 		SPELLS.SD_CARD: 0.,
 		SPELLS.VANILLA_ESSENCE: 0.,
 		SPELLS.PDA: 0.,
 		SPELLS.PHOTO_ALBUM: 0.,
 		SPELLS.BLENDER: 0.,
 		SPELLS.BUBBLE_TAPE: 0.,
+		SPELLS.DISCOMBOBULATOR: BASE_WEIGHT*UNPLAYTESTED_COEFF,
 		SPELLS.UNLIMITED_BACON: BASE_WEIGHT*UNPLAYTESTED_COEFF,
 		SPELLS.CLIFFHANGER: BASE_WEIGHT*UNPLAYTESTED_COEFF,
 		SPELLS.BRASS_KNUCKLES: BASE_WEIGHT*UNPLAYTESTED_COEFF,
+		SPELLS.CHEAP_BEER: BASE_WEIGHT*UNPLAYTESTED_COEFF
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])
