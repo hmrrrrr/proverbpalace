@@ -57,7 +57,7 @@ var current_stats: Dictionary :
 func _first_spawn(is_transform: = false) -> void:
 	super(is_transform)
 	const MAX_UPGRADES := 11
-	var max_starting_color = len(STATS) - (MAX_UPGRADES) # 4
+	var max_starting_color = len(STATS) - (MAX_UPGRADES) # 7
 	
 	if Game.main.player.id == Globals.CHARACTERS.JUBILIST:
 		max_starting_color = len(STATS) - 2
@@ -68,7 +68,6 @@ func _first_spawn(is_transform: = false) -> void:
 			#print(stats)
 	
 	current_color = rng.spell.randi_range(0, max_starting_color )
-	current_color = len(STATS) -1
 
 func set_status_tooltips():
 	status_tooltips = ["counter"]
