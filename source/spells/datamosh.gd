@@ -62,6 +62,8 @@ func on_hover():
 		
 	switch_state()
 	frame_updated.emit()
+	
+	
 
 func get_fucky_null_string() -> String:
 	var base_string = get_string_group().get_string("null", get_tooltip_context()) + "​" # < = ZERO-WIDTH SPACE
@@ -148,6 +150,10 @@ func switch_state():
 			current_frame = randi_range(3,5)
 		if randf() < .75:
 			shake.emit()
+		play_random_datamosh_sound(
+			randf_range(4,5),.25
+		)
+			
 	
 func _update_state():
 	frame_updated.emit()
@@ -158,7 +164,6 @@ func _update_state():
 func _first_spawn(is_transform: = false) -> void:
 	super(is_transform)
 	post_fakeout_charge = max_charge
-	print(post_fakeout_charge)
 	if charge_character in "e24" or has_curse(CURSE.ESOTERIC):
 		post_fakeout_charge = 1
 	elif (charge_character not in "9udcl5") or rng.charge.randf() < .5:
@@ -222,6 +227,11 @@ static func get_corresponding_numbers(face: String) -> String:
 	
 	return new_face
 
+func play_random_datamosh_sound(pitch=randf_range(0.5,1.5),volume=1):
+	AudioManager.play_sound(
+		SOUNDS["DATAMOSH_VAR%d"%randi_range(1,4)],pitch,volume
+	)
+
 static func set_tile_face_to_corresponding_numbers(tile: Tile):
 	if len(tile.faces) > 1:
 		var faces = tile.faces.duplicate()
@@ -262,9 +272,7 @@ func _use():
 				if is_kitty:
 					AudioManager.play_sound(SOUNDS.KITTYTILE,0.55,.1)
 				else:
-					AudioManager.play_sound(
-						SOUNDS["DATAMOSH_VAR%d"%randi_range(1,4)],randf_range(0.5,1.5)
-					)
+					play_random_datamosh_sound()
 				set_tile_face_to_corresponding_numbers(tile)
 			inst.frame_coords = tile.tile_sprite.base_sprite.frame_coords
 			tile.tile_sprite.add_child(inst)

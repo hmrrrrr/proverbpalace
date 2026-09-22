@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://bm8d3ml5sss6g"]
+
+[ext_resource type="Script" uid="uid://2j6f3q3m36xm" path="res://mods/proverbpalace/source/effects/particle/counter_punch.gd" id="1_r65pn"]
+[ext_resource type="Script" uid="uid://drgtw8sp4tp8n" path="res://source/library/anim_player.gd" id="2_u84j4"]
+[ext_resource type="Texture2D" uid="uid://hei2cxbe5l2q" path="res://mods/proverbpalace/arte/effects/counter_punch.png" id="3_ssl2s"]
+
+[sub_resource type="Animation" id="Animation_pddno"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/AfterImage:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_70ccf"]
+resource_name = "punch"
+length = 0.4666700243387371
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.23333333, 0.3, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.13333334, 0.19999999, 0.26666668, 0.33333334),
+"transitions": PackedFloat32Array(0.37892914, 1.6817931, 0.37892914, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.4, 0.6), Vector2(0.9, 1.1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/AfterImage:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.033333335, 0.06666667, 0.10000001, 0.13333333, 0.16666667, 0.26666668, 0.33333334, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimPlayer:event")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.13333334),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["punch"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q42dq"]
+_data = {
+&"RESET": SubResource("Animation_pddno"),
+&"punch": SubResource("Animation_70ccf")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ssl2s"]
+blend_mode = 2
+
+[node name="CounterPunch" type="Node2D" unique_id=1604857726]
+script = ExtResource("1_r65pn")
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=1887430838]
+libraries/ = SubResource("AnimationLibrary_q42dq")
+autoplay = &"punch"
+script = ExtResource("2_u84j4")
+metadata/_custom_type_script = "uid://drgtw8sp4tp8n"
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=1209936841]
+texture = ExtResource("3_ssl2s")
+offset = Vector2(-10, -17)
+hframes = 2
+vframes = 4
+
+[node name="AfterImage" type="Sprite2D" parent="Sprite" unique_id=1951091435]
+self_modulate = Color(1, 1, 1, 0.41568628)
+show_behind_parent = true
+material = SubResource("CanvasItemMaterial_ssl2s")
+texture = ExtResource("3_ssl2s")
+offset = Vector2(-10, -17)
+hframes = 2
+vframes = 4
+frame = 7
+
+[connection signal="animation_stopped" from="AnimPlayer" to="." method="_on_anim_player_animation_stopped"]
+[connection signal="event_emitted" from="AnimPlayer" to="." method="_on_anim_player_event_emitted"]

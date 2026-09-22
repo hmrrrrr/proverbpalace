@@ -3,6 +3,10 @@ extends Mod
 class_name ProverbPalaceMod
 
 
+func is_coop_enabled() -> bool:
+	return ModLoader.mods.any(func (mod:Mod)->bool:return mod.id=="co-op")
+
+
 const SPELLS: Dictionary[String, String] = {
 	PDA = "pda",
 	VANILLA_ESSENCE = "vanilla_essence",
@@ -34,13 +38,22 @@ const SPELLS: Dictionary[String, String] = {
 	CLIFFHANGER = "cliffhanger",
 	BRASS_KNUCKLES = "brass_knuckles",
 	CHEAP_BEER = "cheap_beer",
+	COLOR_BELT = "color_belt",
+	COUNTER_COUNTER = "counter_counter"
 	
 	
 }
 
-var BASE_WEIGHT := 4.5
+const COOP_BLACKLIST := [
+	SPELLS.COLOR_BELT,
+	SPELLS.COUNTER_COUNTER
+]
+
+
+var BASE_WEIGHT := 4.
 var PLAYTESTED_COEFF := .75
 var UNPLAYTESTED_COEFF := 1.35
+var COOP_BAN_COEFF := 1.
 const UNCOMMON_COEFF := .5
 
 
@@ -66,6 +79,8 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.HALO,
 		SPELLS.CLIFFHANGER,
 		SPELLS.CHEAP_BEER,
+		SPELLS.COLOR_BELT,
+		SPELLS.COUNTER_COUNTER,
 	],
 	Globals.SPELL_CATEGORY.DEFENSIVE: [
 		SPELLS.TOY_CAMERA,
@@ -118,13 +133,17 @@ func _ready() -> void:
 	_initialize_managers()
 	Game.main.game_state_updated.connect(_game_state_updated)
 
-var tile_manager: ProverbPalaceTileManager
+static var tile_manager: ProverbPalaceTileManager
+static var gamestate_manager: ProverbPalaceGamestateManager
 
 func _initialize_managers() -> void:
 	tile_manager = ProverbPalaceTileManager.new()
+	gamestate_manager = ProverbPalaceGamestateManager.new()
 	add_child(tile_manager)
+	add_child(gamestate_manager)
 	
 	get_tree().node_added.connect(tile_manager._on_node_added)
+	get_tree().node_added.connect(gamestate_manager._on_node_added)
 
 func _game_state_updated():
 	for player_spell: PlayerSpell in Game.player.spell_container.player_spells:
@@ -152,11 +171,12 @@ func get_run_save_data() -> Dictionary:
 	var discombobulator_spell_record: Dictionary[int, Dictionary] = {}
 	var i := 0
 	for spell in Game.spell_container.get_spells():
-		discombobulator_spell_record[i] = {
-			spell = spell.id,
-			character = spell.charge_character
-		}
-		i += 1
+		if len(spell.charge_character) > 0:
+			discombobulator_spell_record[i] = {
+				spell = spell.id,
+				character = spell.charge_character
+			}
+			i += 1
 	return {
 		discombobulator_spell_record = discombobulator_spell_record
 	}
@@ -192,6 +212,8 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		BASE_WEIGHT = 1.
 		PLAYTESTED_COEFF = 1.
 		UNPLAYTESTED_COEFF = 1.
+	if is_coop_enabled():
+		COOP_BAN_COEFF = 0.
 	
 	print_debug("PROVERB PALACE: FILLING SPELL POOL%s"%
 		" USING PLAYTEST WEIGHTS" if do_playtest_weights else ""
@@ -200,17 +222,17 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 	var SPELL_POOL: Dictionary[String, float] = {
 		SPELLS.TOY_CAMERA: BASE_WEIGHT,
 		SPELLS.DATAMOSH: BASE_WEIGHT,
-		SPELLS.CAT_TAIL: BASE_WEIGHT*PLAYTESTED_COEFF,
+		SPELLS.CAT_TAIL: BASE_WEIGHT,
 		SPELLS.GAYDAR: BASE_WEIGHT,
-		SPELLS.BOOSTER_SHOT: BASE_WEIGHT*PLAYTESTED_COEFF,
+		SPELLS.BOOSTER_SHOT: BASE_WEIGHT,
 		SPELLS.MILK: BASE_WEIGHT, #UNKILLED
-		SPELLS.ZIPTIES: BASE_WEIGHT*UNPLAYTESTED_COEFF,
+		SPELLS.ZIPTIES: BASE_WEIGHT,
 		SPELLS.COLD_CASE: BASE_WEIGHT,
 		SPELLS.BLT: BASE_WEIGHT*UNCOMMON_COEFF,
 		SPELLS.DISSENTER_HOTLINE: BASE_WEIGHT,
 		SPELLS.SUBDOMAIN: BASE_WEIGHT,
 		SPELLS.LCD_TWEEZERS: BASE_WEIGHT,
-		SPELLS.DYNAMO: BASE_WEIGHT*UNPLAYTESTED_COEFF,
+		SPELLS.DYNAMO: BASE_WEIGHT,
 		SPELLS.BLOWOUT: BASE_WEIGHT,
 		SPELLS.POCKET_SNAKE: BASE_WEIGHT,
 		SPELLS.HALO: BASE_WEIGHT,
@@ -221,11 +243,13 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.PHOTO_ALBUM: 0.,
 		SPELLS.BLENDER: 0.,
 		SPELLS.BUBBLE_TAPE: 0.,
-		SPELLS.DISCOMBOBULATOR: BASE_WEIGHT*UNPLAYTESTED_COEFF,
-		SPELLS.UNLIMITED_BACON: BASE_WEIGHT*UNPLAYTESTED_COEFF,
-		SPELLS.CLIFFHANGER: BASE_WEIGHT*UNPLAYTESTED_COEFF,
-		SPELLS.BRASS_KNUCKLES: BASE_WEIGHT*UNPLAYTESTED_COEFF,
-		SPELLS.CHEAP_BEER: BASE_WEIGHT*UNPLAYTESTED_COEFF
+		SPELLS.DISCOMBOBULATOR: BASE_WEIGHT,
+		SPELLS.UNLIMITED_BACON: BASE_WEIGHT,
+		SPELLS.CLIFFHANGER: BASE_WEIGHT,
+		SPELLS.BRASS_KNUCKLES: BASE_WEIGHT,
+		SPELLS.CHEAP_BEER: BASE_WEIGHT,
+		SPELLS.COLOR_BELT: BASE_WEIGHT*UNPLAYTESTED_COEFF*COOP_BAN_COEFF,
+		SPELLS.COUNTER_COUNTER: BASE_WEIGHT*UNPLAYTESTED_COEFF*COOP_BAN_COEFF
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])

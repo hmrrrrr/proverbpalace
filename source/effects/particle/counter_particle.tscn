@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://c31le57421cnx"]
+
+[ext_resource type="Script" uid="uid://bl6wp4wi7yfbu" path="res://mods/proverbpalace/source/effects/particle/counter_particle.gd" id="1_b0xjw"]
+[ext_resource type="Texture2D" uid="uid://b5l64h0y8tyfi" path="res://mods/proverbpalace/arte/tiles/counter/counter_particle.png" id="1_ypbaa"]
+
+[sub_resource type="Curve" id="Curve_b0xjw"]
+_limits = [0.0, 1.0, 0.0, 6.5]
+bake_resolution = 50
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1e-05, 0), 0.0, 0.0, 0, 0, Vector2(1.3928573, 0.52808994), 0.07346582, 0.07346582, 0, 0, Vector2(5.107143, 1), 0.0, 0.0, 0, 0, Vector2(6.5, 0), -0.11255045, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="Gradient" id="Gradient_b0xjw"]
+interpolation_mode = 2
+interpolation_color_space = 2
+colors = PackedColorArray(0.41568628, 0.5921569, 0, 1, 0, 1, 0, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sppku"]
+blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_sppku"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_b0xjw"]
+resource_name = "sparkle"
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.4204481, 1),
+"update": 0,
+"values": [0, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sppku"]
+_data = {
+&"RESET": SubResource("Animation_sppku"),
+&"sparkle": SubResource("Animation_b0xjw")
+}
+
+[node name="CounterParticle" type="Node2D" unique_id=1061706169]
+modulate = Color(0.9567696, 0.89769536, 0.5405955, 0.9786026)
+script = ExtResource("1_b0xjw")
+variant = 1
+opacity_curve = SubResource("Curve_b0xjw")
+gradient = SubResource("Gradient_b0xjw")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=725813486]
+material = SubResource("CanvasItemMaterial_sppku")
+texture = ExtResource("1_ypbaa")
+hframes = 15
+frame = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1790386552]
+libraries/ = SubResource("AnimationLibrary_sppku")
+autoplay = &"sparkle"
+speed_scale = 0.4546318

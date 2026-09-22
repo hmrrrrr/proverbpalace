@@ -25,6 +25,7 @@ func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_u
 	tile.apply_hole( not is_preview)
 	tile.add_status(TileStatus.ETERNAL)
 	if not is_preview:
+		AudioManager.play_sound(Sounds.SPELLS.STAMP_BIG,1.,)
 		AudioManager.play_sound(FOREIGN_1,1.,.7,)
 		create_halo_effect(tile)
 		tile.add_poofcloud(tile.get_color())

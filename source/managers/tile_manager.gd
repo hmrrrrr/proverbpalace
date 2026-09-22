@@ -6,6 +6,8 @@ const EPSILON = "ԑ"
 const TILE_WRAPAROUND_ATLAS = preload("res://mods/proverbpalace/arte/tiles/tile_wraparound_atlas.png")
 const MUTAGEN_BUBBLES = preload("res://mods/proverbpalace/source/bubble/mutagen_bubbles.tscn")
 
+static var stored_counterattack := 0
+
 
 
 func tile_counts_as_epsilon(tile: Tile) -> bool:
@@ -66,7 +68,6 @@ func fix_epsilon_faces(tile: Tile, should_have_epsilon: bool):
 					break
 			
 			if only_epsilon:
-				print("replacement")
 				tile.set_face_at(i, EPSILON)
 				should_update = true
 			elif EPSILON in face:
@@ -174,6 +175,57 @@ func _on_tile_added(tile: Tile):
 	(tile.tile_sprite.material as ShaderMaterial).set_shader_parameter("tile_wraparound",TILE_WRAPAROUND_ATLAS)
 
 var connected_word_builder := false
+const CUSTOM_INTENT = preload("res://mods/proverbpalace/source/custom_intent.tscn")
+
+func update_counter_intent(intent_container,intent, context = null, tiles = null, create_if_not_found = false):
+	if context == null:
+		context = {}
+
+	if tiles == null:
+		tiles = []
+	elif not tiles is Array:
+		tiles = [tiles]
+
+	#print("a")
+	var intent_instance = intent_container.get_intent_instance(intent, context)
+	if intent_instance != null:
+		intent_instance.set_context(context, tiles)
+		intent_container.updated_intents.append(intent_instance)
+	elif create_if_not_found:
+		var new_intent = CUSTOM_INTENT.instantiate()
+		intent_container.intent_offset.add_child(new_intent)
+		new_intent.set_intent(intent, context.duplicate(), tiles)
+		intent_container.intent_instances.append(new_intent)
+		intent_container.new_intents.append(new_intent)
+		intent_container.updated_intents.append(new_intent)
+
+func get_counter_tiles(tiles:Array[Tile]=Game.word_builder.tiles) -> Array[Tile]:
+	return tiles.filter(
+		func(tile: Tile): return tile.has_status("counter") and tile.get_value() > 0
+	)
+
+func get_counter_amount(tiles:Array[Tile]=Game.word_builder.tiles) -> int:
+	var word_builder: WordBuilder = Game.word_builder
+	var amt := 0
+	for tile in get_counter_tiles(tiles):
+		amt += tile.get_value()
+	return ceili(amt*last_crit_multiplier)
+
+var last_crit_multiplier := 1.
+
+func _on_word_builder_finished_updating_stats(words):
+	var word_builder: WordBuilder = Game.word_builder
+	
+	last_crit_multiplier = word_builder.damage_multiplier + word_builder.defense_multiplier - 1
+
+	
+	var counter_amt := get_counter_amount()
+	
+	if counter_amt > 0:
+		update_counter_intent(
+			word_builder.intent_container,
+			ProverbPalaceCustomIntent.COUNTER_INTENT,{damage=counter_amt},get_counter_tiles(),true
+		)
 
 func init_word_builder(word_builder: WordBuilder):
 	word_builder.tiles_updated.connect(
@@ -183,13 +235,32 @@ func init_word_builder(word_builder: WordBuilder):
 	word_builder.add_child(inst)
 	var word_holder = word_builder.get_node("WordHolder")
 	word_holder.updated_tiles.connect(inst._on_word_holder_updated_tiles)
+	word_builder.finished_updating_stats.connect(_on_word_builder_finished_updating_stats)
+	word_builder.submitted_word.connect(_on_word_builder_submitted_word)
 
+
+func _on_word_builder_submitted_word(words: WordList, damage: int, turn_ending: bool):
+	
+	var tiles: Array[Tile] = []
+	for sublist in words.sub_lists:
+		tiles.append_array(sublist.tiles_list)
+	var counter_amount := get_counter_amount(tiles)
+	stored_counterattack += counter_amount
+	print("Adding %d to counterattack"%counter_amount)
+	
+	var player: Player = Game.player
+	
+	player.bruise_changed.emit()
+	
+	
+	
 
 func _ready() -> void:
 	if !connected_word_builder:
 		init_word_builder(Game.word_builder)
 		
 		connected_word_builder = true
+const COUNTER_OVERLAY = preload("res://mods/proverbpalace/source/effects/counter_overlay.tscn")
 
 func _on_node_added(node: Node):
 	var tile := node as Tile

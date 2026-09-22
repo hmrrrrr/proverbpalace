@@ -33,5 +33,5 @@ func set_disabled(disabled: bool) -> void :
 
 
 func _on_button_pressed():
-	AudioManager.play_sound(Sounds.UI.TILE_CLICK)
+	AudioManager.play_sound(Sounds.UI.TILE_CLICK,1.2)
 	set_state( not state)

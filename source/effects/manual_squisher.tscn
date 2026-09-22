@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dpbacecn0n88w"]
+
+[ext_resource type="Script" uid="uid://dginerlh2jd6d" path="res://mods/proverbpalace/source/effects/manual_squisher.gd" id="1_k4ein"]
+[ext_resource type="Script" uid="uid://drgtw8sp4tp8n" path="res://source/library/anim_player.gd" id="2_h5u08"]
+[ext_resource type="Texture2D" uid="uid://b2r0ja43nbjw8" path="res://arte/ass.png" id="3_hrwqm"]
+
+[sub_resource type="Animation" id="Animation_hrwqm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:squish_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h5u08"]
+resource_name = "squish"
+length = 0.32
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:squish_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.3),
+"transitions": PackedFloat32Array(0.37892914, 0.37892914, 0.37892914, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 0.9), Vector2(0.9, 1.2), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hrwqm"]
+_data = {
+&"RESET": SubResource("Animation_hrwqm"),
+&"squish": SubResource("Animation_h5u08")
+}
+
+[node name="ManualSquisher" type="Node" unique_id=1662038892]
+script = ExtResource("1_k4ein")
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="." unique_id=135857468]
+libraries/ = SubResource("AnimationLibrary_hrwqm")
+autoplay = &"squish"
+script = ExtResource("2_h5u08")
+metadata/_custom_type_script = "uid://drgtw8sp4tp8n"
+
+[node name="EditorPreview" type="Sprite2D" parent="." unique_id=2146090282]
+texture = ExtResource("3_hrwqm")
+
+[connection signal="animation_stopped" from="AnimPlayer" to="." method="_on_anim_player_animation_stopped"]

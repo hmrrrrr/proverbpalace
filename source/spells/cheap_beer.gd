@@ -27,7 +27,7 @@ func apply_to_tile(tile: Tile, _real_tile: Tile, is_preview: bool, _is_preview_u
 	if is_preview:
 		return
 	
-	AudioManager.play_sound(MILKSPILL,1.1,1.,"SoundLowpassC")
+	AudioManager.play_sound(Sounds.SPELLS.SODA_CAN,1.,1.)
 	var neighbor_tiles = tile.get_board_neighbors()
 	rng.spell.shuffle(neighbor_tiles)
 	create_mutagen_poofcloud(tile)

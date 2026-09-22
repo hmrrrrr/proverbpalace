@@ -5,7 +5,7 @@
 [resource]
 shader = ExtResource("1_dp7hp")
 shader_parameter/bubble_thresh_lower = 0.0
-shader_parameter/bubble_thresh_upper = 0.82000003895
-shader_parameter/shine_threshold_percent = 0.717
+shader_parameter/bubble_thresh_upper = 1.0
+shader_parameter/shine_threshold_percent = 0.0
 shader_parameter/color_a = Color(0.45976776, 0.57639486, 0.9397423, 1)
 shader_parameter/color_b = Color(0.95160645, 0.44555336, 0.6313541, 1)

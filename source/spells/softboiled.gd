@@ -11,7 +11,7 @@ const EGG_FLUID_TRAIL = preload("res://mods/proverbpalace/source/effects/egg_flu
 func do_egg_crack_effect(tile: Tile):
 	AudioManager.play_sound(EGG_CRACK)
 	#AudioManager.play_sound(Sounds.GENERIC.APPLY_STATUS)
-	tile.animation.play("shake",-1,1.5)
+	tile.animation.play("shake",-1,1.12)
 	
 	var eggshell_a: EggshellEffect
 	var eggshell_b: EggshellEffect
@@ -46,6 +46,7 @@ func do_egg_crack_effect(tile: Tile):
 	const prebounce := .05
 	await Game.timeout(EggshellEffect.CRACK_DELAY-prebounce)
 	tile.animation.play("bounce",-1,1.2)
+	tile.tile_sprite.rotation=0
 	await Game.timeout(prebounce)
 	
 	tile.add_poofcloud(tile.get_poof_color())

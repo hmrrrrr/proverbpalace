@@ -1,0 +1,8 @@
+
+:counter:
+	:name:
+		Counter
+
+	:description:
+		Any incoming hits will cause you to attack for {damage} bonus damage.
+		Scales with damage and defense multipliers.

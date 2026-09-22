@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dotkcgfavnpls"]
+
+[ext_resource type="PackedScene" uid="uid://mfou86kmoucf" path="res://source/ui/intents/intent.tscn" id="1_7jjaq"]
+[ext_resource type="Script" uid="uid://cxf0ewg8yvjjx" path="res://mods/proverbpalace/source/custom_intent.gd" id="2_h0rko"]
+
+[node name="Intent" unique_id=132339065 instance=ExtResource("1_7jjaq")]
+script = ExtResource("2_h0rko")

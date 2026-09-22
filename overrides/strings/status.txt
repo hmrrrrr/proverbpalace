@@ -6,7 +6,7 @@
 		Mutagen Tile
 		
 	:description:
-		Must have valid words to either side of it (including itself).
+		Must have valid words to either side of it.
 		Can be used to combine multiple words.
 		
 	:exclusive_with:
@@ -14,6 +14,19 @@
 		
 	:flags:
 		no_faceless_effect
+
+:counter:
+	:name:
+		Counter
+	
+	:tile_name:
+		Counter Tile
+	
+	:description:
+		If played, attack for +{value} damage when hit.
+	
+	:flags:
+		no_faceless_effect positive
 
 :arc_lightning:
 	:name:

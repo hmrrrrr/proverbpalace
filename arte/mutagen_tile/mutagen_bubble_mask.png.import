@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwodafruwgx17"
-path="res://.godot/imported/mutagen_bubble_mask.png-dd3654b8e440f4786ca12b6be908dba9.ctex"
+uid="uid://d2g17g2lbiaif"
+path="res://.godot/imported/mutagen_bubble_mask.png-de29b9271f7b3c7ca6c5020c53ab0355.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://mods/proverbpalace/arte/mutagen_bubble_mask.png"
-dest_files=["res://.godot/imported/mutagen_bubble_mask.png-dd3654b8e440f4786ca12b6be908dba9.ctex"]
+source_file="res://mods/proverbpalace/arte/mutagen_tile/mutagen_bubble_mask.png"
+dest_files=["res://.godot/imported/mutagen_bubble_mask.png-de29b9271f7b3c7ca6c5020c53ab0355.ctex"]
 
 [params]
 

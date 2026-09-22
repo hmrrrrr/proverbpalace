@@ -39,6 +39,7 @@ void fragment() {
 		}
 	}
 	if (mutagen_enabled) {
+		COLOR.rgb /= vec3(0.882, 0.89, 0.918);
 		if (COLOR.g < 0.3 && COLOR.g > 0.1) {
 			COLOR.rgb = vec3(1.,1.,1.);
 		} else {
@@ -46,6 +47,7 @@ void fragment() {
 		float val_r = (sin(t)*.5+.5);
 		float val_g = (sin(t+PI)*.5+.5);
 		float v = COLOR.r + COLOR.g + COLOR.b;
+		
 		if ((v > 0.)) {
 			COLOR.rgb *= (mutagen_color_a*val_r + mutagen_color_b*val_g);
 		}

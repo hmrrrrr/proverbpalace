@@ -11,6 +11,11 @@
 		Kitty Tile
 
 ::
+	Xanderath
+	::
+		Lots of technical help
+
+::
 	joltmix
 	::
 		Art:

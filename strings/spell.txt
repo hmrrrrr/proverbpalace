@@ -35,7 +35,7 @@
 		Cheap Beer
 	
 	:charge_category:
-		uncommon
+		rare
 	
 	:max_charge:
 		2
@@ -62,7 +62,77 @@
 	:description:
 		Convert ANY tile to a bruised Ԑ.
 	
+	
+:afterimage:
+	:name:
+		Afterimage
+	
+	:label:
+		Counter -s
+	
+	:description:
+		Append a tile's face with S.
+		Make it into a counter tile.
+	
+	:charge_category:
+		uncommon
+	
+	:max_charge:
+		3
 
+# he tryna ignore it
+:counter_counter:
+	:name:
+		Ticker
+	
+	:label:
+		Counter {face}++
+	
+	:description:
+		Turn a tile into a counter {face} ({letters list_merge upper}).
+		Increments the applied face after use. 9 loops back to 2.
+		
+	:charge_category:
+		uncommon
+	
+	:max_charge:
+		3
+
+:national_salute:
+	:name:
+		National Salute
+	
+	:label:
+		Double O7
+
+:color_belt:
+	:name:
+		{:name_normal: not quotes}
+		{:name_quotes: if quotes}
+	
+	:name_normal:
+		{current_color capital} Belt
+	
+	:name_quotes:
+		"{current_color capital}" Belt
+	
+	:label:
+		Parry ({current_length}, {current_value})
+		
+	:description:
+		Convert tiles in a spelled word to counter, then submit it.
+		Word must have exactly {current_length} length and {current_value} total value.
+		Upgrades after each battle.
+		
+	:charge_category:
+		uncommon
+	
+	:max_charge:
+		1
+	
+	:flags:
+		fixed_max_charge immediate
+	
 :discombobulator:
 	:name:
 		Discombobulator
@@ -145,7 +215,7 @@
 		2
 	
 	:description:
-		Shimmer a tile's face between a wildcard and Ԑ
+		Shimmer a tile's face between a wildcard and Ԑ.
 
 :subdomain:
 	:name:
@@ -343,6 +413,7 @@
 	:banner:
 		Select a tile to mystify
 
+
 :softboiled:
 	:name:
 		99-Year Egg
@@ -351,7 +422,7 @@
 		Burn a tile, or turn a coal tile into a candy 99 (WXYZ×2).
 	
 	:charge_category:
-		very_common
+		common
 	
 	:max_charge:
 		1
@@ -508,7 +579,7 @@
 		‼
 	
 	:max_charge:
-		2
+		1
 	
 :pocket_snake:
 	:name:

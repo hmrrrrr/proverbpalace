@@ -1,5 +1,4 @@
 shader_type canvas_item;
-render_mode unshaded;
 
 uniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;
 
@@ -22,6 +21,14 @@ void fragment() {
 	float t = TIME*1.5;
 	float val_r = (sin(t)*.5+.5);
 	float val_g = (sin(t+PI)*.5+.5);
+	val_r = 1.-(1.-val_r)*(1.-val_r);
+	val_g = 1.-(1.-val_g)*(1.-val_g);
+	
+	if (val_r > val_g) {
+		val_g = 0.;
+	} else {
+		val_r = 0.;
+	}
 	
 	float shine_threshold = mix(bubble_thresh_lower,bubble_thresh_upper,shine_threshold_percent);
 	

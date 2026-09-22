@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5083h6esx7ov"]
 
-[ext_resource type="Texture2D" uid="uid://dwodafruwgx17" path="res://mods/proverbpalace/arte/mutagen_bubble_mask.png" id="1_d0ola"]
+[ext_resource type="Texture2D" uid="uid://d2g17g2lbiaif" path="res://mods/proverbpalace/arte/mutagen_tile/mutagen_bubble_mask.png" id="1_q64yc"]
 [ext_resource type="Script" uid="uid://b4g8hgs7buk1a" path="res://mods/proverbpalace/source/bubble/mutagen_bubble.gd" id="1_wa2dy"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d0ola"]
@@ -8,6 +8,6 @@ blend_mode = 1
 
 [node name="MutagenBubble" type="Sprite2D" unique_id=427323563]
 material = SubResource("CanvasItemMaterial_d0ola")
-texture = ExtResource("1_d0ola")
+texture = ExtResource("1_q64yc")
 offset = Vector2(0, 1)
 script = ExtResource("1_wa2dy")
