@@ -132,6 +132,7 @@ func queue_save_pic(tile: Tile) -> void:
 		delete_tiles = true, 
 		settle = true, 
 		restock = true,
+		ignore_status = true,
 	})
 	(func ():
 		await Game.timeout(.3)
@@ -174,7 +175,10 @@ func _use():
 	var value := tile.get_value()
 	if tile.has_status(TileStatus.CRIT):
 		value = ceil(value*1.5)
+	if tile.has_status(TileStatus.BRUISE):
+		player.bruise += maxi(1,value)
 	player.defense += value
+	
 	for letter in tile.face:
 		pics_taken.append(letter)
 		pic_rotations.append(randf_range(-6,6))

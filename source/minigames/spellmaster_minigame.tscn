@@ -125,6 +125,7 @@ position = Vector2(-21, 7)
 
 [node name="KeyTile5" parent="BoardOffset" unique_id=1348603571 instance=ExtResource("4_qxyhd")]
 position = Vector2(0, 7)
+state = true
 
 [node name="KeyTile6" parent="BoardOffset" unique_id=1218912124 instance=ExtResource("4_qxyhd")]
 position = Vector2(21, 7)

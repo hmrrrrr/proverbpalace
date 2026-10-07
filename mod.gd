@@ -4,7 +4,7 @@ class_name ProverbPalaceMod
 
 
 func is_coop_enabled() -> bool:
-	return ModLoader.mods.any(func (mod:Mod)->bool:return mod.id=="co-op")
+	return ModLoader.mods.any(func (mod:ModData)->bool:return mod.id=="co-op")
 
 
 const SPELLS: Dictionary[String, String] = {
@@ -39,7 +39,8 @@ const SPELLS: Dictionary[String, String] = {
 	BRASS_KNUCKLES = "brass_knuckles",
 	CHEAP_BEER = "cheap_beer",
 	COLOR_BELT = "color_belt",
-	COUNTER_COUNTER = "counter_counter"
+	COUNTER_COUNTER = "counter_counter",
+	SEWING_NEEDLE = "sewing_needle",
 	
 	
 }
@@ -70,6 +71,7 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 		SPELLS.BUBBLE_TAPE,
 		SPELLS.UNLIMITED_BACON,
 		SPELLS.BRASS_KNUCKLES,
+		SPELLS.SEWING_NEEDLE,
 	],
 	Globals.SPELL_CATEGORY.OFFENSIVE: [
 		SPELLS.MILK,
@@ -118,6 +120,20 @@ var SPELL_CATEGORIES: Dictionary[String, Array] = {
 	#)
 	#
 
+
+var modified_resources: Array[Resource]
+
+func modify_resources() -> void:
+	var headline_intro: AudioStreamOggVorbis = load("res://music/headline_intro.ogg")
+	headline_intro.bpm = 303
+	
+	var headline_loop: AudioStreamOggVorbis = load("res://music/headline_loop.ogg")
+	headline_loop.bpm = 303
+	modified_resources.append_array([headline_intro,headline_loop])
+	
+	modified_resources.make_read_only()
+	
+	
 func _ready() -> void:
 	#CustomIntent.custom_status_intent_icons["mutagen"]=preload("uid://dukxvsrifradw")
 	#update_remove_other_enemies()
@@ -125,7 +141,7 @@ func _ready() -> void:
 	print_debug("Yay loaded Proverb Palace. Playtest weights file %sdetected"%("not " if !do_playtest_weights else ""))
 	#if "dimorph" not in EnemyLoader.enemy_pools[0][0]:
 		#EnemyLoader.add_enemy("dimorph",2,3,"res://mods/proverbpalace/arte/dimorph/miniface_dimorph.png")
-	
+	modify_resources()
 	
 	
 	await Game.main_scene_loaded
@@ -249,7 +265,8 @@ func get_spell_pool(category: String = "") -> Dictionary[String, float]:
 		SPELLS.BRASS_KNUCKLES: BASE_WEIGHT,
 		SPELLS.CHEAP_BEER: BASE_WEIGHT,
 		SPELLS.COLOR_BELT: BASE_WEIGHT*UNPLAYTESTED_COEFF*COOP_BAN_COEFF,
-		SPELLS.COUNTER_COUNTER: BASE_WEIGHT*UNPLAYTESTED_COEFF*COOP_BAN_COEFF
+		SPELLS.COUNTER_COUNTER: BASE_WEIGHT*UNPLAYTESTED_COEFF*COOP_BAN_COEFF,
+		SPELLS.SEWING_NEEDLE: BASE_WEIGHT*UNPLAYTESTED_COEFF,
 	}
 	
 	var category_pool: Array = SPELL_CATEGORIES.get(category, [])

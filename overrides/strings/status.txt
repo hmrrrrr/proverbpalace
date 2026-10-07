@@ -28,6 +28,26 @@
 	:flags:
 		no_faceless_effect positive
 
+:painted:
+	:name:
+		{:name_with_color: if color}
+		{:name_generic: not color}
+	
+	:name_generic:
+		Painted
+	
+	:name_with_color:
+		Painted {color}
+	
+	:tile_name:
+		Painted Tile
+	
+	:description:
+		Played colors must be ordered by hue. {+status_value|:plus_status_tile_value:} damage taken when unplayed.
+	
+	:flags:
+		harmful
+
 :arc_lightning:
 	:name:
 		Lightning

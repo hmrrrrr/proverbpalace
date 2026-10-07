@@ -3,6 +3,7 @@ class_name ProverbPalaceTileManager
 
 
 const EPSILON = "ԑ"
+const GAMMA = "γ"
 const TILE_WRAPAROUND_ATLAS = preload("res://mods/proverbpalace/arte/tiles/tile_wraparound_atlas.png")
 const MUTAGEN_BUBBLES = preload("res://mods/proverbpalace/source/bubble/mutagen_bubbles.tscn")
 

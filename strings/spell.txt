@@ -393,7 +393,23 @@
 		
 	:banner:
 		Select a tile to start burning
+
+:sewing_needle:
+	:name:
+		Sewing Needle
 	
+	:label:
+		Append {face aoran} {face upper}
+	
+	:description:
+		Append {face upper} to a face. The next use of this will append with that selected face.
+	
+	:charge_category:
+		auto
+	
+	:max_charge:
+		3
+
 :cold_case:
 	:name:
 		Cold Case
@@ -533,7 +549,7 @@
 		Custom plastic
 	
 	:description:
-		Replace a random tile with a plastic tile that you spell out the face of.
+		Replace a tile with a plastic tile that you spell out the face of.
 		Might be broken..?
 		
 	:charge_category:

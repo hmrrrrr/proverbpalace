@@ -5,7 +5,6 @@ class_name SnakeSegment
 signal death_finished
 
 @onready var snake_face: Sprite2D = $SnakeFace
-@onready var snake_connection_overlay: Sprite2D = $SnakeConnectionOverlay
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 const SNAKE_SEGMENT_CONNECTION_OVERLAY = preload("res://mods/proverbpalace/source/spells/snake_segment_connection_overlay.tscn")

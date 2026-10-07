@@ -59,6 +59,10 @@ func apply_to_tile(tile: Tile):
 		tile.randomize_similar_face(rng.spell)
 		return
 	
+	for let in tile.face:
+		if let not in Letters.LETTERS:
+			return
+	
 	var N_GET_MIN_WEIGHT_ACROSS := 4
 	
 	var ngrams: Dictionary[String,float] = get_pool_for_n_lettered_grams(len(tile.face))

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://m36bngmbw8jq"]
 
-[ext_resource type="Texture2D" uid="uid://dh1wg3p1oxcwj" path="res://mods/proverbpalace/arte/tiles/counter/tile_inside_mask.png" id="1_f0t1f"]
+[ext_resource type="Texture2D" uid="uid://cig75xppuexxg" path="res://mods/proverbpalace/arte/tiles/counter/tile_inside_mask1.png" id="1_f0t1f"]
 [ext_resource type="Texture2D" uid="uid://148kaduvpg0r" path="res://arte/tiles/hole_mask.png" id="1_teecy"]
 [ext_resource type="Script" uid="uid://bf1mh13g4opbu" path="res://mods/proverbpalace/source/effects/counter_overlay.gd" id="2_ptcov"]
 
