@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://hdxu6tvqtaum"]
+
+[ext_resource type="PackedScene" uid="uid://cbdk6hv7wu8im" path="res://source/battle_unit/enemy.tscn" id="1_k0p31"]
+[ext_resource type="Script" uid="uid://1n4uhvj8etpq" path="res://mods/proverbpalace/source/enemies/prisonball.gd" id="2_2dut6"]
+[ext_resource type="PackedScene" uid="uid://co2i1ebh4oeqs" path="res://mods/proverbpalace/source/enemies/sprites/prisonball_sprite.tscn" id="3_2dut6"]
+
+[node name="Prisonball" unique_id=1126369289 instance=ExtResource("1_k0p31")]
+script = ExtResource("2_2dut6")
+idle_after_flinching = false
+
+[node name="Sprite" parent="." index="0" unique_id=290587191 instance=ExtResource("3_2dut6")]

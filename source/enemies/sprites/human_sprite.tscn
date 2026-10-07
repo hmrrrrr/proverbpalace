@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://b8jraq4k17ao5"]
+
+[ext_resource type="PackedScene" uid="uid://dmg180a1myio" path="res://source/battle_unit/battle_unit_sprite.tscn" id="1_i83aj"]
+[ext_resource type="Script" uid="uid://c6l6l5oxctuue" path="res://mods/proverbpalace/source/enemies/sprites/human_sprite.gd" id="2_o7f6e"]
+[ext_resource type="Script" uid="uid://dcl5psvuald64" path="res://source/library/beat_player.gd" id="3_x837l"]
+
+[sub_resource type="Animation" id="Animation_wvqgx"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x837l"]
+_data = {
+&"idle": SubResource("Animation_wvqgx")
+}
+
+[node name="BattleUnitSprite" unique_id=1356876798 instance=ExtResource("1_i83aj")]
+script = ExtResource("2_o7f6e")
+
+[node name="AnimPlayer" parent="." index="4" unique_id=1026464875]
+libraries/ = SubResource("AnimationLibrary_x837l")
+autoplay = &"idle"
+
+[node name="HalfBeatPlayer" type="Node" parent="." index="6" unique_id=1483016505]
+script = ExtResource("3_x837l")
+high_bpm_interval = 2
+metadata/_custom_type_script = "uid://dcl5psvuald64"
+
+[node name="ThirdsBeatPlayer" type="Node" parent="." index="7" unique_id=1021064449]
+script = ExtResource("3_x837l")
+beat_interval = 3
+metadata/_custom_type_script = "uid://dcl5psvuald64"
+
+[connection signal="interval_beat" from="HalfBeatPlayer" to="." method="_on_half_beat_player_interval_beat"]
+[connection signal="interval_beat" from="ThirdsBeatPlayer" to="." method="_on_thirds_beat_player_interval_beat"]

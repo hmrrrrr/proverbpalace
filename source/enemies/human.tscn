@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b40cyvacvsi0s"]
+
+[ext_resource type="PackedScene" uid="uid://cbdk6hv7wu8im" path="res://source/battle_unit/enemy.tscn" id="1_6e1dc"]
+[ext_resource type="Script" uid="uid://t25jhowwblp2" path="res://mods/proverbpalace/source/enemies/human.gd" id="2_6e1dc"]
+[ext_resource type="PackedScene" uid="uid://b8jraq4k17ao5" path="res://mods/proverbpalace/source/enemies/sprites/human_sprite.tscn" id="3_6e1dc"]
+
+[node name="Human" unique_id=1126369289 instance=ExtResource("1_6e1dc")]
+script = ExtResource("2_6e1dc")
+
+[node name="Sprite" parent="." index="0" unique_id=1356876798 instance=ExtResource("3_6e1dc")]

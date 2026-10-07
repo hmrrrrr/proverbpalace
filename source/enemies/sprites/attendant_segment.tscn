@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://bat63khdyyfvb"]
+
+[ext_resource type="Script" uid="uid://bw2u112ca3agx" path="res://mods/proverbpalace/source/enemies/sprites/attendant_segment.gd" id="1_hy2t7"]
+[ext_resource type="Texture2D" uid="uid://bjt5xafogth10" path="res://mods/proverbpalace/arte/effects/attendant/hex.png" id="1_wb22u"]
+
+[sub_resource type="Gradient" id="Gradient_hy2t7"]
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.622807, 1)
+colors = PackedColorArray(0.34, 0.34, 0.34, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_7u8r2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animated_segment_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hy2t7"]
+resource_name = "cycle"
+length = 0.3
+step = 0.016666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animated_segment_rotation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666667, 0.1, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666668, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, -0.125, 0.19390231955051415, 0.4557494000196457, 0.6637821006774902, 0.8216001343727112, 0.933290289402008, 1.0036509487628935, 1.0386630985736849, 1.047]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7u8r2"]
+_data = {
+&"RESET": SubResource("Animation_7u8r2"),
+&"cycle": SubResource("Animation_hy2t7")
+}
+
+[node name="AttendantSegment" type="Node2D" unique_id=459538330]
+scale = Vector2(0.166, 0.057)
+script = ExtResource("1_hy2t7")
+shading_modulate = SubResource("Gradient_hy2t7")
+face_atlas_h_frames = 6
+vertex_offset_base = Vector2(0, -0.62)
+vertex_offset_top = Vector2(0, 0.62)
+line_width = 11.575
+metadata/_edit_horizontal_guides_ = [-51.0]
+
+[node name="Base" type="Sprite2D" parent="." unique_id=786537034]
+show_behind_parent = true
+texture = ExtResource("1_wb22u")
+
+[node name="PrimitivePoint1" type="Marker2D" parent="Base" unique_id=1696443795]
+visible = false
+position = Vector2(-62.444874, -102.95881)
+
+[node name="PrimitivePoint2" type="Marker2D" parent="Base" unique_id=1551256158]
+visible = false
+position = Vector2(56.660507, -102.92566)
+
+[node name="PrimitivePoint3" type="Marker2D" parent="Base" unique_id=1445534227]
+visible = false
+position = Vector2(116.55492, 0.35971832)
+
+[node name="PrimitivePoint4" type="Marker2D" parent="Base" unique_id=796053217]
+visible = false
+position = Vector2(56.982315, 105.43098)
+
+[node name="PrimitivePoint5" type="Marker2D" parent="Base" unique_id=1698742378]
+visible = false
+position = Vector2(-56.710587, 104.664925)
+
+[node name="PrimitivePoint6" type="Marker2D" parent="Base" unique_id=1434009215]
+visible = false
+position = Vector2(-118.41682, 0)
+
+[node name="Top" type="Sprite2D" parent="." unique_id=1291709908]
+position = Vector2(1.286527, -380.73795)
+texture = ExtResource("1_wb22u")
+
+[node name="PrimitivePoint1" type="Marker2D" parent="Top" unique_id=311796538]
+visible = false
+position = Vector2(-62.444874, -102.95881)
+
+[node name="PrimitivePoint2" type="Marker2D" parent="Top" unique_id=1382842935]
+visible = false
+position = Vector2(56.660507, -102.92566)
+
+[node name="PrimitivePoint3" type="Marker2D" parent="Top" unique_id=1012970622]
+visible = false
+position = Vector2(116.55492, 0.35971832)
+
+[node name="PrimitivePoint4" type="Marker2D" parent="Top" unique_id=478235128]
+visible = false
+position = Vector2(56.982315, 105.43098)
+
+[node name="PrimitivePoint5" type="Marker2D" parent="Top" unique_id=1539046111]
+visible = false
+position = Vector2(-56.710587, 104.664925)
+
+[node name="PrimitivePoint6" type="Marker2D" parent="Top" unique_id=772521798]
+visible = false
+position = Vector2(-118.41682, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=169662172]
+callback_mode_method = 1
+libraries/ = SubResource("AnimationLibrary_7u8r2")
+
+[node name="SpikePivot" type="Node2D" parent="." unique_id=252908519]
+visible = false
+position = Vector2(0, -192.98245)
+scale = Vector2(1.515, 1.515)
+
+[node name="PrimitivePoint6" type="Marker2D" parent="SpikePivot" unique_id=1180461917]
+position = Vector2(-91.24895, -60.083366)
+
+[node name="PrimitivePoint1" type="Marker2D" parent="SpikePivot" unique_id=2128156461]
+position = Vector2(0, -105.668)
+
+[node name="PrimitivePoint2" type="Marker2D" parent="SpikePivot" unique_id=1704576389]
+position = Vector2(80.85405, -55.49091)
+
+[node name="PrimitivePoint3" type="Marker2D" parent="SpikePivot" unique_id=173378409]
+position = Vector2(87.327126, 57.728756)
+
+[node name="PrimitivePoint4" type="Marker2D" parent="SpikePivot" unique_id=1459285668]
+position = Vector2(0, 108.65474)
+
+[node name="PrimitivePoint5" type="Marker2D" parent="SpikePivot" unique_id=845118984]
+position = Vector2(-87.44233, 61.941265)

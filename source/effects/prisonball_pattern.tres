@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bfudffr7i7l4a"]
+
+[ext_resource type="Shader" uid="uid://fbj0eq45otd3" path="res://mods/proverbpalace/source/enemies/sprites/prisonball_sprite.gdshader" id="1_ph520"]
+[ext_resource type="Texture2D" uid="uid://dofyi2wny8n0k" path="res://mods/proverbpalace/arte/enemies/prisonball_pattern.png" id="2_uvnn3"]
+
+[resource]
+shader = ExtResource("1_ph520")
+shader_parameter/pattern = ExtResource("2_uvnn3")
+shader_parameter/mix_level = 0.20000000298024

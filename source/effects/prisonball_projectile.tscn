@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://qi2vdbui210x"]
+
+[ext_resource type="Script" uid="uid://cdn40f7edjvn" path="res://source/effects/arcing_projectile.gd" id="1_ux42x"]
+[ext_resource type="PackedScene" uid="uid://17w86cn71xhn" path="res://mods/proverbpalace/source/enemies/sprites/p_ball.tscn" id="2_7d8q6"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7d8q6"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Animation" id="Animation_7d8q6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/PBallPivot/BadIdea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/PBallPivot:pivot_t")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ux42x"]
+resource_name = "spin"
+length = 0.5
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SubViewport/PBallPivot/BadIdea:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.265732]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SubViewport/PBallPivot:pivot_t")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(2.2973964, 0.43527532),
+"update": 0,
+"values": [0.0, 1.227]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_acjgi"]
+_data = {
+&"RESET": SubResource("Animation_7d8q6"),
+&"spin": SubResource("Animation_ux42x")
+}
+
+[node name="ForeignBodyProjectile" type="CharacterBody2D" unique_id=20325527]
+z_index = 110
+script = ExtResource("1_ux42x")
+look_at_direction = false
+do_poof = false
+
+[node name="PBall" parent="." unique_id=1808194852 instance=ExtResource("2_7d8q6")]
+position = Vector2(0, -8)
+
+[node name="PBallPivot" parent="PBall/SubViewport" parent_id_path=PackedInt32Array(1808194852, 482741996) index="0" unique_id=710868583]
+center_position = Vector2(20, 16)
+pivot_r = 2.0
+
+[node name="Sprite2D" parent="PBall" index="2" unique_id=227635209]
+texture = SubResource("ViewportTexture_7d8q6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PBall" unique_id=1804966141]
+libraries/ = SubResource("AnimationLibrary_acjgi")
+
+[editable path="PBall"]

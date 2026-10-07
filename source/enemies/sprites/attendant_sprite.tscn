@@ -1,0 +1,160 @@
+[gd_scene format=3 uid="uid://bpkwxtps7qvtg"]
+
+[ext_resource type="PackedScene" uid="uid://dmg180a1myio" path="res://source/battle_unit/battle_unit_sprite.tscn" id="1_mx2bd"]
+[ext_resource type="Script" uid="uid://c6l6l5oxctuue" path="res://mods/proverbpalace/source/enemies/sprites/human_sprite.gd" id="2_siwds"]
+[ext_resource type="Script" uid="uid://dcl5psvuald64" path="res://source/library/beat_player.gd" id="3_l4rqs"]
+[ext_resource type="PackedScene" uid="uid://bce4t03bxdcek" path="res://mods/proverbpalace/source/enemies/sprites/attendant_real.tscn" id="4_siwds"]
+
+[sub_resource type="Animation" id="Animation_siwds"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ViewportSprite/SubViewport/AttendantReal:segment_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.831]
+}
+
+[sub_resource type="Animation" id="Animation_wvqgx"]
+resource_name = "idle"
+length = 4.7524999999999995
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ViewportSprite/SubViewport/AttendantReal:segment_rotation")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667, 0.53333336, 0.6, 0.6666667, 0.73333335, 0.8, 0.8666667, 0.93333334, 1, 1.0666667, 1.1333333, 1.2, 1.2666667, 1.3333334, 1.4, 1.4666667, 1.5333333, 1.6, 1.6666666, 1.7333333, 1.8, 1.8666667, 1.9333333, 2, 2.0666666, 2.1333334, 2.2, 2.2666667, 2.3333333, 2.4, 2.4666667, 2.5333333, 2.6, 2.6666667, 2.7333333, 2.8, 2.8666666, 2.9333334, 3, 3.0666666, 3.1333334, 3.2, 3.2666667, 3.3333333, 3.4, 3.4666667, 3.5333333, 3.6, 3.6666667, 3.7333333, 3.8, 3.8666666, 3.9333334, 4, 4.0666666, 4.133333, 4.2, 4.266667, 4.3333335, 4.4, 4.4666667, 4.5333333, 4.6, 4.6666665, 4.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1.831, 1.7689347343072297, 1.7098330473005772, 1.6536381202042103, 1.6002924408018588, 1.549737883925438, 1.501915655732155, 1.4567661203444005, 1.414228973209858, 1.3742431668043136, 1.3367467620372773, 1.3016768044233322, 1.268969596505165, 1.2385604006648063, 1.210383340060711, 1.1843715472221374, 1.1604568668603896, 1.1385700044631957, 1.11864008051157, 1.100595026731491, 1.0843607935905455, 1.0698619942069052, 1.0570210127830504, 1.045758351325989, 1.035992084801197, 1.027637613475323, 1.0206074152588844, 1.0148105999231338, 1.010152265191078, 1.006532852828503, 1.0038469103574754, 1.0019819023013117, 1.0008155354857444, 1.0002118460536005, 1.000011639893055, 1.029505361240357, 1.0865431744754317, 1.1409895667433738, 1.1928917384296656, 1.242297425478697, 1.2892548839151858, 1.3338129146099091, 1.3760208508968352, 1.4159285957217216, 1.4535867702364922, 1.4890466395020483, 1.52236006295681, 1.5535795934796333, 1.5827587250471111, 1.609951595544815, 1.6352131848931313, 1.6585994636416437, 1.6801673929691314, 1.6999747760891917, 1.7180807040333748, 1.734545258462429, 1.7494300565123555, 1.762797854542732, 1.7747130434513092, 1.7852415991425514, 1.794451429247856, 1.802412373125553, 1.8091964990496632, 1.8148787481188773, 1.8195367361307144, 1.82325174421072, 1.8261092636585237, 1.828199788451195, 1.8296204497814177, 1.8304772449731828, 1.8308891981244089, 1.830998414993286]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x837l"]
+_data = {
+&"RESET": SubResource("Animation_siwds"),
+&"idle": SubResource("Animation_wvqgx")
+}
+
+[sub_resource type="Shader" id="Shader_1b4u8"]
+code = "shader_type canvas_item;
+
+void fragment() {
+	COLOR.a = round(COLOR.a);
+}
+
+//void light() {
+//	// Called for every pixel for every light affecting the CanvasItem.
+//	// Uncomment to replace the default light processing function with this one.
+//}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xbejv"]
+shader = SubResource("Shader_1b4u8")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xbejv"]
+viewport_path = NodePath("ViewportSprite/SubViewport")
+
+[node name="BattleUnitSprite" unique_id=1356876798 instance=ExtResource("1_mx2bd")]
+script = ExtResource("2_siwds")
+
+[node name="AnimPlayer" parent="." index="4" unique_id=1026464875]
+libraries/ = SubResource("AnimationLibrary_x837l")
+autoplay = &"idle"
+
+[node name="SixthBeatPlayer" type="Node" parent="." index="6" unique_id=1835614355]
+script = ExtResource("3_l4rqs")
+beat_interval = 6
+high_bpm_interval = 6
+metadata/_custom_type_script = "uid://dcl5psvuald64"
+
+[node name="SecondBeatPlayer" type="Node" parent="." index="7" unique_id=1483016505]
+script = ExtResource("3_l4rqs")
+high_bpm_interval = 2
+metadata/_custom_type_script = "uid://dcl5psvuald64"
+
+[node name="ThirdBeatPlayer" type="Node" parent="." index="8" unique_id=1021064449]
+script = ExtResource("3_l4rqs")
+beat_interval = 3
+metadata/_custom_type_script = "uid://dcl5psvuald64"
+
+[node name="ViewportSprite" type="Sprite2D" parent="." index="9" unique_id=458400476]
+material = SubResource("ShaderMaterial_xbejv")
+position = Vector2(0, -69)
+texture = SubResource("ViewportTexture_xbejv")
+offset = Vector2(0, 30)
+
+[node name="SubViewport" type="SubViewport" parent="ViewportSprite" index="0" unique_id=1220316756]
+transparent_bg = true
+size = Vector2i(128, 256)
+
+[node name="AttendantReal" parent="ViewportSprite/SubViewport" index="0" unique_id=2084728404 instance=ExtResource("4_siwds")]
+position = Vector2(0, 64)
+segment_rotation = 1.831
+
+[node name="AttendantSegment1" parent="ViewportSprite/SubViewport/AttendantReal/Pivot" parent_id_path=PackedInt32Array(2084728404, 2097542382) index="0" unique_id=706308260]
+segment_rotation_offset = 1.831
+line_width = 10.0
+
+[node name="Base" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment1" index="0" unique_id=786537034]
+rotation = 1.831
+
+[node name="Top" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment1" index="1" unique_id=1291709908]
+rotation = 1.831
+
+[node name="AttendantSegment2" parent="ViewportSprite/SubViewport/AttendantReal/Pivot" parent_id_path=PackedInt32Array(2084728404, 2097542382) index="1" unique_id=667406770]
+segment_rotation_offset = 1.831
+line_width = 10.0
+
+[node name="Base" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment2" index="0" unique_id=786537034]
+rotation = 1.831
+
+[node name="Top" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment2" index="1" unique_id=1291709908]
+rotation = 1.831
+
+[node name="AttendantSegment3" parent="ViewportSprite/SubViewport/AttendantReal/Pivot" parent_id_path=PackedInt32Array(2084728404, 2097542382) index="2" unique_id=1855279381]
+segment_rotation_offset = 1.831
+line_width = 10.0
+
+[node name="Base" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment3" index="0" unique_id=786537034]
+rotation = 1.831
+
+[node name="Top" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment3" index="1" unique_id=1291709908]
+rotation = 1.831
+
+[node name="AttendantSegment4" parent="ViewportSprite/SubViewport/AttendantReal/Pivot" parent_id_path=PackedInt32Array(2084728404, 2097542382) index="3" unique_id=459538330]
+segment_rotation_offset = 1.831
+
+[node name="Base" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment4" index="0" unique_id=786537034]
+rotation = 1.831
+
+[node name="Top" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment4" index="1" unique_id=1291709908]
+rotation = 1.831
+
+[node name="AttendantSegment5" parent="ViewportSprite/SubViewport/AttendantReal/Pivot" parent_id_path=PackedInt32Array(2084728404, 2097542382) index="4" unique_id=1939960308]
+segment_rotation_offset = 1.831
+
+[node name="Base" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment5" index="0" unique_id=786537034]
+rotation = 1.831
+
+[node name="Top" parent="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment5" index="1" unique_id=1291709908]
+rotation = 1.831
+
+[connection signal="interval_beat" from="SixthBeatPlayer" to="." method="_on_sixth_beat_player_interval_beat"]
+[connection signal="interval_beat" from="SecondBeatPlayer" to="." method="_on_half_beat_player_interval_beat"]
+[connection signal="interval_beat" from="ThirdBeatPlayer" to="." method="_on_thirds_beat_player_interval_beat"]
+
+[editable path="ViewportSprite/SubViewport/AttendantReal"]
+[editable path="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment1"]
+[editable path="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment2"]
+[editable path="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment3"]
+[editable path="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment4"]
+[editable path="ViewportSprite/SubViewport/AttendantReal/Pivot/AttendantSegment5"]

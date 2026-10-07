@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://bce4t03bxdcek"]
+
+[ext_resource type="Script" uid="uid://cegmd2epbqh3y" path="res://mods/proverbpalace/source/enemies/sprites/attendant_real.gd" id="1_1b4u8"]
+[ext_resource type="PackedScene" uid="uid://bat63khdyyfvb" path="res://mods/proverbpalace/source/enemies/sprites/attendant_segment.tscn" id="1_xbejv"]
+
+[sub_resource type="Curve" id="Curve_1b4u8"]
+_limits = [-1.0, 2.0, 0.0, 1.0]
+bake_resolution = 25
+_data = [Vector2(0, 0), 0.0, 1.0, 0, 1, Vector2(0.5, 0.5), 1.0, 1.0, 1, 1, Vector2(1, 1), 1.0, 0.0, 1, 0]
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_gj0lh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:top_segment_x_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:bottom_segment_x_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:segment_x_skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.5]
+}
+
+[sub_resource type="Animation" id="Animation_1b4u8"]
+resource_name = "slide_left"
+length = 4.0000200596049424
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:top_segment_x_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5999801, 2.80002),
+"transitions": PackedFloat32Array(2.0000002, 0.14358735, 1),
+"update": 0,
+"values": [11.0, -8.0, -11.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:bottom_segment_x_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5999801, 2.8),
+"transitions": PackedFloat32Array(0.34151006, 0.6830201, 1),
+"update": 0,
+"values": [11.0, 0.0, -11.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:segment_x_skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5999801, 2.8),
+"transitions": PackedFloat32Array(0.45062524, 1, 0.45062524),
+"update": 0,
+"values": [-0.55, 0.5, 1.25]
+}
+
+[sub_resource type="Animation" id="Animation_v0bcu"]
+resource_name = "slide_right"
+length = 4.0000200596049424
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:top_segment_x_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5999801, 2.80002),
+"transitions": PackedFloat32Array(2.0000002, 0.25881618, 1),
+"update": 0,
+"values": [-11.0, 8.0, 11.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:bottom_segment_x_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5999801, 2.8),
+"transitions": PackedFloat32Array(0.40612623, 0.5358867, 1),
+"update": 0,
+"values": [-11.0, 0.0, 11.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:segment_x_skew")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5999801, 2.8),
+"transitions": PackedFloat32Array(0.45062524, 1, 0.45062524),
+"update": 0,
+"values": [-0.55, 0.5, 1.25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gj0lh"]
+_data = {
+&"RESET": SubResource("Animation_gj0lh"),
+&"slide_left": SubResource("Animation_1b4u8"),
+&"slide_right": SubResource("Animation_v0bcu")
+}
+
+[node name="AttendantReal" type="Node2D" unique_id=2084728404]
+script = ExtResource("1_1b4u8")
+segment_x_skew = 0.5
+x_animation_curve = SubResource("Curve_1b4u8")
+segment_rotation = 0.686
+
+[node name="bg" type="ColorRect" parent="." unique_id=194780300]
+visible = false
+offset_right = 128.0
+offset_bottom = 128.0
+
+[node name="Pivot" type="Node2D" parent="." unique_id=2097542382]
+position = Vector2(64, 64)
+
+[node name="AttendantSegment1" parent="Pivot" unique_id=706308260 instance=ExtResource("1_xbejv")]
+position = Vector2(0, 39)
+segment_rotation_offset = 6.263185307179587
+line_width = 12.0
+
+[node name="Base" parent="Pivot/AttendantSegment1" index="0" unique_id=786537034]
+rotation = 6.2631855
+
+[node name="Top" parent="Pivot/AttendantSegment1" index="1" unique_id=1291709908]
+modulate = Color(0.64, 0.64, 0.64, 1)
+rotation = 6.2631855
+
+[node name="AttendantSegment2" parent="Pivot" unique_id=667406770 instance=ExtResource("1_xbejv")]
+position = Vector2(0, 14.999999)
+atlas_row = 1
+segment_rotation_offset = 6.263185307179587
+animate_backwards = true
+line_width = 12.0
+
+[node name="Base" parent="Pivot/AttendantSegment2" index="0" unique_id=786537034]
+rotation = 6.2631855
+
+[node name="Top" parent="Pivot/AttendantSegment2" index="1" unique_id=1291709908]
+modulate = Color(0.64, 0.64, 0.64, 1)
+rotation = 6.2631855
+
+[node name="AttendantSegment3" parent="Pivot" unique_id=1855279381 instance=ExtResource("1_xbejv")]
+position = Vector2(0, -9.000002)
+atlas_row = 2
+segment_rotation_offset = 6.263185307179587
+line_width = 12.0
+
+[node name="Base" parent="Pivot/AttendantSegment3" index="0" unique_id=786537034]
+rotation = 6.2631855
+
+[node name="Top" parent="Pivot/AttendantSegment3" index="1" unique_id=1291709908]
+rotation = 6.2631855
+
+[node name="AttendantSegment4" parent="Pivot" unique_id=459538330 instance=ExtResource("1_xbejv")]
+position = Vector2(0, -33)
+atlas_row = 1
+segment_rotation_offset = 6.263185307179587
+line_width = 12.0
+
+[node name="Base" parent="Pivot/AttendantSegment4" index="0" unique_id=786537034]
+rotation = 6.2631855
+
+[node name="Top" parent="Pivot/AttendantSegment4" index="1" unique_id=1291709908]
+rotation = 6.2631855
+
+[node name="AttendantSegment5" parent="Pivot" unique_id=1939960308 instance=ExtResource("1_xbejv")]
+position = Vector2(0, -57)
+segment_rotation_offset = 6.263185307179587
+line_width = 12.0
+
+[node name="Base" parent="Pivot/AttendantSegment5" index="0" unique_id=786537034]
+rotation = 6.2631855
+
+[node name="Top" parent="Pivot/AttendantSegment5" index="1" unique_id=1291709908]
+rotation = 6.2631855
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1844479656]
+libraries/ = SubResource("AnimationLibrary_gj0lh")
+autoplay = &"slide_left"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+
+[editable path="Pivot/AttendantSegment1"]
+[editable path="Pivot/AttendantSegment2"]
+[editable path="Pivot/AttendantSegment3"]
+[editable path="Pivot/AttendantSegment4"]
+[editable path="Pivot/AttendantSegment5"]

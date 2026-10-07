@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://17w86cn71xhn"]
+
+[ext_resource type="Material" uid="uid://bfudffr7i7l4a" path="res://mods/proverbpalace/source/effects/prisonball_pattern.tres" id="1_8mv0x"]
+[ext_resource type="Texture2D" uid="uid://dx6nomul7urm1" path="res://mods/proverbpalace/arte/prisonball.png" id="3_0816j"]
+[ext_resource type="PackedScene" uid="uid://0n887pgxw8mb" path="res://source/effects/afterimage_spawner.tscn" id="4_2pocb"]
+[ext_resource type="PackedScene" uid="uid://c403grwnqk45u" path="res://source/effects/afterimage.tscn" id="5_l52ts"]
+[ext_resource type="Texture2D" uid="uid://7rgh0fmejc0i" path="res://mods/proverbpalace/arte/enemies/bad_idea.png" id="6_jkkhy"]
+[ext_resource type="Script" uid="uid://cryx10uiv1ofg" path="res://mods/proverbpalace/source/enemies/sprites/p_ball_pivot.gd" id="6_oc07p"]
+[ext_resource type="Shader" uid="uid://byd8xrvc3ityo" path="res://mods/proverbpalace/source/enemies/sprites/prisonball_mapping.gdshader" id="7_yfnux"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hyytt"]
+shader = ExtResource("7_yfnux")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_34jc1"]
+viewport_path = NodePath("SubViewport")
+
+[node name="PBall" type="Sprite2D" unique_id=1808194852]
+clip_children = 2
+z_index = 5
+material = ExtResource("1_8mv0x")
+texture = ExtResource("3_0816j")
+offset = Vector2(0, 8)
+hframes = 6
+region_rect = Rect2(192, 0, 64, 64)
+
+[node name="AfterimageSpawner" parent="." unique_id=586769612 instance=ExtResource("4_2pocb")]
+Particle = ExtResource("5_l52ts")
+enabled = false
+min_cooldown = 0.0
+max_cooldown = 0.0
+max_spawn_radius = 0.0
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=482741996]
+transparent_bg = true
+size = Vector2i(32, 32)
+
+[node name="PBallPivot" type="Node2D" parent="SubViewport" unique_id=710868583]
+position = Vector2(22, 16)
+scale = Vector2(0.83, 1)
+script = ExtResource("6_oc07p")
+
+[node name="BadIdea" type="Sprite2D" parent="SubViewport/PBallPivot" unique_id=15080579]
+scale = Vector2(0.116, 0.116)
+texture = ExtResource("6_jkkhy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=227635209]
+self_modulate = Color(1, 1, 1, 0.38431373)
+material = SubResource("ShaderMaterial_hyytt")
+position = Vector2(0, 8)
+texture = SubResource("ViewportTexture_34jc1")
